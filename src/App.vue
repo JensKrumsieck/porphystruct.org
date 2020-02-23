@@ -3,18 +3,20 @@
     <header>
       <Navigation/>
     </header>
-    <Hero/>
+    <transition>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
   </body>
 </template>
 
 <script>
 import Navigation from './components/Navigation'
-import Hero from './components/Hero'
 export default {
   name: 'App',
   components: {
-    Navigation,
-    Hero
+    Navigation
   }
 }
 </script>
