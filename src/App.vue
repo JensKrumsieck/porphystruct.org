@@ -1,6 +1,6 @@
 <template>
   <body>
-    <header>
+    <header class="header">
       <Navigation/>
     </header>
     <transition>
@@ -43,6 +43,7 @@ export default {
     position: relative;
     &:before{
       content: ' ';
+      opacity: 0.5;
       background: url(/img/analysis_bg.svg) no-repeat top center/45%;
       position: absolute;
       width: 100%;
@@ -78,7 +79,7 @@ export default {
     }
   }
   .features{
-    background: lighten(desaturate($primary, 20%), 70%);
+    background: lighten(desaturate($primary, 5%), 70%);
     .column{
       p, h4{
         > strong{font-weight: 600;}
@@ -97,7 +98,6 @@ export default {
         p, h4, strong{color: #ffffff; 
        }
         .feature-icon{ 
-          position: relative;
           color: #ffffff;
           path[fill=none] {
             stroke: #ffffff !important;
@@ -108,6 +108,7 @@ export default {
         }
       }
       .feature-icon{
+        position: relative;
         color: $primary;
         width: 90px;
         height: 90px;
@@ -179,6 +180,7 @@ figure{
   svg{vertical-align: middle;}
 }
 
+.particles{position: absolute; width: 100%; height: 100%; left:0; top: 0; z-index:0;}
 .small{font-size: 0.85rem;}
 
 //margin mixin 

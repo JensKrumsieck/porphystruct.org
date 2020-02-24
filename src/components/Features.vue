@@ -1,5 +1,5 @@
 <template>
-    <section class="section features">
+    <section class="section features p-b-100">
         <h2 class="title is-2 has-text-centered has-text-weight-light hl-border">Features</h2>
         <nav class="columns m-t-50">
             <div class="column feature has-text-centered">
@@ -28,6 +28,14 @@
                 Furthermore, the analysis data can be exported in many different formats.
                 </p>
             </div>
+             <div class="column feature has-text-centered">
+                <Code class="feature-icon" />
+                <h4 class="title is-4 is-spaced"><strong>Latest</strong> Technology</h4>
+                <p class="subtitle is-6">                    
+				With C# 8.0 and .NET Core 3.1, <b>PorphyStruct</b> is beeing developed on the latest technology base from Microsoft. 
+                The current development status and source code can be viewed on <a href="https://github.com/JensKrumsieck/PorphyStruct" target="_blank"><strong>GitHub</strong></a>.
+                </p>
+            </div>
         </nav>
     </section>
 </template>
@@ -35,11 +43,13 @@
 <script>
 import Analysis from '@/assets/analysis_bg.svg';
 import Sim from '@/assets/simulation.svg';
+import Code from '@/assets/netcore.svg';
 export default {
   name: 'Features',
   components: {
       Analysis,
-      Sim
+      Sim,
+      Code
   }
 }
 </script>

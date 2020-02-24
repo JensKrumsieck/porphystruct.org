@@ -3,9 +3,11 @@ import App from './App.vue'
 import Buefy from 'buefy'
 import VueRouter from 'vue-router'
 import Index from './pages/Index'
+import VueParticles from 'vue-particles'
 
 Vue.config.productionTip = false
 Vue.use(Buefy);
+Vue.use(VueParticles);
 
 const routes = [
   {path: '/', name: 'start', component: Index}
