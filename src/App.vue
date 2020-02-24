@@ -29,6 +29,8 @@ export default {
   $secondary: #DC3545;
   $danger: $secondary;
   $size-1: 4.5rem;
+  $menu-item-active-background-color: darken($primary, 10%);
+  $menu-item-color: #fff;
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Titillium+Web:200,300,300i,400,600&display=swap');
   $family-sans-serif: 'Open Sans';
   @import "~bulma/sass/utilities/_all";
@@ -68,12 +70,13 @@ export default {
     background: transparent;
     .navbar-item{
       text-transform: uppercase;
+      &:not(:last-child){margin-right: 1rem;}
     }
     &.sticky{
       background: #ffffff !important;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
-      > .container > .navbar-menu > .navbar-end > .navbar-item:not(.is-active):not(:hover) {
+      > .container > .navbar-menu > .navbar-end > .navbar-item:not(.is-active):not(:hover):not(.button) {
         color: $primary;
       }
     }

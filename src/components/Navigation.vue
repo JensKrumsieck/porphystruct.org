@@ -10,8 +10,11 @@
                 <b-navbar-item tag="router-link" :to="{path: '/'}">
                     Home
                 </b-navbar-item>
-                 <b-navbar-item tag="a" href="/hallo">
-                    tets
+                 <b-navbar-item tag="router-link" :to="{path: '/support'}">
+                    Support
+                </b-navbar-item>
+                <b-navbar-item tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/releases/latest/" class="button is-danger">
+                    Download
                 </b-navbar-item>
             </template>
     </b-navbar>

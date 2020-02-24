@@ -15,16 +15,10 @@
             </div>
             <div class="level-item has-text-centered">
                 <div>
-                    <p class="heading">Coffees</p>
-                    <p class="title is-2">42</p>
+                    <p class="heading">Coffees comsumed</p>
+                    <p class="title is-2">> 42</p>
                 </div>
-            </div>            
-            <div class="level-item has-text-centered">
-                <div>
-                    <p class="heading">Supported Macrocycles</p>
-                    <p class="title is-2">5</p>
-                </div>
-            </div>            
+            </div>          
             <div class="level-item has-text-centered">
                 <div>
                     <p class="heading">Supported Macrocycles</p>
