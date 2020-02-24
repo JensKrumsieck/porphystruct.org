@@ -4,7 +4,7 @@
           <div class="container">
                <div class="columns is-vcentered">
                    <div class="column">
-                       <h1 class="title is-1 is-spaced"><img src="../assets/porphystructlogo.svg" alt="" class="icon-90" /> PorphyStruct</h1>
+                       <h1 class="title is-1 is-spaced"><PorphyStruct class="icon-90" /> PorphyStruct</h1>
                         <p class="has-text-justified m-t-50">PorphyStruct is an open source project working on methods to analyze the <i>pigments of life</i>.
                             Porphyrinoids and Corrinoids altogether show recurring conformational patterns in their solid 
                             state structures which can be described by linear combination of their lowest energy vibrational 
@@ -16,11 +16,11 @@
                         </div>
                    </div>
                    <div class="column">
-                       <img src="../assets/laptop.svg" alt="Screenshot" />
+                       <Laptop  /> 
                        <!--conference badge-->
                         <div class="tag badge-conference columns">
                             <div class="column">
-                                <img src="@/assets/porphystructlogo.svg" alt="" class="icon-90" />
+                                <PorphyStruct class="icon-90" />
                             </div>
                             <div class="column">
                                 <h4 class="title is-5">ICPP-11</h4>                            
@@ -42,9 +42,13 @@
     </section>
 </template>
 <script>
+import PorphyStruct from '@/assets/porphystructlogo.svg';
+import Laptop from '@/assets/laptop.svg';
 export default {
   name: 'Hero',
   components: {
+      PorphyStruct,
+      Laptop
   }
 }
 </script>
