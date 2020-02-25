@@ -5,8 +5,8 @@
       <Story />
       <Features class="m-t-50" />
       <Cycles class="m-t-50" />
-      <Platform />
       <Team />
+      <Platform />
     </div>
 </template>
 
