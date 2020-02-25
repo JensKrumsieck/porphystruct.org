@@ -1,6 +1,6 @@
 <template>
     <section class="hero is-primary is-fullheight-with-navbar">
-    <vue-particles color="#e9edf2" linesColor="#e9edf2" class="particles" :particleOpacity="0.1" :lineOpacity="0.1" :moveSpeed="1" />
+    <client-only><vue-particles color="#e9edf2" linesColor="#e9edf2" class="particles" :particleOpacity="0.1" :lineOpacity="0.1" :moveSpeed="1" /></client-only>
       <div class="hero-body">
           <div class="container">
                <div class="columns is-vcentered">

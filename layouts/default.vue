@@ -1,26 +1,48 @@
 <template>
-  <body>
+  <div>
     <header class="header">
       <Navigation/>
     </header>
-    <transition>
-      <keep-alive>
-        <router-view></router-view>
-      </keep-alive>
-    </transition>
+    <nuxt />
     <Footer />
-  </body>
+  </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 export default {
-  name: 'App',
-  components: {
+  name: 'default',
+  components:{
     Navigation,
     Footer
-  }
+  },
+   methods: {
+      handleScroll () {
+        var content = document.getElementsByTagName("section").item(0).getBoundingClientRect();
+        var nav = document.getElementsByClassName("navbar").item(0);
+        
+        var logo = document.getElementsByClassName("navbar-brand").item(0).getElementsByTagName("img").item(0);
+        
+        if (content.top < nav.getBoundingClientRect().top) {
+            if (!nav.classList.contains('sticky')) {
+            //add sticky
+            nav.classList.add('sticky');
+            //change to dark logo
+            logo.src = "img/logo_dark.svg";
+            }
+        }
+        else if (nav.classList.contains('sticky')) {
+            //remove sticky
+            nav.classList.remove('sticky');
+            //change to light logo
+            logo.src = "img/logo.svg";
+        }
+      }
+    },
+    mounted () {
+      window.addEventListener('scroll', this.handleScroll);
+    }
 }
 </script>
 
@@ -34,7 +56,7 @@ export default {
   @import "~bulma/sass/utilities/_all";
   @import "~bulma";
   @import "~buefy/src/scss/buefy";
-  
+  body.has-spaced-navbar-fixed-top{padding-top: 0 !important}
   h1,h2,h3,h4,h5,h6{
     font-family: 'Titillium Web';
   }
@@ -204,3 +226,4 @@ $sides: (top, bottom, left, right);
   }
 }
 </style>
+
