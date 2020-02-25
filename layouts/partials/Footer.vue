@@ -16,10 +16,10 @@
                 <div class="column footer-menu menu">
                     <ul class="menu-list">
                         <li>
-                            <router-link :to="{path: '/'}"><b-icon pack="fa" icon="home" />  Home</router-link>
+                            <nuxt-link :to="{path: '/'}"><b-icon pack="fa" icon="home" />  Home</nuxt-link>
                         </li>
                         <li>
-                            <router-link :to="{path: '/support'}"><b-icon pack="fa" icon="life-ring" />  Support</router-link>
+                            <nuxt-link :to="{path: '/support'}"><b-icon pack="fa" icon="life-ring" /> Support</nuxt-link>
                         </li>
                         <li>
                             <a href="https://github.com/JensKrumsieck/PorphyStruct/releases/latest/" target="_blank"><b-icon pack="fa" icon="cloud-download-alt" /> Download</a>
@@ -29,7 +29,7 @@
                  <div class="column footer-menu menu">
                     <ul class="menu-list">
                         <li>
-                            <router-link :to="{path: '/imprint'}"><b-icon pack="fa" icon="balance-scale" /> Imprint</router-link>
+                            <nuxt-link :to="{path: '/imprint'}"><b-icon pack="fa" icon="balance-scale" /> Imprint</nuxt-link>
                         </li>
                     </ul>
                 </div>
@@ -47,8 +47,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .footer-menu{
-        .menu-list a{ color: #fff;}
-        .menu-list a:hover, .menu-list a.is-active{background-color: darken(#29384D, 10%);}
-    }
+.footer-menu{
+    .menu-list a{ color: #fff;}
+    .menu-list a:hover, .menu-list a.is-active{background-color: darken(#29384D, 10%);}
+}
+    
+.footer{
+    background: $primary;
+    position: relative;
+    svg{vertical-align: middle;}
+}
 </style>

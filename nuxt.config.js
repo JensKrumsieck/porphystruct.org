@@ -24,6 +24,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/global.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -41,8 +42,13 @@ export default {
   */
   modules: [
     'nuxt-svg-loader',
-    'nuxt-buefy'
+    'nuxt-buefy',
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    scss: ['assets/variables.scss']
+  },
   /*
   ** Build configuration
   */

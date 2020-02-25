@@ -3,14 +3,16 @@
     <header class="header">
       <Navigation/>
     </header>
-    <nuxt />
+    <main class="main">
+      <nuxt />
+    </main>
     <Footer />
   </div>
 </template>
 
 <script>
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
+import Navigation from './partials/Navigation'
+import Footer from './partials/Footer'
 export default {
   name: 'default',
   components:{
@@ -47,20 +49,12 @@ export default {
 </script>
 
 <style lang="scss">
-  $primary: #29384D;
-  $secondary: #DC3545;
-  $danger: $secondary;
-  $size-1: 4.5rem; 
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Titillium+Web:200,300,300i,400,600&display=swap');
   $family-sans-serif: 'Open Sans';
   @import "~bulma/sass/utilities/_all";
   @import "~bulma";
   @import "~buefy/src/scss/buefy";
-  body.has-spaced-navbar-fixed-top{padding-top: 0 !important}
-  h1,h2,h3,h4,h5,h6{
-    font-family: 'Titillium Web';
-  }
-  .icon-90{height: 90px;}
+  body.has-spaced-navbar-fixed-top{padding-top: 0 !important; }
   .hero {
     position: relative;
     &:before{
@@ -197,18 +191,9 @@ export default {
   }
 }
 .scroll-icon{color: rgba($secondary, 0.35);}
-figure{
-  margin: 1rem;
-  > figcaption{font-size: 0.7rem;}
-}
-.footer{
-  background: $primary;
-  position: relative;
-  svg{vertical-align: middle;}
-}
 
 .particles{position: absolute; width: 100%; height: 100%; left:0; top: 0; z-index:0;}
-.small{font-size: 0.85rem;}
+
 
 //margin mixin 
 $spaces: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100);

@@ -2,20 +2,20 @@
     <b-navbar fixed-top spaced type="is-primary" wrapperClass="container">
         
             <template slot="brand">
-                <b-navbar-item tag="router-link" :to="{path: '/'}">
+                <b-navbar-item tag="nuxt-link" :to="{path: '/'}">
                     <img src="img/logo.svg" alt="logo" class="logo" />
                 </b-navbar-item>
             </template>
             <template slot="end">
-                <b-navbar-item tag="router-link" :to="{path: '/'}">
+                <b-navbar-item tag="nuxt-link" :to="{path: '/'}">
                     Home
                 </b-navbar-item>
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <router-link :to="{path: '/support'}" class="navbar-link">
+                    <nuxt-link :to="{path: '/support'}" class="navbar-link">
                         Support                   
-                    </router-link>
+                    </nuxt-link>
                     <div class="navbar-dropdown">
-                        <b-navbar-item tag="router-link" :to="{path: '/manual'}">
+                        <b-navbar-item tag="nuxt-link" :to="{path: '/manual'}">
                             User Manual
                         </b-navbar-item>
                         <b-navbar-item tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/issues">

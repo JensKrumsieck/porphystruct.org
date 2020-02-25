@@ -1,0 +1,19 @@
+
+.page-enter-active, .page-leave-active {
+    transition: all .25s ease-in-out;
+}
+.page-enter, .page-leave-to {
+    opacity: 0;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Titillium Web';
+  }
+.icon-90{height: 90px;}
+
+figure{
+    margin: 1rem;
+    > figcaption{font-size: 0.7rem;}
+  }
+  .small{font-size: 0.85rem;}
