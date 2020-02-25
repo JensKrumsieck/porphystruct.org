@@ -1,10 +1,10 @@
 <template>
    <div id="Support">
        <section class="hero is-primary is-medium">
-           <vue-particles color="#e9edf2" linesColor="#e9edf2" class="particles" :particleOpacity="0.1" :lineOpacity="0.1" :moveSpeed="1" />
            <div class="hero-body">
                 <div class="container">
-                    <Title title="Support" />
+                    <Title title="Support" class="is-spaced" />
+                    <h2 class="subtitle is-2">How can we help you?</h2>
                 </div>
            </div>
        </section>
@@ -15,7 +15,8 @@
                     <div class="message-body">
                         <h2 class="title is-4">User Manual</h2>
                         <p>
-                            TODO
+                            The first point of contact for questions is our online manual. All functions and processes are explained 
+                            in detail in the manual.
                         </p>
                         <a class="m-t-10 button is-danger" href="">User Manual</a>
                     </div>

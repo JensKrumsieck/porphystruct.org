@@ -68,7 +68,7 @@ export default {
     -moz-transition: all 0.5s;
     transition: all 0.5s;
     background: transparent;
-    .navbar-item{
+    a.navbar-item, a.navbar-link{
       text-transform: uppercase;
       &:not(:last-child){margin-right: 1rem;}
     }
@@ -76,8 +76,11 @@ export default {
       background: #ffffff !important;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
-      > .container > .navbar-menu > .navbar-end > .navbar-item:not(.is-active):not(:hover):not(.button) {
-        color: $primary;
+      > .container > .navbar-menu > .navbar-end {
+        .navbar-item, .navbar-link {
+          &:not(.is-active):not(:hover):not(.button):not(:focus){color: $primary;}
+          &:hover > .navbar-link{color: #fff !important;}
+        }
       }
     }
   }

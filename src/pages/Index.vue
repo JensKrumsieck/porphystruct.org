@@ -6,6 +6,7 @@
       <Features class="m-t-50" />
       <Cycles class="m-t-50" />
       <Platform />
+      <Team />
     </div>
 </template>
 
@@ -16,6 +17,7 @@ import Story from '@/components/Story'
 import Scrollicon from '@/components/Scrollicon'
 import Platform from '@/components/Platform'
 import Cycles from '@/components/Cycles'
+import Team from '@/components/Team'
 export default {
   name: 'Index',
   components: {
@@ -24,7 +26,8 @@ export default {
       Story,
       Platform,
       Scrollicon,
-      Cycles
+      Cycles,
+      Team
    }
 }
 </script>

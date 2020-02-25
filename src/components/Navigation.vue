@@ -10,9 +10,19 @@
                 <b-navbar-item tag="router-link" :to="{path: '/'}">
                     Home
                 </b-navbar-item>
-                 <b-navbar-item tag="router-link" :to="{path: '/support'}">
-                    Support
-                </b-navbar-item>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <router-link :to="{path: '/support'}" class="navbar-link">
+                        Support                   
+                    </router-link>
+                    <div class="navbar-dropdown">
+                        <b-navbar-item tag="router-link" :to="{path: '/manual'}">
+                            User Manual
+                        </b-navbar-item>
+                        <b-navbar-item tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/issues">
+                            GitHub Issues
+                        </b-navbar-item>
+                    </div>
+                </div>
                 <b-navbar-item tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/releases/latest/" class="button is-danger">
                     Download
                 </b-navbar-item>
