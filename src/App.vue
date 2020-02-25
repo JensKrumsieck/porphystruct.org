@@ -28,9 +28,7 @@ export default {
   $primary: #29384D;
   $secondary: #DC3545;
   $danger: $secondary;
-  $size-1: 4.5rem;
-  $menu-item-active-background-color: darken($primary, 10%);
-  $menu-item-color: #fff;
+  $size-1: 4.5rem; 
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Titillium+Web:200,300,300i,400,600&display=swap');
   $family-sans-serif: 'Open Sans';
   @import "~bulma/sass/utilities/_all";

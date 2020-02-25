@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Index from './pages/Index'
 import Support from './pages/Support'
 import Imprint from './pages/Imprint'
+import Manual_Index from './pages/Manual_Index'
 import VueParticles from 'vue-particles'
 
 Vue.config.productionTip = false
@@ -14,6 +15,7 @@ Vue.use(VueParticles);
 const routes = [
   {path: '/', name: 'start', component: Index},
   {path: '/support', name: 'support', component: Support},
+  {path: '/manual', name: 'manual', component: Manual_Index},
   {path: '/imprint', name: 'imprint', component: Imprint}
 ]
 

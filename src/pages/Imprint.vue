@@ -1,13 +1,6 @@
 <template>
     <div id="Support">
-       <section class="hero is-primary is-medium">
-           <div class="hero-body">
-                <div class="container">
-                    <Title title="Legal Disclosure" class="is-spaced" />
-                    <h2 class="subtitle is-2">Information in accordance with Section 5 TMG</h2>
-                </div>
-           </div>
-       </section>
+        <Title title="Legal Disclosure" subtitle="Information in accordance with Section 5 TMG" />
        <section class="section container">
             <p>
                 Jens Krumsieck<br/>

@@ -1,13 +1,6 @@
 <template>
    <div id="Support">
-       <section class="hero is-primary is-medium">
-           <div class="hero-body">
-                <div class="container">
-                    <Title title="Support" class="is-spaced" />
-                    <h2 class="subtitle is-2">How can we help you?</h2>
-                </div>
-           </div>
-       </section>
+       <Title title="Support" subtitle="How can we help you?" />
         <section class="section container">
         <div class="columns">
             <div class="column">
@@ -18,7 +11,7 @@
                             The first point of contact for questions is our online manual. All functions and processes are explained 
                             in detail in the manual.
                         </p>
-                        <a class="m-t-10 button is-danger" href="">User Manual</a>
+                        <router-link class="m-t-10 button is-danger" :to="{path: '/manual'}">User Manual</router-link>
                     </div>
                 </div>
             </div>
