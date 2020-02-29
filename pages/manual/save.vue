@@ -1,15 +1,8 @@
 <template>
     <div id="save">
-        <Title title="Export Files"/>
-        <section class="section">
-            <div class="container">
-                <nav class="breadcrumb" aria-label="breadcrumbs">
-                <ul>
-                    <li><nuxt-link :to="{path: '/'}">PorphyStruct</nuxt-link></li>
-                    <li><nuxt-link :to="{path: '/manual'}">Manual</nuxt-link></li>
-                    <li class="is-active"><nuxt-link :to="{path: '/manual/save'}">Export Files</nuxt-link></li>
-                </ul>
-                </nav>
+        <manual-header title="Export Results"/>
+            <section class="section">
+                <div class="container">
                 <div class="columns is-multiline">
                     <div class="column is-half">
                         <h3 class="title is-4">Saving your results</h3>
@@ -38,11 +31,11 @@
 </template>
 
 <script>
-import Title from '@/components/Title';
+import ManualHeader from '@/components/ManualHeader';
 export default {
     name: 'Save',
     components:{
-        Title
+        ManualHeader
     }
 }
 </script>

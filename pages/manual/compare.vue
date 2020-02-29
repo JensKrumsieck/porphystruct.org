@@ -1,15 +1,8 @@
 <template>
     <div id="compare">
-        <Title title="Compare"/>
-        <section class="section">
-            <div class="container">
-                <nav class="breadcrumb" aria-label="breadcrumbs">
-                <ul>
-                    <li><nuxt-link :to="{path: '/'}">PorphyStruct</nuxt-link></li>
-                    <li><nuxt-link :to="{path: '/manual'}">Manual</nuxt-link></li>
-                    <li class="is-active"><nuxt-link :to="{path: '/manual/compare'}">Compare</nuxt-link></li>
-                </ul>
-                </nav>
+        <manual-header title="Compare Data"/>
+            <section class="section">
+                <div class="container">
                 <div class="columns is-multiline">
                     <div class="column is-half">
                         <h3 class="title is-4">Compare Macrocycles</h3>
@@ -29,11 +22,11 @@
 </template>
 
 <script>
-import Title from '@/components/Title';
+import ManualHeader from '@/components/ManualHeader';
 export default {
     name: 'Compare',
     components:{
-        Title
+        ManualHeader
     }
 }
 </script>

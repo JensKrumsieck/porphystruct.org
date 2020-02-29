@@ -1,15 +1,8 @@
 <template>
     <div id="getting-started">
-        <Title title="Getting Started"/>
-        <section class="section">
-            <div class="container">
-                <nav class="breadcrumb" aria-label="breadcrumbs">
-                <ul>
-                    <li><nuxt-link :to="{path: '/'}">PorphyStruct</nuxt-link></li>
-                    <li><nuxt-link :to="{path: '/manual'}">Manual</nuxt-link></li>
-                    <li class="is-active"><nuxt-link :to="{path: '/manual/getting-started'}">Getting Started</nuxt-link></li>
-                </ul>
-                </nav>
+        <manual-header title="Getting Started"/>
+            <section class="section">
+                <div class="container">
                 <div class="columns">
                 <div class="column">
                 <h3 class="title is-4">Introduction</h3>
@@ -23,7 +16,7 @@
                <h3 class="title is-4 m-t-50">Installation</h3>
                 <p  class="has-text-justified">
                     No installation is necessary. PorphyStruct is downloaded as a <em>"self-containing app"</em> in one .exe file. 
-                    This has a relatively large file size (< 200 MB), as .NET Core is already implemented in this file, so no separate installation of 
+                    This has a relatively large file size (&lt; 200 MB), as .NET Core is already implemented in this file, so no separate installation of 
                     .NET is necessary. Simply place the file in a folder of your choice and run PorphyStruct.
                 </p>
                 </div>
@@ -38,11 +31,11 @@
 </template>
 
 <script>
-import Title from '@/components/Title';
+import ManualHeader from '@/components/ManualHeader';
 export default {
     name: 'GettingStarted',
     components:{
-        Title
+        ManualHeader
     }
 }
 </script>

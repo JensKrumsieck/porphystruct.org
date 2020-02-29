@@ -82,19 +82,6 @@
                         </div>
                     </nuxt-link>
                 </div> 
-                <div class="column is-half">
-                    <nuxt-link :to="{path: '/manual/settings'}" class="media">
-                        <figure class="media-left">
-                            <p class="image is-64x64">
-                                <b-icon pack="fas" icon="cogs" custom-size="fa-4x" class="is-rounded image is-64x64"/>
-                            </p>
-                        </figure>
-                        <div class="media-content">
-                            <h3 class="title is-4">Settings</h3>
-                            <p class="subtitle is-5">Who is who of all settings in PorphyStruct</p>
-                        </div>
-                    </nuxt-link>
-                </div>
             </div>
         </div>
     </section>
