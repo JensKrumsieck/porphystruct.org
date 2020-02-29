@@ -97,6 +97,7 @@ export default {
           &:hover > .navbar-link{color: #fff !important;}
         }
       }
+      .burger{color: $primary !important;}
     }
   }
   .features{
@@ -160,7 +161,7 @@ export default {
     .title.is-1{font-size: 3rem !important;}
     .icon-90{height: 50px;}    
     .tag.badge-conference{display:none !important;}
-    .hl-border{width: 13rem !important;}
+    .hl-border{width: 15rem !important;}
   }
   @media (min-height: 1300px){
     .divider-shape{height: 35vh !important;}
@@ -182,7 +183,7 @@ export default {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
-  width: 26rem;
+  width: 30rem;
   margin: auto;
   padding: 1rem;
   border-bottom: 1px solid rgba($primary, 0.2);
