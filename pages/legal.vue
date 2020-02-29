@@ -47,7 +47,7 @@
 <script>
 import Title from '@/components/Title';
 export default {
-  name: 'Imprint',
+  name: 'legal',
   components: {
       Title
    }

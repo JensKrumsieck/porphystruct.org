@@ -5,7 +5,7 @@
                 <div class="footer-logo logo column is-5">
                     <a href="/"><img src="img/logo.svg" style="height: 34px;" alt="logo" /></a>
                     <p class="small copyright has-text-light m-t-30">
-                        PorphyStruct by <a href="/jens" class="has-text-light">Jens Krumsieck</a> <br/>
+                        PorphyStruct by <a href="http://jenskrumsieck.de" class="has-text-light">Jens Krumsieck</a> <br/>
                         (2019 - {{new Date().getFullYear()}})
                     </p>
                     <p class="small made has-text-light m-t-5">
@@ -29,7 +29,7 @@
                  <div class="column footer-menu menu">
                     <ul class="menu-list">
                         <li>
-                            <nuxt-link :to="{path: '/imprint'}"><b-icon pack="fa" icon="balance-scale" /> Imprint</nuxt-link>
+                            <nuxt-link :to="{path: '/legal'}"><b-icon pack="fa" icon="balance-scale" /> Legal Notice</nuxt-link>
                         </li>
                     </ul>
                 </div>
