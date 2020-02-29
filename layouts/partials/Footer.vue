@@ -3,7 +3,7 @@
         <div class="container">
             <div class="columns">
                 <div class="footer-logo logo column is-5">
-                    <a href="/"><img src="img/logo.svg" style="height: 34px;" alt="logo" /></a>
+                    <a href="/"><img src="/img/logo.svg" style="height: 34px;" alt="logo" /></a>
                     <p class="small copyright has-text-light m-t-30">
                         PorphyStruct by <a href="http://jenskrumsieck.de" class="has-text-light">Jens Krumsieck</a> <br/>
                         (2019 - {{new Date().getFullYear()}})

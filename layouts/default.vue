@@ -31,14 +31,14 @@ export default {
             //add sticky
             nav.classList.add('sticky');
             //change to dark logo
-            logo.src = "img/logo_dark.svg";
+            logo.src = "/img/logo_dark.svg";
             }
         }
         else if (nav.classList.contains('sticky')) {
             //remove sticky
             nav.classList.remove('sticky');
             //change to light logo
-            logo.src = "img/logo.svg";
+            logo.src = "/img/logo.svg";
         }
       }
     },
@@ -66,7 +66,7 @@ export default {
       height: 100%;
       left: 0;
       top: 100px;
-      z-index: 1;
+      z-index: 0;
     }
     > .hero-body{z-index:2;}
     h1{
