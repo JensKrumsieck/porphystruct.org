@@ -1,6 +1,5 @@
 <template>
     <div id="compare">
-        <manual-header title="Compare Data"/>
             <section class="section">
                 <div class="container">
                 <div class="columns is-multiline">
@@ -22,11 +21,9 @@
 </template>
 
 <script>
-import ManualHeader from '@/components/ManualHeader';
 export default {
     name: 'Compare',
-    components:{
-        ManualHeader
-    }
+    layout: 'manual',
+    pageTitle: 'Compare Data'
 }
 </script>

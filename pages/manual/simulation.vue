@@ -1,6 +1,5 @@
 <template>
     <div id="simulation">
-            <manual-header title="Simulation"/>
             <section class="section">
                 <div class="container">
                 <div class="columns is-multiline">
@@ -95,12 +94,10 @@
 </template>
 
 <script>
-import ManualHeader from '@/components/ManualHeader';
 export default {
     name: 'Simulation',
-    components:{
-        ManualHeader
-    }
+    layout: 'manual',
+    pageTitle: 'Simulation'
 }
 </script>
 <style scoped>

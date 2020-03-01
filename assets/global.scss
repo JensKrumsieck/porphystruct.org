@@ -3,15 +3,14 @@ $family-sans-serif: 'Open Sans';
 @import "~bulma/sass/utilities/_all";
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
-body.has-spaced-navbar-fixed-top{padding-top: 0 !important; }
 .page-enter-active, .page-leave-active {
     transition: all .25s ease-in-out;
 }
 .page-enter, .page-leave-to {
     opacity: 0;
 }
-
-
+body{transition: all .15s ease-in-out;}
+body.has-spaced-navbar-fixed-top{padding-top: 0 !important; }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Titillium Web';
   }

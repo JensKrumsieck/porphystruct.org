@@ -1,6 +1,5 @@
 <template>
     <div id="open-files">
-        <manual-header title="Open Files"/>
             <section class="section">
                 <div class="container">
                 <div class="columns is-multiline">
@@ -79,11 +78,9 @@
 </template>
 
 <script>
-import ManualHeader from '@/components/ManualHeader';
 export default {
     name: 'OpenFiles',
-    components:{
-        ManualHeader
-    }
+    layout: 'manual',
+    pageTitle: 'Open Files'
 }
 </script>

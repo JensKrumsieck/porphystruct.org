@@ -1,6 +1,5 @@
 <template>
     <div id="getting-started">
-        <manual-header title="Getting Started"/>
             <section class="section">
                 <div class="container">
                 <div class="columns">
@@ -31,11 +30,9 @@
 </template>
 
 <script>
-import ManualHeader from '@/components/ManualHeader';
 export default {
     name: 'GettingStarted',
-    components:{
-        ManualHeader
-    }
+    layout: 'manual',
+    pageTitle: 'Getting Started'
 }
 </script>

@@ -26,6 +26,12 @@ export default {
   css: [
     '@/assets/global.scss'
   ],
+  pageTransition:{
+    name: 'page'
+  },
+  layoutTransition:{
+    name: 'page'
+  },
   /*
   ** Plugins to load before mounting the App
   */

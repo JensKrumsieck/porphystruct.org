@@ -1,6 +1,5 @@
 <template>
     <div id="analysis">
-        <manual-header title="Analysis"/>
             <section class="section">
                 <div class="container">
                 <div class="columns is-multiline">
@@ -46,11 +45,9 @@
 </template>
 
 <script>
-import ManualHeader from '@/components/ManualHeader';
 export default {
     name: 'Analysis',
-    components:{
-        ManualHeader
-    }
+    layout: 'manual',
+    pageTitle: 'Analysis'
 }
 </script>

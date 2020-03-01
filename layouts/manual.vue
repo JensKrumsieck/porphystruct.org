@@ -3,8 +3,9 @@
     <header class="header">
       <Navigation/>
     </header>
-    <main class="main">  
-      <nuxt />
+    <main class="main">    
+        <manual-header :title="title"/> 
+        <nuxt />
     </main>
     <Footer />
   </div>
@@ -12,13 +13,22 @@
 
 <script>
 import Navigation from './partials/Navigation'
+import ManualHeader from './partials/ManualHeader'
 import Footer from './partials/Footer'
-export default {
-  components:{
-    Navigation,
-    Footer
-  },
-   methods: {
+export default {     
+    components:{
+        ManualHeader,
+        Navigation,
+        Footer
+    },
+    computed:{
+        title(){
+            return this.$route.matched.map((r) => {
+                return (r.components.default.options ? r.components.default.options.pageTitle : r.components.default.pageTitle)
+            })[0]
+        }
+    },
+    methods: {
       handleScroll () {
         var content = document.getElementsByTagName("section").item(0).getBoundingClientRect();
         var nav = document.getElementsByClassName("navbar").item(0);

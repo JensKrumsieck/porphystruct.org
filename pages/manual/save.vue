@@ -1,6 +1,5 @@
 <template>
     <div id="save">
-        <manual-header title="Export Results"/>
             <section class="section">
                 <div class="container">
                 <div class="columns is-multiline">
@@ -31,12 +30,10 @@
 </template>
 
 <script>
-import ManualHeader from '@/components/ManualHeader';
 export default {
     name: 'Save',
-    components:{
-        ManualHeader
-    }
+    layout: 'manual',
+    pageTitle: 'Export Results'
 }
 </script>
 <style scoped>
