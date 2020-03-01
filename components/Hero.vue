@@ -53,3 +53,58 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.particles{position: absolute; width: 100%; height: 100%; left:0; top: 0; z-index:0;}
+@media (min-height: 1300px){
+    .divider-shape{height: 35vh !important;}
+    .hero.is-fullheight-with-navbar{min-height: calc(50vh - 3.25rem);}
+}
+  @media (max-width: 769px) {
+    .divider-shape{height: 50% !important;}
+    .hl-border{width: 15rem !important;}
+  }
+  
+.divider-shape{
+    > svg{height: 100%; width: 100%;}
+    position: absolute;
+    bottom: -1px;
+    z-index: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+  }
+.hero {
+    position: relative;
+    &:before{
+      content: ' ';
+      opacity: 0.5;
+      background: url(/img/analysis_bg.svg) no-repeat top center/45%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 100px;
+      z-index: 0;
+    }
+    > .hero-body{z-index:2;}
+    h1{
+      font-family: 'Titillium Web';
+    }
+    * {font-weight: 300 !important;}
+    .title, .icon-90{
+      vertical-align: middle;
+    }
+  }
+.tag.badge-conference{
+	position: absolute;
+    color: darken(#ffffff, 35%);
+	right: 0;
+    top: 0;
+    height: auto;
+	border: 1px solid #ffffff;
+    text-align: center;
+	background: darken($primary, 10%) !important;
+    .title{margin-bottom: 1rem !important;}
+}
+</style>

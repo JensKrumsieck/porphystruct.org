@@ -53,3 +53,53 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.features{
+    background: lighten(desaturate($primary, 5%), 70%);
+    .column{
+      p, h4{
+        > strong{font-weight: 600;}
+        font-weight: 400;
+        color: $primary;
+      }
+      z-index: 1;
+      position: relative;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      transition: all 0.5s;
+      border-radius: 5px;
+      overflow:hidden;
+      &:hover{
+        background: $primary !important;
+        p, h4, strong{color: #ffffff; 
+       }
+        .feature-icon{ 
+          color: #ffffff;
+          path[fill=none] {
+            stroke: #ffffff !important;
+          }
+          path:not([fill=none]), circle{
+              fill: #ffffff !important;
+          } 
+        }
+      }
+      .feature-icon{
+        position: relative;
+        color: $primary;
+        width: 90px;
+        height: 90px;
+        > 
+        g {
+          opacity: 1.0;
+        }
+        path[fill=none] {
+          stroke: $primary;
+        }
+        path:not([fill=none]), circle{
+            fill: $primary;
+        }
+      }
+    }
+  }
+</style>

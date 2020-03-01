@@ -36,9 +36,32 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="scss" scoped>
     .logo{
         height: 34px;
     }
     .navbar-brand > a.navbar-item.is-active{background: none !important;}
+     nav.navbar.is-primary{
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    background: transparent;
+    a.navbar-item, a.navbar-link{
+      text-transform: uppercase;
+      &:not(:last-child){margin-right: 1rem;}
+    }
+    &.sticky{
+      background: #ffffff !important;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+      > .container > .navbar-menu > .navbar-end {
+        .navbar-item, .navbar-link {
+          &:after{border-color: $primary;}
+          &:not(.is-active):not(:hover):not(.button):not(:focus){color: $primary;}
+          &:hover > .navbar-link{color: #fff !important;}
+        }
+      }
+      .burger{color: $primary !important;}
+    }
+  }
 </style>

@@ -9,7 +9,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.scroll-icon{color: rgba($secondary, 0.35);}
+
 .bounce {
   display: inline-block;
   position: relative;
