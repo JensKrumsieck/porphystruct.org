@@ -13,11 +13,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://use.fontawesome.com/'},
-      { rel: 'preload', href: 'https://use.fontawesome.com/releases/v5.12.1/css/all.css', as: 'style'},
-      { rel: 'preload', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Titillium+Web:200,300,300i,400,600&display=swap', as: 'style'},
-      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.12.1/css/all.css'},
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Titillium+Web:200,300,300i,400,600&display=swap'}
+      { rel: 'preconnect', href: 'https://use.fontawesome.com/' },
+      { rel: 'preload', href: 'https://use.fontawesome.com/releases/v5.12.1/css/all.css', as: 'style' },
+      { rel: 'preload', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Titillium+Web:200,300,300i,400,600&display=swap', as: 'style' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.12.1/css/all.css' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Titillium+Web:200,300,300i,400,600&display=swap' }
     ]
   },
   /*
@@ -30,17 +30,17 @@ export default {
   css: [
     '@/assets/global.scss'
   ],
-  pageTransition:{
+  pageTransition: {
     name: 'page'
   },
-  layoutTransition:{
+  layoutTransition: {
     name: 'page'
   },
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {src: '@/plugins/vueparticles', ssr: false}
+    { src: '@/plugins/vueparticles', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -54,11 +54,15 @@ export default {
     'nuxt-svg-loader',
     'nuxt-buefy',
     '@nuxtjs/style-resources',
-    /*'@nuxtjs/sitemap'*/
+    '@nuxtjs/sitemap'
   ],
   buefy: {
     materialDesignIcons: false,
     defaultIconPack: 'fas'
+  },
+  sitemap: {
+    hostname: 'http://porphystruct.de',
+    gzip: true
   },
 
   styleResources: {
@@ -71,8 +75,12 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    
-   extend (config, ctx) {
+    filenames: {
+      app: ({ isDev }) => isDev ? '[name].js' : '[name].[contenthash].js',
+      chunk: ({ isDev }) => isDev ? '[name].js' : '[name].[contenthash].js',
+      css: ({ isDev }) => isDev ? '[name].css' : '[name].[contenthash].css',
+    },
+    extend(config, ctx) {
     }
   },
   router: {

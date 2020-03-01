@@ -1,27 +1,46 @@
-$family-sans-serif: 'Open Sans';
+$family-sans-serif: "Open Sans";
 @import "~bulma/sass/utilities/_all";
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
-.page-enter-active, .page-leave-active {
-    transition: all .25s ease-in-out;
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.25s ease-in-out;
 }
-.page-enter, .page-leave-to {
-    opacity: 0;
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
-body{transition: all .15s ease-in-out;}
-body.has-spaced-navbar-fixed-top{padding-top: 0 !important; }
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Titillium Web';
-  }
-.icon-90{height: 90px;}
+body {
+  transition: all 0.15s ease-in-out;
+}
+body.has-spaced-navbar-fixed-top {
+  padding-top: 0 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium Web";
+}
+.icon-90 {
+  height: 90px;
+}
 
-figure:not(.column){
-    margin: 1rem;
-    > figcaption{font-size: 0.7rem;}
+figure:not(.column) {
+  margin: 1rem;
+  > figcaption {
+    font-size: 0.7rem;
   }
-.small{font-size: 0.85rem;}
-.section{z-index: 2;}
-.hl-border {  
+}
+.small {
+  font-size: 0.85rem;
+}
+.section {
+  z-index: 2;
+}
+.hl-border {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -29,12 +48,18 @@ figure:not(.column){
   margin: auto;
   padding: 1rem;
   border-bottom: 1px solid rgba($primary, 0.2);
-  &:hover{
+  &:hover {
     font-size: 3.2rem;
   }
 }
 @media (max-width: 769px) {
-  .title.is-1{font-size: 3rem !important;}
-  .icon-90{height: 50px;}    
-  .hl-border{width: 15rem !important;}
+  .title.is-1 {
+    font-size: 3rem !important;
+  }
+  .icon-90 {
+    height: 50px;
+  }
+  .hl-border {
+    width: 15rem !important;
+  }
 }
