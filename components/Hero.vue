@@ -34,8 +34,8 @@
               >Download</b-button>
             </div>
           </div>
-          <div class="column">
-            <Laptop />
+          <div class="column laptop">
+            <img src="/img/laptop.png" alt="laptop mockup" />
             <!--conference badge-->
             <div class="tag badge-conference columns">
               <div class="column">
@@ -85,6 +85,7 @@ export default {
 </script>
 
 <style lang="scss">
+.laptop >img {max-width: 120%;}
 .particles {
   position: absolute;
   width: 100%;
@@ -145,8 +146,8 @@ export default {
   h1 {
     font-family: "Titillium Web";
   }
-  * {
-    font-weight: 400 !important;
+  p {
+    font-weight: 300 !important;
   }
   .title,
   .icon-90 {

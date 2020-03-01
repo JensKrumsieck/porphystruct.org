@@ -76,7 +76,7 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-strong{color: #fff;}
+.has-text-justified strong{color: #fff;}
 ol.ref-list {
   counter-reset: list;
   > li {

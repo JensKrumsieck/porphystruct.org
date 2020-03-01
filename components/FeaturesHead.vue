@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section hero is-primary">
     <div class="container">
       <div class="columns">
         <article class="media columns is-two-third is-vcentered">
@@ -11,7 +11,7 @@
           <div class="media-content">
             <h2 class="title is-3">PorphyStruct</h2>
             <h3 class="subtitle">Structural Analysis on Porphyrinoids and Corrinoids</h3>
-            <p class="has-text-justified">
+            <p class="has-text-justified p-r-10">
               The conformation of tetrapyrrolic macrocycles
               <strong>significantly</strong> influences the reactivity and the (photo)physical properties.
               To analyse the conformation by manually is possible, but costs a lot of time. Furthermore, a quantitative analysis is
@@ -29,26 +29,39 @@
           </div>
         </article>
         <figure class="column is-one-third">
-          <p class="image p-l-10">
+          <p class="image video">
             <video autoplay loop muted playsinline>
               <source src="/img/porphystruct.webm" type="video/webm" />
             </video>
           </p>
         </figure>
       </div>
+      <Features />
     </div>
   </section>
 </template>
 
 <script>
+import Features from "@/components/Features";
 import PorphyStruct from "@/assets/porphystructlogo.svg";
 export default {
-  components: { PorphyStruct }
+  components: {
+    PorphyStruct,
+    Features
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.section {
-  background: lighten(desaturate($primary, 5%), 70%);
+.media-content{overflow: hidden;}
+strong{color: #ffffff; font-weight: bold;}
+.video {
+  margin: 5px;
+  padding: 15px;
+  > video {
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+  }
 }
 </style>

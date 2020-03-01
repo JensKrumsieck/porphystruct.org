@@ -1,6 +1,5 @@
 <template>
-  <section class="section features">
-    <div class="container">
+  <div class="features">
     <h2 class="title is-3 has-text-centered has-text-weight-light hl-border">Highlights</h2>
     <nav class="columns">
       <div class="column feature has-text-centered">
@@ -9,9 +8,9 @@
           <strong>Displacement</strong> Diagrams
         </h4>
         <p class="subtitle small">
-            <strong>PorphyStruct</strong> offers the ability to create displacement diagrams
-            of almost any tetrapyrrolic macrocycle in a flash. This opens a
-            new window to gain insight into the conformation of the obtained substance.
+          <strong>PorphyStruct</strong> offers the ability to create displacement diagrams
+          of almost any tetrapyrrolic macrocycle in a flash. This opens a
+          new window to gain insight into the conformation of the obtained substance.
         </p>
       </div>
       <div class="column feature has-text-centered">
@@ -46,14 +45,17 @@
           With C# 8.0 and .NET Core 3.1,
           <b>PorphyStruct</b> is beeing developed on the latest technology base from Microsoft.
           The current development status and source code can be viewed on
-          <a href="https://github.com/JensKrumsieck/PorphyStruct" rel="noreferrer" target="_blank">
+          <a
+            href="https://github.com/JensKrumsieck/PorphyStruct"
+            rel="noreferrer"
+            target="_blank"
+          >
             <strong>GitHub</strong>
           </a>.
         </p>
       </div>
     </nav>
-    </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -72,14 +74,14 @@ export default {
 
 <style lang="scss">
 .features {
-  background: lighten(desaturate($primary, 5%), 70%);
+  .small{font-size: 0.9rem;}
   .column {
     p,
     h4 {
       > strong {
         font-weight: 600;
       }
-      font-weight: 400;
+      font-weight: 500;
       color: $primary;
     }
     z-index: 1;
@@ -90,37 +92,38 @@ export default {
     border-radius: 5px;
     overflow: hidden;
     &:hover {
-      background: $primary !important;
+      background: #fff !important;
       p,
       h4,
       strong {
-        color: #ffffff;
+        color: $primary;
       }
+      p{text-shadow: 0px 0px 1px rgba(0,0,0,0.25);}
       .feature-icon {
-        color: #ffffff;
+        color: $primary;
         path[fill="none"] {
-          stroke: #ffffff !important;
+          stroke: $primary !important;
         }
         path:not([fill="none"]),
         circle {
-          fill: #ffffff !important;
+          fill: $primary !important;
         }
       }
     }
     .feature-icon {
       position: relative;
-      color: $primary;
+      color: #fff;
       width: 65px;
       height: 65px;
       > g {
         opacity: 1;
       }
       path[fill="none"] {
-        stroke: $primary;
+        stroke: #fff;
       }
       path:not([fill="none"]),
       circle {
-        fill: $primary;
+        fill: #fff;
       }
     }
   }

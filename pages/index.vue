@@ -3,7 +3,6 @@
       <Hero/>
       <Scrollicon />
       <FeaturesHead />
-      <Features />
       <InDepthFeatures />
       <Story />
       <Team />
@@ -15,7 +14,6 @@
 import FeaturesHead from "@/components/FeaturesHead";
 import InDepthFeatures from "@/components/InDepthFeatures";
 import Hero from '@/components/Hero'
-import Features from '@/components/Features'
 import Story from '@/components/Story'
 import Scrollicon from '@/components/Scrollicon'
 import Platform from '@/components/Platform'
@@ -24,7 +22,6 @@ export default {
   name: 'Index',
   components: {
       Hero,
-      Features,
       FeaturesHead,
       InDepthFeatures,
       Story,
