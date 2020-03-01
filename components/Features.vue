@@ -1,22 +1,23 @@
 <template>
-  <section class="section features p-b-100">
-    <h2 class="title is-2 has-text-centered has-text-weight-light hl-border">Features</h2>
-    <nav class="columns m-t-50">
+  <section class="section features">
+    <div class="container">
+    <h2 class="title is-3 has-text-centered has-text-weight-light hl-border">Highlights</h2>
+    <nav class="columns">
       <div class="column feature has-text-centered">
         <Analysis class="feature-icon" />
         <h4 class="title is-4 is-spaced">
           <strong>Displacement</strong> Diagrams
         </h4>
-        <p class="subtitle is-6">
-          <strong>PorphyStruct</strong> offers the ability to create displacement diagrams
-          of almost any tetrapyrrolic macrocycle in a flash. This opens a
-          new window to gain insight into the conformation of the obtained substance.
+        <p class="subtitle small">
+            <strong>PorphyStruct</strong> offers the ability to create displacement diagrams
+            of almost any tetrapyrrolic macrocycle in a flash. This opens a
+            new window to gain insight into the conformation of the obtained substance.
         </p>
       </div>
       <div class="column feature has-text-centered">
         <Sim class="feature-icon" />
         <h4 class="title is-4 is-spaced">Simulation</h4>
-        <p class="subtitle is-6">
+        <p class="subtitle small">
           Using given standards for the lowest energy vibration modes the obtained
           conformation can be simulated. The simulation may provides information about
           <strong>reactivities</strong>,
@@ -28,7 +29,7 @@
         <h4 class="title is-4 is-spaced">
           <strong>Import</strong> &amp; Export
         </h4>
-        <p class="subtitle is-6">
+        <p class="subtitle small">
           Many file formats frequently used in chemistry can be used to read data (
           <strong>CIF</strong>,
           <strong>MOL2</strong>,
@@ -41,7 +42,7 @@
         <h4 class="title is-4 is-spaced">
           <strong>Latest</strong> Technology
         </h4>
-        <p class="subtitle is-6">
+        <p class="subtitle small">
           With C# 8.0 and .NET Core 3.1,
           <b>PorphyStruct</b> is beeing developed on the latest technology base from Microsoft.
           The current development status and source code can be viewed on
@@ -51,6 +52,7 @@
         </p>
       </div>
     </nav>
+    </div>
   </section>
 </template>
 
@@ -108,8 +110,8 @@ export default {
     .feature-icon {
       position: relative;
       color: $primary;
-      width: 90px;
-      height: 90px;
+      width: 65px;
+      height: 65px;
       > g {
         opacity: 1;
       }

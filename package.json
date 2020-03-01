@@ -11,11 +11,15 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@bazzite/nuxt-optimized-images": "^0.3.0",
     "@nuxtjs/sitemap": "^2.0.1",
     "@nuxtjs/style-resources": "^1.0.0",
     "buefy": "^0.8.12",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-svgo": "^7.1.0",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.23",
+    "nuxt-compress": "^1.1.0",
     "nuxt-svg-loader": "^1.2.0",
     "vue-particles": "^1.0.9"
   },

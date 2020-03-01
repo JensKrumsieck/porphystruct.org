@@ -8,7 +8,11 @@
           </a>
           <p class="small copyright has-text-light m-t-30">
             PorphyStruct by
-            <a href="http://jenskrumsieck.de" rel="noreferrer" class="has-text-light">Jens Krumsieck</a>
+            <a
+              href="http://jenskrumsieck.de"
+              rel="noreferrer"
+              class="has-text-light"
+            >Jens Krumsieck</a>
             <br />
             (2019 - {{new Date().getFullYear()}})
           </p>
@@ -87,6 +91,10 @@ export default {
 .footer-menu {
   .menu-list a {
     color: #fff;
+    .icon {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
   }
   .menu-list a:hover,
   .menu-list a.is-active {

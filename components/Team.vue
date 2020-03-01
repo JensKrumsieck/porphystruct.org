@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section team">
     <div class="container">
       <h2 class="title is-2 has-text-centered has-text-weight-light hl-border">Team</h2>
       <div class="columns">
@@ -80,3 +80,14 @@ export default {
   components: {}
 };
 </script>
+
+<style lang="scss" scoped>
+.team {
+  background: lighten(desaturate($primary, 5%), 70%);
+}
+.team .icon{
+  width: 2rem;
+  height: 2rem;
+  > i {font-size: 1.5rem;}
+}
+</style>

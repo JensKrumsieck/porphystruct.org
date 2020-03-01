@@ -1,3 +1,7 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 $family-sans-serif: "Open Sans";
 @import "~bulma/sass/utilities/_all";
 @import "~bulma";

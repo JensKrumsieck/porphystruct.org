@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-primary is-fullheight-with-navbar">
+  <section class="hero is-primary is-fullheight-with-navbar hero-top">
     <client-only>
       <vue-particles
         color="#e9edf2"
@@ -132,8 +132,12 @@ export default {
     width: 100%;
     height: 100%;
     left: 0;
-    top: 100px;
+    top: 0;
     z-index: 0;
+  }
+  &.hero-top::before{
+    left: 0;
+    top: 100px;
   }
   > .hero-body {
     z-index: 2;
@@ -142,7 +146,7 @@ export default {
     font-family: "Titillium Web";
   }
   * {
-    font-weight: 300 !important;
+    font-weight: 400 !important;
   }
   .title,
   .icon-90 {

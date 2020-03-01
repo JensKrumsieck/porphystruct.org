@@ -51,11 +51,24 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@bazzite/nuxt-optimized-images',
     'nuxt-svg-loader',
     'nuxt-buefy',
     '@nuxtjs/style-resources',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    "nuxt-compress",
   ],
+  optimizedImages: {
+    optimizeImages: true
+  },
+  "nuxt-compress": {
+    gzip: {
+      cache: true
+    },
+    brotli: {
+      threshold: 10240
+    }
+  },
   buefy: {
     materialDesignIcons: false,
     defaultIconPack: 'fas'
@@ -83,6 +96,13 @@ export default {
     extend(config, ctx) {
     }
   },
+
+render: {
+  static: {
+    maxAge: 1000 * 60 * 60 * 24 * 21
+  }
+},
+
   router: {
     linkExactActiveClass: 'is-active'
   }

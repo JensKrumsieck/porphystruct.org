@@ -6,7 +6,7 @@
       </b-navbar-item>
     </template>
     <template slot="end">
-      <b-navbar-item tag="nuxt-link" :to="{path: '/'}">Home</b-navbar-item>
+      <b-navbar-item tag="nuxt-link" :to="{path: '/'}">Home</b-navbar-item>      
       <div class="navbar-item has-dropdown is-hoverable">
         <nuxt-link :to="{path: '/support'}" class="navbar-link">Support</nuxt-link>
         <div class="navbar-dropdown">
