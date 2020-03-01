@@ -13,7 +13,7 @@
                         </p>
 
                         <div class="buttons is-right m-t-20">
-                            <b-button tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/releases/latest/" type="is-danger">Download</b-button>
+                            <b-button tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/releases/latest/" rel="noreferrer" type="is-danger">Download</b-button>
                         </div>
                    </div>
                    <div class="column">

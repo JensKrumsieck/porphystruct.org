@@ -19,14 +19,14 @@
                                         Chemistry - Programming 
                                     </p>
                                     <p>
-                                        <a href="https://orcid.org/0000-0001-6242-5846"><b-icon pack="fab" icon="orcid" /></a> 
-                                        <a href="https://www.researchgate.net/profile/Jens_Krumsieck"><b-icon pack="fab" icon="researchgate" /></a>
-                                        <a href="https://scholar.google.de/citations?user=_hJ9h1YAAAAJ"><b-icon pack="fab" icon="google" /></a>
-                                        <a href="https://github.com/JensKrumsieck"><b-icon pack="fab" icon="github" /></a>
-                                        <a href="https://www.xing.com/profile/Jens_Krumsieck/"><b-icon pack="fab" icon="xing" /></a>
-                                        <a href="https://twitter.com/jens_ation"><b-icon pack="fab" icon="twitter" /></a>
-                                        <a href="https://instagram.com/jens.ation"><b-icon pack="fab" icon="instagram" /></a>
-                                        <a href="https://www.facebook.com/jens.krumsieck"><b-icon pack="fab" icon="facebook" /></a>                               
+                                        <a href="https://orcid.org/0000-0001-6242-5846" rel="noreferrer"><b-icon pack="fab" icon="orcid" /></a> 
+                                        <a href="https://www.researchgate.net/profile/Jens_Krumsieck" rel="noreferrer"><b-icon pack="fab" icon="researchgate" /></a>
+                                        <a href="https://scholar.google.de/citations?user=_hJ9h1YAAAAJ" rel="noreferrer"><b-icon pack="fab" icon="google" /></a>
+                                        <a href="https://github.com/JensKrumsieck" rel="noreferrer"><b-icon pack="fab" icon="github" /></a>
+                                        <a href="https://www.xing.com/profile/Jens_Krumsieck/" rel="noreferrer"><b-icon pack="fab" icon="xing" /></a>
+                                        <a href="https://twitter.com/jens_ation" rel="noreferrer"><b-icon pack="fab" icon="twitter" /></a>
+                                        <a href="https://instagram.com/jens.ation" rel="noreferrer"><b-icon pack="fab" icon="instagram" /></a>
+                                        <a href="https://www.facebook.com/jens.krumsieck" rel="noreferrer"><b-icon pack="fab" icon="facebook" /></a>                               
                                     </p>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                                         Chemistry  
                                     </p>
                                     <p>    
-                                        <a href="https://orcid.org/0000-0001-6807-6579"><b-icon pack="fab" icon="orcid" /></a>                           
+                                        <a href="https://orcid.org/0000-0001-6807-6579" rel="noreferrer"><b-icon pack="fab" icon="orcid" /></a>                           
                                     </p>
                                 </div>
                             </div>

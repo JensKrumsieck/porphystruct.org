@@ -33,7 +33,7 @@
                 <h4 class="title is-4 is-spaced"><strong>Latest</strong> Technology</h4>
                 <p class="subtitle is-6">                    
 				With C# 8.0 and .NET Core 3.1, <b>PorphyStruct</b> is beeing developed on the latest technology base from Microsoft. 
-                The current development status and source code can be viewed on <a href="https://github.com/JensKrumsieck/PorphyStruct" target="_blank"><strong>GitHub</strong></a>.
+                The current development status and source code can be viewed on <a href="https://github.com/JensKrumsieck/PorphyStruct" rel="noreferrer" target="_blank"><strong>GitHub</strong></a>.
                 </p>
             </div>
         </nav>

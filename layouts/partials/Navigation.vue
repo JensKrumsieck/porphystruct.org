@@ -18,12 +18,12 @@
                         <b-navbar-item tag="nuxt-link" :to="{path: '/manual'}">
                             User Manual
                         </b-navbar-item>
-                        <b-navbar-item tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/issues">
+                        <b-navbar-item tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/issues" rel="noreferrer">
                             GitHub Issues
                         </b-navbar-item>
                     </div>
                 </div>
-                <b-navbar-item tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/releases/latest/" class="button is-danger">
+                <b-navbar-item tag="a" href="https://github.com/JensKrumsieck/PorphyStruct/releases/latest/"  rel="noreferrer" class="button is-danger">
                     Download
                 </b-navbar-item>
             </template>

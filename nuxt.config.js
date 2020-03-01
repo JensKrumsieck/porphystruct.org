@@ -13,7 +13,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.12.1/css/all.css'}
+      { rel: 'preconnect', href: 'https://use.fontawesome.com/'},
+      { rel: 'preload', href: 'https://use.fontawesome.com/releases/v5.12.1/css/all.css', as: 'style'},
+      { rel: 'preload', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Titillium+Web:200,300,300i,400,600&display=swap', as: 'style'},
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.12.1/css/all.css'},
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600|Titillium+Web:200,300,300i,400,600&display=swap'}
     ]
   },
   /*
@@ -49,8 +53,13 @@ export default {
   modules: [
     'nuxt-svg-loader',
     'nuxt-buefy',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    /*'@nuxtjs/sitemap'*/
   ],
+  buefy: {
+    materialDesignIcons: false,
+    defaultIconPack: 'fas'
+  },
 
   styleResources: {
     scss: ['assets/variables.scss']

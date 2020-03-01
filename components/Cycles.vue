@@ -17,7 +17,7 @@
                         <img src="@/assets/isopor.png" alt="" />
                         <figcaption>
                             <strong>Figure</strong>: Displacement diagram and analysis of a Zinc-<strong>Isoporphyrin</strong> 
-                            (CCDC: <a href="https://dx.doi.org/10.5517/ccdc.csd.cc1lks20" target="_blank">ORILUY</a>).<br/>
+                            (CCDC: <a href="https://dx.doi.org/10.5517/ccdc.csd.cc1lks20" rel="noreferrer" target="_blank">ORILUY</a>).<br/>
                             P. Schweyen, M. Hoffmann, J. Krumsieck, B. Wolfram, X. Xie, M. Bröring,
                             <em>Angew. Chem. Int. Ed.</em>, <strong>2016</strong>, <em>55</em>, 10118.
                         </figcaption>

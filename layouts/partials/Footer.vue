@@ -5,7 +5,7 @@
                 <div class="footer-logo logo column is-5">
                     <a href="/"><img src="/img/logo.svg" style="height: 34px;" alt="logo" /></a>
                     <p class="small copyright has-text-light m-t-30">
-                        PorphyStruct by <a href="http://jenskrumsieck.de" class="has-text-light">Jens Krumsieck</a> <br/>
+                        PorphyStruct by <a href="http://jenskrumsieck.de" rel="noreferrer" class="has-text-light">Jens Krumsieck</a> <br/>
                         (2019 - {{new Date().getFullYear()}})
                     </p>
                     <p class="small made has-text-light m-t-5">
@@ -22,7 +22,7 @@
                             <nuxt-link :to="{path: '/support'}"><b-icon pack="fa" icon="life-ring" /> Support</nuxt-link>
                         </li>
                         <li>
-                            <a href="https://github.com/JensKrumsieck/PorphyStruct/releases/latest/" target="_blank"><b-icon pack="fa" icon="cloud-download-alt" /> Download</a>
+                            <a href="https://github.com/JensKrumsieck/PorphyStruct/releases/latest/" rel="noreferrer" target="_blank"><b-icon pack="fa" icon="cloud-download-alt" /> Download</a>
                         </li>
                     </ul>
                 </div>

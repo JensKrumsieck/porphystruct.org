@@ -1,6 +1,6 @@
 <template>
-    <div id="Legal">
-        <Title title="Legal Disclosure" subtitle="Information in accordance with Section 5 TMG" />
+    <div id="pivacy">
+        <Title title="Privacy Policy"/>
        <section class="section container">
             <p>
                 Jens Krumsieck<br/>
@@ -11,7 +11,7 @@
             <p>
                 Telephone: 017630629281<br/>
                 E-Mail: j.krumsieck@tu-bs.de<br/>
-                Internet address: <a href="https://jenskrumsieck.github.io" rel="noreferrer">http://jenskrumsieck.github.io</a>
+                Internet address: <a href="https://jenskrumsieck.github.io" rel="noreferrer">https://jenskrumsieck.github.io</a>
             </p>
             <h4 class="title is-5 m-t-25">Disclaimer</h4>
             
