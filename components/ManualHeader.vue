@@ -7,7 +7,7 @@
                     <ul>
                         <li><nuxt-link :to="{path: '/'}">PorphyStruct</nuxt-link></li>
                         <li><nuxt-link :to="{path: '/manual'}">Manual</nuxt-link></li>
-                        <li class="is-active"><nuxt-link :to="{path: route}">{{title}}</nuxt-link></li>
+                        <li class="is-active"><nuxt-link :to="{path: $route.path}">{{title}}</nuxt-link></li>
                     </ul>
                     </nav>
                 </div>
