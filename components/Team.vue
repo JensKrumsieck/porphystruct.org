@@ -1,7 +1,7 @@
 <template>
   <section class="section team">
     <div class="container">
-      <h2 class="title is-2 has-text-centered has-text-weight-light hl-border">Team</h2>
+      <h2 class="title has-text-centered has-text-weight-light hl-border">Team</h2>
       <div class="columns">
         <div class="column">
           <article class="media">

@@ -36,21 +36,7 @@
           </div>
           <div class="column laptop">
             <img src="/img/laptop.png" alt="laptop mockup" />
-            <!--conference badge-->
-            <div class="tag badge-conference columns">
-              <div class="column">
-                <PorphyStruct class="icon-90" />
-              </div>
-              <div class="column">
-                <h4 class="title is-5">ICPP-11</h4>
-                <p class="is-size-7">
-                  June 28 - July 3 2020
-                  <br />International Conference on
-                  <br />Porphyrins and Phtalocyanines
-                  <br />in Buffalo, NY, USA
-                </p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -85,7 +71,6 @@ export default {
 </script>
 
 <style lang="scss">
-.laptop >img {max-width: 120%;}
 .particles {
   position: absolute;
   width: 100%;
@@ -125,6 +110,7 @@ export default {
 }
 .hero {
   position: relative;
+  h1,h2{font-weight: 300;}
   &:before {
     content: " ";
     opacity: 0.5;
@@ -142,10 +128,7 @@ export default {
   }
   > .hero-body {
     z-index: 2;
-  }
-  h1 {
-    font-family: "Titillium Web";
-  }
+  } 
   p {
     font-weight: 300 !important;
   }
@@ -154,17 +137,5 @@ export default {
     vertical-align: middle;
   }
 }
-.tag.badge-conference {
-  position: absolute;
-  color: darken(#ffffff, 35%);
-  right: 0;
-  top: 0;
-  height: auto;
-  border: 1px solid #ffffff;
-  text-align: center;
-  background: darken($primary, 10%) !important;
-  .title {
-    margin-bottom: 1rem !important;
-  }
-}
+
 </style>
