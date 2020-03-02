@@ -15,6 +15,9 @@
                 <h4 class="title is-4">Jens Krumsieck, M.Sc.</h4>
                 <p>Chemistry - Programming</p>
                 <p>
+                  <a href="http://jenskrumsieck.de" rel="noreferrer">                    
+                    <b-icon pack="fa" icon="home" />
+                  </a>
                   <a href="https://orcid.org/0000-0001-6242-5846" rel="noreferrer">
                     <b-icon pack="fab" icon="orcid" />
                   </a>
@@ -61,6 +64,9 @@
                 <h4 class="title is-4">Prof. Dr. Martin Bröring</h4>
                 <p>Chemistry</p>
                 <p>
+                  <a href="https://www.tu-braunschweig.de/iaac/personal/prof-dr-m-broering" rel="noreferrer">                    
+                    <b-icon pack="fa" icon="home" />
+                  </a>
                   <a href="https://orcid.org/0000-0001-6807-6579" rel="noreferrer">
                     <b-icon pack="fab" icon="orcid" />
                   </a>

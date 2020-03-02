@@ -44,15 +44,11 @@
           </p>
         </div>
         <div class="column footer-menu menu">
+          <p class="menu-label">Project</p>
           <ul class="menu-list">
             <li>
               <nuxt-link :to="{path: '/'}">
                 <b-icon pack="fa" icon="home" />Home
-              </nuxt-link>
-            </li>
-            <li>
-              <nuxt-link :to="{path: '/support'}">
-                <b-icon pack="fa" icon="life-ring" />Support
               </nuxt-link>
             </li>
             <li>
@@ -67,11 +63,43 @@
           </ul>
         </div>
         <div class="column footer-menu menu">
+          <p class="menu-label">Support</p>
+          <ul class="menu-list">            
+            <li>
+              <nuxt-link :to="{path: '/support'}">
+                <b-icon pack="fa" icon="life-ring" />Support
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link :to="{path: '/manual'}">
+                <b-icon pack="fa" icon="book" />Manual
+              </nuxt-link>
+            </li>
+            
+            <li>
+              <a href="https://github.com/JensKrumsieck/PorphyStruct/issues" rel="noreferrer">
+                <b-icon pack="fab" icon="github" />GitHub Issues
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="column footer-menu menu">
+          <p class="menu-label">Information</p>
           <ul class="menu-list">
             <li>
               <nuxt-link :to="{path: '/legal'}">
                 <b-icon pack="fa" icon="balance-scale" />Legal Notice
               </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link :to="{path: '/privacy'}">                
+                <b-icon pack="fa" icon="user-secret" />Privacy Policy
+              </nuxt-link>
+            </li>            
+            <li>
+              <a href="http://jenskrumsieck.de" rel="noreferrer">             
+                <b-icon pack="fa" icon="user" /> Jens Krumsieck
+              </a>
             </li>
           </ul>
         </div>

@@ -9,11 +9,16 @@
       </p>
       <h4 class="title is-4 m-t-25">Contact Information</h4>
       <p>
-        Telephone: 017630629281
-        <br />E-Mail: j.krumsieck@tu-bs.de
+        Telephone: 017630629281 (no telephone support)
+        <br />E-Mail: info@porphystruct.de
         <br />Internet address:
-        <a href="https://jenskrumsieck.github.io" rel="noreferrer">http://jenskrumsieck.github.io</a>
+        <a href="https://jenskrumsieck.de" rel="noreferrer">http://jenskrumsieck.de</a>
       </p>
+      <h4 class="title is-5 m-t-25">Responsible for journalistically and editorially designed contents:</h4>
+      Jens Krumsieck
+      <br/>Celler Str. 108
+      <br/>38114 Braunschweig
+      <br/>E-Mail: jens@porphystruct.de <small class="small">(preferred languages: german, english)</small>
       <h4 class="title is-5 m-t-25">Disclaimer</h4>
 
       <h5 class="title is-6">Accountability for content</h5>

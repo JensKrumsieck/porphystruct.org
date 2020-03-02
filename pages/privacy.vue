@@ -1,274 +1,118 @@
 <template>
   <div id="pivacy">
-    <Title title="Privacy Policy" />
+    <Title title="Privacy Policy" subtitle="Last updated March 1st, 2020" />
     <section class="section container">
-      <h4 class="title is-4">Owner and Data Controller</h4>
+      <h2>Privacy Policy</h2>
+      <p>Personal data (usually referred to just as "data" below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.</p>
+      <p>Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the "GDPR"), "processing" refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.</p>
+      <p>The following privacy policy is intended to inform you in particular about the type, scope, purpose, duration, and legal basis for the processing of such data either under our own control or in conjunction with others. We also inform you below about the third-party components we use to optimize our website and improve the user experience which may result in said third parties also processing data they collect and control.</p>
+      <p>Our privacy policy is structured as follows:</p>
       <p>
-        Jens Krumsieck
+        I. Information about us as controllers of your data
+        <br />II. The rights of users and data subjects
+        <br />III. Information about the data processing
+      </p>
+      <h3>I. Information about us as controllers of your data</h3>
+      <p>The party responsible for this website (the "controller") for purposes of data protection law is:</p>
+      <p>
+        <strong>Jens Krumsieck</strong>
         <br />Celler Str. 108
         <br />38114 Braunschweig
-        <br />email: info@porphystruct.de
+        <br />Germany
       </p>
-      <h4 class="title is-4 m-t-50">Types of Data collected</h4>
       <p>
-        Among the types of Personal Data that this Application collects, by itself or through third parties,
-        there are: Cookies; Usage Data.
-        <br />Complete details on each type of Personal Data collected are provided in the dedicated sections
-        of this privacy policy or by specific explanation texts displayed prior to the Data collection.
-        <br />Personal Data may be freely provided by the User, or, in case of Usage Data, collected automatically
-        when using this Application.
-        <br />Unless specified otherwise, all Data requested by this Application is mandatory and failure to
-        provide this Data may make it impossible for this Application to provide its services.
-        In cases where this Application specifically states that some Data is not mandatory,
-        Users are free not to communicate this Data without consequences to the availability or the
-        functioning of the Service. Users who are uncertain about which Personal Data is mandatory
-        are welcome to contact the Owner. Any use of Cookies – or of other tracking tools – by this Application
-        or by the owners of third-party services used by this Application serves the purpose of providing the
-        Service required by the User, in addition to any other purposes described in the present document
-        and in the Cookie Policy, if available.
+        Telephone: 017630629281 (no telephone support)
         <br />
-        <br />Users are responsible for any third-party Personal Data obtained, published or shared through this
-        Application and confirm that they have the third party's consent to provide the Data to the Owner.
+        <br />Email: info@porphystruct.de
       </p>
-      <h4 class="title is-4 m-t-50">Mode and place of processing the Data</h4>
-      <h5 class="title is-5">Methods of processing</h5>
-      <p>
-        The Owner takes appropriate security measures to prevent unauthorized access, disclosure,
-        modification, or unauthorized destruction of the Data. The Data processing is carried out
-        using computers and/or IT enabled tools, following organizational procedures and modes
-        strictly related to the purposes indicated. In addition to the Owner, in some cases,
-        the Data may be accessible to certain types of persons in charge, involved with the operation
-        of this Application (administration, sales, marketing, legal, system administration) or
-        external parties (such as third-party technical service providers, mail carriers, hosting
-        providers, IT companies, communications agencies) appointed, if necessary, as Data Processors
-        by the Owner. The updated list of these parties may be requested from the Owner at any time.
-      </p>
-      <h5 class="title is-5 m-t-25">Legal basis of processing</h5>
-      <p>The Owner may process Personal Data relating to Users if one of the following applies:</p>
-      <ol type="i" class="m-t-25">
-        <li>
-          Users have given their consent for one or more specific purposes. Note: Under some legislations
-          the Owner may be allowed to process Personal Data until the User objects to such processing (“opt-out”),
-          without having to rely on consent or any other of the following legal bases. This, however,
-          does not apply, whenever the processing of Personal Data is subject to European data protection law;
-        </li>
-        <li>
-          provision of Data is necessary for the performance of an agreement with the User and/or for any pre-contractual
-          obligations thereof;
-        </li>
-        <li>processing is necessary for compliance with a legal obligation to which the Owner is subject;</li>
-        <li>
-          processing is related to a task that is carried out in the public interest or in the exercise of
-          official authority vested in the Owner;
-        </li>
-        <li>processing is necessary for the purposes of the legitimate interests pursued by the Owner or by a third party.</li>
-      </ol>
-      <p class="m-t-25">
-        In any case, the Owner will gladly help to clarify the specific legal basis that applies to the processing,
-        and in particular whether the provision of Personal Data is a statutory or contractual requirement, or a
-        requirement necessary to enter into a contract.
-      </p>
-      <h5 class="title is-5 m-t-25">Place</h5>
-      <p>
-        The Data is processed at the Owner's operating offices and in any other places where the parties involved
-        in the processing are located. Depending on the User's location, data transfers may involve transferring
-        the User's Data to a country other than their own. To find out more about the place of processing
-        of such transferred Data, Users can check the section containing details about the processing of
-        Personal Data. Users are also entitled to learn about the legal basis of Data transfers to a country
-        outside the European Union or to any international organization governed by public international
-        law or set up by two or more countries, such as the UN, and about the security measures taken by the
-        Owner to safeguard their Data. If any such transfer takes place, Users can find out more by checking
-        the relevant sections of this document or inquire with the Owner using the information provided in
-        the contact section.
-      </p>
-      <h5 class="title is-5 m-t-25">Retention time</h5>
-      <p>Personal Data shall be processed and stored for as long as required by the purpose they have been collected for.</p>
-      <ol type="i" class="m-t-25">
-        <li>
-          Personal Data collected for purposes related to the performance of a contract between the Owner and the
-          User shall be retained until such contract has been fully performed.
-        </li>
-        <li>
-          Personal Data collected for the purposes of the Owner’s legitimate interests shall be retained as long as
-          needed to fulfill such purposes. Users may find specific information regarding the legitimate interests
-          pursued by the Owner within the relevant sections of this document or by contacting the Owner.
-        </li>
-      </ol>
-      <p class="m-t-25">
-        The Owner may be allowed to retain Personal Data for a longer period whenever the User
-        has given consent to such processing, as long as such consent is not withdrawn. Furthermore,
-        the Owner may be obliged to retain Personal Data for a longer period whenever required to do
-        so for the performance of a legal obligation or upon order of an authority. Once the retention
-        period expires, Personal Data shall be deleted. Therefore, the right to access, the right to erasure,
-        the right to rectification and the right to data portability cannot be enforced after expiration
-        of the retention period.
-      </p>
-      <h4 class="title is-4 m-t-50">The purposes of processing</h4>
-      <p>
-        The Data concerning the User is collected to allow the Owner to provide its Service, comply with its legal
-        obligations, respond to enforcement requests, protect its rights and interests (or those of its Users or
-        third parties), detect any malicious or fraudulent activity, as well as the following: Analytics and
-        Displaying content from external platforms.
-        For specific information about the Personal Data used for each purpose,
-        the User may refer to the section “Detailed information on the processing of Personal Data”.
-      </p>
-      <h4 class="title is-4 m-t-50">Detailed information on the processing of Personal Data</h4>
-      <p>Personal Data is collected for the following purposes and using the following services:</p>
-      <div class="columns m-t-20">
-        <div class="column">
-          <h4 class="title is-5">Analytics</h4>
-          <p>
-            The services contained in this section enable the Owner to monitor and analyze
-            web traffic and can be used to keep track of User behavior.
-            <br />
-            <br />
-            <strong>Matomo (this Application)</strong>
-            <br />Matomo is an analytics software used by this Application to analyze data directly
-            without the help of third parties.
-            <br />Personal Data processed: Cookies; Usage Data.
-            You may have a look at their
-            <a
-              href="https://matomo.org/"
-            >Website</a>.
-          </p>
-        </div>
-        <div class="column">
-          <h4 class="title is-5">Displaying content from external platforms</h4>
-          <p>
-            This type of service allows you to view content hosted on external platforms directly from
-            the pages of this Application and interact with them. This type of service might still collect
-            web traffic data for the pages where the service is installed, even when Users do not use it.
-            <br />
-            <br />
-            <strong>Google Fonts (Google LLC)</strong>
-            <br />Google Fonts is a typeface visualization service provided by Google LLC that allows
-            this Application to incorporate content of this kind on its pages.
-            <br />Personal Data processed: Usage Data; various types of Data as specified in the privacy
-            policy of the service.
-            <br />Place of processing: United States –
-            <a
-              href="https://policies.google.com/privacy"
-            >Privacy</a>
-            . Privacy Shield participant.
-          </p>
-        </div>
-      </div>
+      <p>The controller's data protection officer is:</p>
+      <p>Jens Krumsieck</p>
 
-      <h4 class="title is-4 m-t-50">The rights of Users</h4>
-      <p>
-        Users may exercise certain rights regarding their Data processed by the Owner. In particular,
-        Users have the right to do the following:
-      </p>
+      <h3>II. The rights of users and data subjects</h3>
+      <p>With regard to the data processing to be described in more detail below, users and data subjects have the right</p>
       <ol type="i">
-        <li>
-          <strong>Withdraw their consent at any time.</strong> Users have the right to withdraw consent where they have
-          previously given their consent to the processing of their Personal Data.
-        </li>
-        <li>
-          <strong>Object to processing of their Data.</strong>Users have the right to object to the processing
-          of their Data if the processing is carried out on a legal basis other than consent.
-          Further details are provided in the dedicated section below.
-        </li>
-        <li>
-          <strong>Access their Data.</strong> Users have the right to learn if Data is being processed by the Owner, obtain
-          disclosure regarding certain aspects of the processing and obtain a copy of the Data undergoing processing.
-        </li>
-        <li>
-          <strong>Verify and seek rectification.</strong> Users have the right to verify the accuracy of
-          their Data and ask for it to be updated or corrected.
-        </li>
-        <li>
-          <strong>Restrict the processing of their Data.</strong> Users have the right, under certain
-          circumstances, to restrict the processing of their Data. In this case, the Owner will not
-          process their Data for any purpose other than storing it.
-        </li>
-        <li>
-          <strong>Have their Personal Data deleted or otherwise removed.</strong>Users have the right, under certain circumstances,
-          to obtain the erasure of their Data from the Owner.
-        </li>
-        <li>
-          <strong>Receive their Data and have it transferred to another controller.</strong> Users have the right to
-          receive their Data in a structured, commonly used and machine readable format and, if technically
-          feasible, to have it transmitted to another controller without any hindrance. This provision
-          is applicable provided that the Data is processed by automated means and that the processing is
-          based on the User's consent, on a contract which the User is part of or on pre-contractual obligations thereof.
-        </li>
-        <li>
-          <strong>Lodge a complaint.</strong> Users have the right to bring a claim before their competent data protection authority.
-        </li>
+        <li>to confirmation of whether data concerning them is being processed, information about the data being processed, further information about the nature of the data processing, and copies of the data (cf. also Art. 15 GDPR);</li>
+        <li>to correct or complete incorrect or incomplete data (cf. also Art. 16 GDPR);</li>
+        <li>to the immediate deletion of data concerning them (cf. also Art. 17 DSGVO), or, alternatively, if further processing is necessary as stipulated in Art. 17 Para. 3 GDPR, to restrict said processing per Art. 18 GDPR;</li>
+        <li>to receive copies of the data concerning them and/or provided by them and to have the same transmitted to other providers/controllers (cf. also Art. 20 GDPR);</li>
+        <li>to file complaints with the supervisory authority if they believe that data concerning them is being processed by the controller in breach of data protection provisions (see also Art. 77 GDPR).</li>
       </ol>
-      <h5 class="title is-5 m-t-25">Details about the right to object to processing</h5>
+      <p>In addition, the controller is obliged to inform all recipients to whom it discloses data of any such corrections, deletions, or restrictions placed on processing the same per Art. 16, 17 Para. 1, 18 GDPR. However, this obligation does not apply if such notification is impossible or involves a disproportionate effort. Nevertheless, users have a right to information about these recipients.</p>
       <p>
-        Where Personal Data is processed for a public interest, in the exercise of an official authority
-        vested in the Owner or for the purposes of the legitimate interests pursued by the Owner, Users
-        may object to such processing by providing a ground related to their particular situation to
-        justify the objection. Users must know that, however, should their Personal Data be processed for
-        direct marketing purposes, they can object to that processing at any time without providing any
-        justification. To learn, whether the Owner is processing Personal Data for direct marketing purposes,
-        Users may refer to the relevant sections of this document.
+        <strong>Likewise, under Art. 21 GDPR, users and data subjects have the right to object to the controller's future processing of their data pursuant to Art. 6 Para. 1 lit. f) GDPR. In particular, an objection to data processing for the purpose of direct advertising is permissible.</strong>
       </p>
-      <h5 class="title is-5 m-t-25">How to exercise these rights</h5>
-      <p>
-        Any requests to exercise User rights can be directed to the Owner through the contact details
-        provided in this document. These requests can be exercised free of charge and will be addressed
-        by the Owner as early as possible and always within one month.
-      </p>
-      <h4 class="title is-4 m-t-50">Additional information about Data collection and processing</h4>
-      <h5 class="title is-5">Legal action</h5>
-      <p>
-        The User's Personal Data may be used for legal purposes by the Owner in Court or in the stages
-        leading to possible legal action arising from improper use of this Application or the related Services.
-        The User declares to be aware that the Owner may be required to reveal personal data upon request of public authorities.
-      </p>
-      <h5 class="title is-5 m-t-25">Additional information about User's Personal Data</h5>
-      <p>In addition to the information contained in this privacy policy, this Application may provide the User with additional and contextual information concerning particular Services or the collection and processing of Personal Data upon request.</p>
-      <h5 class="title is-5 m-t-25">System logs and maintenance</h5>
-      <p>For operation and maintenance purposes, this Application and any third-party services may collect files that record interaction with this Application (System logs) use other Personal Data (such as the IP Address) for this purpose</p>
-      <h5 class="title is-5 m-t-25">Information not contained in this policy</h5>
-      <p>More details concerning the collection or processing of Personal Data may be requested from the Owner at any time. Please see the contact information at the beginning of this document.</p>
-      <h5 class="title is-5 m-t-25">How “Do Not Track” requests are handled</h5>
-      <p>
-        This Application does not support “Do Not Track” requests.
-        To determine whether any of the third-party services it uses honor the “Do Not Track” requests, please read their privacy policies.
-      </p>
-      <h5 class="title is-5 m-t-25">Changes to this privacy policy</h5>
-      <p>
-        The Owner reserves the right to make changes to this privacy policy at any time by notifying its Users on this page and possibly within this Application and/or - as far as technically and legally feasible - sending a notice to Users via any contact information available to the Owner. It is strongly recommended to check this page often, referring to the date of the last modification listed at the bottom.
-        Should the changes affect processing activities performed on the basis of the User’s consent, the Owner shall collect new consent from the User, where required.
-      </p>
+      <h3>III. Information about the data processing</h3>
+      <p>Your data processed when using our website will be deleted or blocked as soon as the purpose for its storage ceases to apply, provided the deletion of the same is not in breach of any statutory storage obligations or unless otherwise stipulated below.</p>
 
-      <h4 class="title is-4 m-t-50">Definitions and legal references</h4>
-      <h5 class="title is-5">Personal Data (or Data)</h5><p>
-Any information that directly, indirectly, or in connection with other information — including a personal identification number — allows for the identification or identifiability of a natural person.
-</p><h5 class="title is-5 m-t-25">
-Usage Data</h5><p>
-Information collected automatically through this Application (or third-party services employed in this Application), which can include: the IP addresses or domain names of the computers utilized by the Users who use this Application, the URI addresses (Uniform Resource Identifier), the time of the request, the method utilized to submit the request to the server, the size of the file received in response, the numerical code indicating the status of the server's answer (successful outcome, error, etc.), the country of origin, the features of the browser and the operating system utilized by the User, the various time details per visit (e.g., the time spent on each page within the Application) and the details about the path followed within the Application with special reference to the sequence of pages visited, and other parameters about the device operating system and/or the User's IT environment.
-</p>
-<h5 class="title is-5 m-t-25">User</h5><p>
-The individual using this Application who, unless otherwise specified, coincides with the Data Subject.</p>
+      <h4>Server data</h4>
+      <p>For technical reasons, the following data sent by your internet browser to us or to our server provider will be collected, especially to ensure a secure and stable website: These server log files record the type and version of your browser, operating system, the website from which you came (referrer URL), the webpages on our site visited, the date and time of your visit, as well as the IP address from which you visited our site.</p>
+      <p>The data thus collected will be temporarily stored, but not in association with any other of your data.</p>
+      <p>The basis for this storage is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the improvement, stability, functionality, and security of our website.</p>
+      <p>The data will be deleted within no more than seven days, unless continued storage is required for evidentiary purposes. In which case, all or part of the data will be excluded from deletion until the investigation of the relevant incident is finally resolved.</p>
 
-<h5 class="title is-5 m-t-25">Data Subject</h5><p>
-The natural person to whom the Personal Data refers.</p>
+      <h4>User posts, comments, and ratings</h4>
+      <p>We offer you the opportunity to post questions, answers, opinions, and ratings on our website, hereinafter referred to jointly as "posts." If you make use of this opportunity, we will process and publish your post, the date and time you submitted it, and any pseudonym you may have used.</p>
+      <p>The legal basis for this is Art. 6 Para. 1 lit. a) GDPR. You may revoke your prior consent under Art. 7 Para. 3 GDPR with future effect. All you have to do is inform us that you are revoking your consent.</p>
+      <p>In addition, we will also process your IP address and email address. The IP address is processed because we might have a legitimate interest in taking or supporting further action if your post infringes the rights of third parties and/or is otherwise unlawful.</p>
+      <p>In this case, the legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in any legal defense we may have to mount.</p>
 
-<h5 class="title is-5 m-t-25">Data Processor (or Data Supervisor)</h5><p>
-The natural or legal person, public authority, agency or other body which processes Personal Data on behalf of the Controller, as described in this privacy policy.
-</p>
-<h5 class="title is-5 m-t-25">Data Controller (or Owner)</h5><p>
-The natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of Personal Data, including the security measures concerning the operation and use of this Application. The Data Controller, unless otherwise specified, is the Owner of this Application.
-</p>
-<h5 class="title is-5 m-t-25">This Application</h5><p>
-The means by which the Personal Data of the User is collected and processed.
-</p>
-<h5 class="title is-5 m-t-25">Service</h5><p>
-The service provided by this Application as described in the relative terms (if available) and on this site/application.
-</p>
-<h5 class="title is-5 m-t-25">European Union (or EU)</h5><p>
-Unless otherwise specified, all references made within this document to the European Union include all current member states to the European Union and the European Economic Area.
-</p>
-<h5 class="title is-5 m-t-25">Cookies</h5><p>
-Small sets of data stored in the User's device.
-</p>
-<p><small>Privacy Policy generated with <a href="https://www.iubenda.com/">Iubenda</a></small></p>
+      <h4>Matomo (formerly: PIWIK)</h4>
+      <p>Our website uses Matomo (formerly: PIWIK). This is open-source software with which we can analyze the use of our site. Data such as your IP address, the pages you visit, the website from which you came (referrer URL), the duration of your visit, and the frequency of your visits is processed.</p>
+      <p>Matomo stores a cookie on your device via your browser in order to collect this data. This cookie is valid for one week.</p>
+      <p>The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the analysis and optimization of our website.</p>
+      <p>We use Matomo with the "Automatically Anonymize Visitor IPs" function. This anonymization function truncates your IP address by two bytes so that it is impossible to assign it to you or to the internet connection you are using.</p>
+      <p>If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above.</p>
+      <p>In addition, you have the option of terminating the analysis of your usage behavior by opting out. By confirming the link</p>
+      <p>
+        <span style="color: #ff0000;">[HERE ADD INSERT IFRAME FROM MATOMO WITH OPT-OUT-COOKIE]</span>
+      </p>
+      <p>a cookie is stored on your device via your browser to prevent any further analysis. Please note, however, that you must click the above link again if you delete the cookies stored on your end device.</p>
+      <h4><b-icon pack="fab" icon="font-awesome" size="is-small"/> Font Awesome</h4>
+      <p>Our Website uses FontAwesome to display icons like this <b-icon pack="far" icon="handshake" size="is-small"/>. - This is a service provided by FortAwesome Cambridge MA. Their Administrative Contact is: David Gandy, 1558 Massachusetts Ave, Cambridge, MA, US. </p>
+      <p>Font Awesome offers detailed information about their privacy policy when using their Content Delivery Network at <a href="https://fontawesome.com/privacy#cdns">https://fontawesome.com/privacy#cdns</a>.</p>
+
+      <h4>Google Fonts</h4>
+      <p>Our website uses Google Fonts to display external fonts. This is a service provided by <b-icon pack="fab" icon="google" size="is-small"/> Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland (hereinafter: Google).</p>
+      <p>Through certification according to the EU-US Privacy Shield</p>
+      <p>
+        <a
+          href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active"
+          target="_blank"
+          rel="noopener"
+        >https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active</a>
+      </p>
+      <p>Google guarantees that it will follow the EU's data protection regulations when processing data in the United States.</p>
+      <p>To enable the display of certain fonts on our website, a connection to the Google server in the USA is established whenever our website is accessed.</p>
+      <p>The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest lies in the optimization and economic operation of our site.</p>
+      <p>When you access our site, a connection to Google is established from which Google can identify the site from which your request has been sent and to which IP address the fonts are being transmitted for display.</p>
+      <p><b-icon pack="fab" icon="google" size="is-small"/> Google offers detailed information at</p>
+      <p>
+        <a
+          href="https://adssettings.google.com/authenticated"
+          target="_blank"
+          rel="noopener"
+        >https://adssettings.google.com/authenticated</a>
+      </p>
+      <p>
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          rel="noopener"
+        >https://policies.google.com/privacy</a>
+      </p>
+      <p>in particular on options for preventing the use of data.</p>
+
+      <p>
+        <a
+          href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html"
+          target="_blank"
+          rel="noopener"
+        >Model Data Protection Statement</a> for
+        <a
+          href="https://www.ratgeberrecht.eu/"
+          target="_blank"
+        >Anwaltskanzlei Weiß &amp; Partner</a>
+      </p>
     </section>
   </div>
 </template>
@@ -276,9 +120,37 @@ Small sets of data stored in the User's device.
 <script>
 import Title from "@/components/Title";
 export default {
-  name: "legal",
   components: {
     Title
   }
 };
 </script>
+
+<style lang="scss" scoped>
+li {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+p {
+  text-align: justify;
+  margin-top: 0.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+</style>
