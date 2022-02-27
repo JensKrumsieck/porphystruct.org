@@ -1,5 +1,5 @@
 <script>
-	import SimpleIcon from '$lib/components/SimpleIcon.svelte';
+	import SimpleIcon from '$lib/components/common/SimpleIcon.svelte';
 	export let img = '';
 	export let url = '';
 	export let name = '';

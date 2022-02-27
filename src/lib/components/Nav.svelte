@@ -1,5 +1,5 @@
 <script>
-	import Button from './Button.svelte';
+	import Button from '$lib/components/common/Button.svelte';
 	import Windows from 'svelte-material-icons/Windows.svelte';
 	let open = false;
 </script>
@@ -59,7 +59,7 @@
 		class="font-normal text-lg md:flex md:w-auto w-full md:order-1  justify-between items-center"
 		id="main-menu"
 	>
-		<ul class="flex md:flex-row flex-col">
+		<ul class="flex md:flex-row flex-col navbar">
 			<li class="p-4">Docs</li>
 			<li class="p-4">
 				<a href="https://github.com/jenskrumsieck/porphystruct/issues">Report Bug</a>

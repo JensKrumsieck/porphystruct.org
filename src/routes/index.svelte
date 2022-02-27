@@ -16,10 +16,10 @@
 	import Save from 'svelte-material-icons/ContentSave.svelte';
 	import Windows from 'svelte-material-icons/Windows.svelte';
 
-	import Button from '../lib/components/Button.svelte';
-	import Badge from '../lib/components/Badge.svelte';
-	import Wrapper from '../lib/components/Wrapper.svelte';
-	import H3 from '../lib/components/H3.svelte';
+	import Button from '$lib/components/common/Button.svelte';
+	import Badge from '$lib/components/common/Badge.svelte';
+	import Wrapper from '$lib/components/common/Wrapper.svelte';
+	import H3 from '$lib/components/common/H3.svelte';
 	import Circles from '../lib/components/circles.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
 

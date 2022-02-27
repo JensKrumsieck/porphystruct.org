@@ -1,7 +1,7 @@
 <script>
 // @ts-ignore
 import jens from '../../../static/jens.jpg?w=100;200;300;400;500;&format=webp&srcset';
-import ContactCard from "./ContactCard.svelte";
+import ContactCard from "./common/ContactCard.svelte";
 
 let img = `<img srcset=${jens} alt="Jens" loading="lazy" />`;
 let url = 'https://jenskrumsieck.de';

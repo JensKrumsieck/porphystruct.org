@@ -1,6 +1,6 @@
 <script>
-	import H3 from '$lib/components/H3.svelte';
-	import Wrapper from '$lib/components/Wrapper.svelte';    
+	import H3 from '$lib/components/common/H3.svelte';
+	import Wrapper from '$lib/components/common/Wrapper.svelte';    
 	import SEO from '$lib/components/SEO/index.svelte'
 </script>
 <SEO slug="imprint" title="Legal Notice"  />

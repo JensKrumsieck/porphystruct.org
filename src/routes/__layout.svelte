@@ -1,13 +1,13 @@
 <script>
-	import Button from '../lib/components/Button.svelte';
+	import Button from '$lib/components/common/Button.svelte';
 	import Windows from 'svelte-material-icons/Windows.svelte';
 	import Top from 'svelte-material-icons/ArrowUpThick.svelte';
 	import '@fontsource/source-sans-pro';
 	import '../app.css';
 	import GdprConsent from '$lib/components/GdprConsent.svelte';
-	import Wrapper from '$lib/components/Wrapper.svelte';
-	import H3 from '$lib/components/H3.svelte';
-	import Badge from '$lib/components/Badge.svelte';
+	import Wrapper from '$lib/components/common/Wrapper.svelte';
+	import H3 from '$lib/components/common/H3.svelte';
+	import Badge from '$lib/components/common/Badge.svelte';
 	import ContactJens from '$lib/components/ContactJens.svelte';
 	import ContactMartin from '$lib/components/ContactMartin.svelte';
 	import Nav from '$lib/components/Nav.svelte';
