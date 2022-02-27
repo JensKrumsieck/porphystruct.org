@@ -1,6 +1,7 @@
 <script>
 	import Button from '$lib/components/common/Button.svelte';
 	import Windows from 'svelte-material-icons/Windows.svelte';
+import NavLink from './NavLink.svelte';
 	let open = false;
 </script>
 
@@ -61,9 +62,7 @@
 	>
 		<ul class="flex md:flex-row flex-col navbar">
 			<li class="p-4">Docs</li>
-			<li class="p-4">
-				<a href="https://github.com/jenskrumsieck/porphystruct/issues">Report Bug</a>
-			</li>
+			<NavLink href="https://github.com/jenskrumsieck/porphystruct/issues">Report Bug</NavLink>
 		</ul>
 	</div>
 </nav>
