@@ -1,7 +1,7 @@
 <script>
 	import Button from '../lib/components/Button.svelte';
 	import Windows from 'svelte-material-icons/Windows.svelte';
-	import Top from 'svelte-material-icons/ArrowUpThick.svelte'
+	import Top from 'svelte-material-icons/ArrowUpThick.svelte';
 	import '@fontsource/source-sans-pro';
 	import '../app.css';
 	import GdprConsent from '$lib/components/GdprConsent.svelte';
@@ -10,75 +10,18 @@
 	import Badge from '$lib/components/Badge.svelte';
 	import ContactJens from '$lib/components/ContactJens.svelte';
 	import ContactMartin from '$lib/components/ContactMartin.svelte';
-	let open = false;
+	import Nav from '$lib/components/Nav.svelte';
 </script>
 
 <GdprConsent />
-<a href="#top" class="z-[9998] rounded-full flex flex-col fixed bg-blue p-2 shadow-xl bottom-2 right-12 max-w-lg text-white">
-	<Top size="1.25rem"/>
+<a
+	href="#top"
+	class="z-[9998] rounded-full flex flex-col fixed bg-blue p-2 shadow-xl bottom-2 right-12 max-w-lg text-white"
+>
+	<Top size="1.25rem" />
 </a>
 <header class="bg-off-white z-50 relative" id="top">
-	<nav class="container mx-auto justify-between px-4 flex flex-wrap ">
-		<div class="logo py-3">
-			<a class="flex" href="/">
-				<img src="ps_logo.svg" alt="Logo" width="42px" />
-				<span class="md:flex hidden font-bold text-[1.75rem] ml-2 self-center">PorphyStruct</span>
-			</a>
-		</div>
-		<div class="flex md:order-2 ">
-			<Button
-				href="https://github.com/jenskrumsieck/porphystruct/releases/latest"
-				_class="self-center"
-			>
-				<Windows size="1.5rem" />
-				<span>Download</span>
-			</Button>
-			<button
-				data-collapse-toggle="main-menu"
-				type="button"
-				class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-				aria-controls="main-menu"
-				aria-expanded="false"
-				on:click={() => (open = !open)}
-			>
-				<span class="sr-only">Open main menu</span>
-				<svg
-					class:hidden={open}
-					class="w-6 h-6"
-					fill="currentColor"
-					viewBox="0 0 20 20"
-					xmlns="http://www.w3.org/2000/svg"
-					><path
-						fill-rule="evenodd"
-						d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-						clip-rule="evenodd"
-					/></svg
-				>
-				<svg
-					class:hidden={!open}
-					class="w-6 h-6"
-					fill="currentColor"
-					viewBox="0 0 20 20"
-					xmlns="http://www.w3.org/2000/svg"
-					><path
-						fill-rule="evenodd"
-						d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-						clip-rule="evenodd"
-					/></svg
-				>
-			</button>
-		</div>
-		<div
-			class:hidden={!open}
-			class="font-normal text-lg md:flex md:w-auto w-full md:order-1  justify-between items-center"
-			id="main-menu"
-		>
-			<ul class="flex md:flex-row flex-col">
-				<li class="p-4">Docs</li>
-				<li class="p-4"><a href="https://github.com/jenskrumsieck/porphystruct/issues">Report Bug</a></li>
-			</ul>
-		</div>
-	</nav>
+	<Nav />
 </header>
 
 <main>
