@@ -3,7 +3,8 @@ import { browser } from "$app/env"
 
 export const gdprSettings = writable(browser && JSON.parse(localStorage.getItem("gdprSettings")) || {
     show: true,
-    analytics: false
+    analytics: false,
+    youtube: false
 })
 
 gdprSettings.subscribe((val) => {

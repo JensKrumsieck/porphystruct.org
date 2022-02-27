@@ -1,8 +1,14 @@
-<script>
+<script lang="ts">
 	// @ts-ignore
 	import screenshot_hero from '../../static/screenshot_hero.png?w=100;200;300;400;500;600;700;800;1000;1200;1500;1600;1800&format=webp&srcset';
 	// @ts-ignore
 	import cover from '../../static/ps_cover.jpg?w=100;200;300;400;500;600;700;800;1000;1200;1500;1600;1800&format=webp&srcset';
+
+	import { gdprSettings } from '../store.js';
+	let currentSettings = $gdprSettings;
+	$: if ($gdprSettings) {
+		currentSettings = $gdprSettings;
+	}
 
 	import Ruler from 'svelte-material-icons/Ruler.svelte';
 	import Molecule from 'svelte-material-icons/Molecule.svelte';
@@ -15,7 +21,7 @@
 	import Wrapper from '../lib/components/Wrapper.svelte';
 	import H3 from '../lib/components/H3.svelte';
 	import Circles from '../lib/components/circles.svelte';
-	import SEO from '$lib/components/SEO/index.svelte'
+	import SEO from '$lib/components/SEO/index.svelte';
 
 	let size = '5em';
 	let macrocycles = [
@@ -32,7 +38,6 @@
 		active = Math.floor(Math.random() * macrocycles.length);
 	}, 1500);
 </script>
-
 
 <SEO />
 <section class="hero bg-off-white md:-mt-16">
@@ -260,6 +265,30 @@
 		</div>
 	</Wrapper>
 </section>
+{#if currentSettings.youtube}
+	<section>
+		<Wrapper notFullHeight>
+			<div class="flex flex-wrap gap-12 place-items-center mx-auto">
+				<iframe
+					class="w-80 md:w-96 h-44 md:h-56"
+					src="https://www.youtube-nocookie.com/embed/YCA3ZIYyLQw"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				/>
+				<iframe
+					class="w-80 md:w-96 h-44 md:h-56"
+					src="https://www.youtube-nocookie.com/embed/WdEJJrrPYKg"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				/>
+			</div>
+		</Wrapper>
+	</section>
+{/if}
 
 <style lang="scss">
 	.hero {

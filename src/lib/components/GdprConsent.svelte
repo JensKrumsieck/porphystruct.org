@@ -2,6 +2,7 @@
 	export interface GdprSettings {
 		show: boolean;
 		analytics: boolean;
+		youtube: boolean;
 	}
 </script>
 
@@ -19,6 +20,7 @@
 	let currentSettings: GdprSettings = $gdprSettings;
 	let analyticsCheck = $gdprSettings.analytics;
 	let showSettings: boolean = false;
+	let youtubeCheck = $gdprSettings.youtube;
 	let ga;
 
 	$: if ($gdprSettings) {
@@ -27,7 +29,8 @@
 	const acceptCookies = () => {
 		let newSettings: GdprSettings = {
 			show: false,
-			analytics: true
+			analytics: true,
+			youtube: true
 		};
 		gdprSettings.set(newSettings);
 		// Init analytics
@@ -39,7 +42,8 @@
 	const saveAndExit = () => {
 		let newSettings: GdprSettings = {
 			show: false,
-			analytics: analyticsCheck
+			analytics: analyticsCheck,
+			youtube: youtubeCheck
 		};
 		gdprSettings.set(newSettings);
 		// Init analytics
@@ -63,10 +67,16 @@
 				<H3>Cookie Consent</H3>
 			</div>
 			{#if showSettings}
-				<div class="form-control mb-5">
+				<div class="form-control">
 					<label class="cursor-pointer label">
 						<span class="label-text">Google Analytics</span>
 						<input type="checkbox" class="toggle" bind:checked={analyticsCheck} />
+					</label>
+				</div>
+				<div class="form-control mb-5">
+					<label class="cursor-pointer label">
+						<span class="label-text">YouTube Embedded Videos</span>
+						<input type="checkbox" class="toggle" bind:checked={youtubeCheck} />
 					</label>
 				</div>
 				<a href="/privacy">Privacy Policy</a> |
