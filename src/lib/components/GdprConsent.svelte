@@ -52,7 +52,9 @@
 
 <GoogleAnalytics bind:this={ga} properties={['G-GK2FHC96JT']} enabled={currentSettings.analytics} />
 {#if pageLoaded && currentSettings.show}
-	<div class="z-[9999] fixed bg-dark rounded py-2 shadow-xl bottom-0 right-0 w-full text-white">
+	<div
+		class="z-[9999] fixed bg-dark rounded pt-2 pb-4 shadow-xl bottom-0 right-0 w-full text-white consent"
+	>
 		<div class="container mx-auto px-4">
 			<div class="flex">
 				<div class="mt-2 mr-2">
@@ -67,8 +69,8 @@
 						<input type="checkbox" class="toggle" bind:checked={analyticsCheck} />
 					</label>
 				</div>
-                <a href="/privacy">Privacy Policy</a> | 
-                <a href="/imprint">Legal Notice</a>
+				<a href="/privacy">Privacy Policy</a> |
+				<a href="/imprint">Legal Notice</a>
 			{/if}
 			<div class="flex mt-4">
 				<button
@@ -85,9 +87,15 @@
 	</div>
 {:else}
 	<button
-		class="z-[9999] rounded-full flex flex-col fixed bg-blue p-5 shadow-xl bottom-2 right-2 max-w-lg text-white"
+		class="z-[9999] rounded-full flex flex-col fixed bg-blue p-2 shadow-xl bottom-2 right-2 max-w-lg text-white"
 		on:click={() => (currentSettings.show = true)}
 	>
-		<Cookie size="1.5rem" />
+		<Cookie size="1.25rem" />
 	</button>
 {/if}
+
+<style>
+	.consent {
+		transition: all 0.5s ease-in-out;
+	}
+</style>

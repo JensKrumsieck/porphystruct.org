@@ -1,17 +1,23 @@
 <script>
 	import Button from '../lib/components/Button.svelte';
 	import Windows from 'svelte-material-icons/Windows.svelte';
+	import Top from 'svelte-material-icons/ArrowUpThick.svelte'
 	import '@fontsource/source-sans-pro';
 	import '../app.css';
 	import GdprConsent from '$lib/components/GdprConsent.svelte';
 	import Wrapper from '$lib/components/Wrapper.svelte';
 	import H3 from '$lib/components/H3.svelte';
 	import Badge from '$lib/components/Badge.svelte';
+	import ContactJens from '$lib/components/ContactJens.svelte';
+	import ContactMartin from '$lib/components/ContactMartin.svelte';
 	let open = false;
 </script>
 
 <GdprConsent />
-<header class="bg-off-white z-50 relative">
+<a href="#top" class="z-[9998] rounded-full flex flex-col fixed bg-blue p-2 shadow-xl bottom-2 right-12 max-w-lg text-white">
+	<Top size="1.25rem"/>
+</a>
+<header class="bg-off-white z-50 relative" id="top">
 	<nav class="container mx-auto justify-between px-4 flex flex-wrap ">
 		<div class="logo py-3">
 			<a class="flex" href="/">
@@ -69,7 +75,7 @@
 		>
 			<ul class="flex md:flex-row flex-col">
 				<li class="p-4">Docs</li>
-				<li class="p-4">Docs</li>
+				<li class="p-4"><a href="https://github.com/jenskrumsieck/porphystruct/issues">Report Bug</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -82,7 +88,7 @@
 <footer class="mt-12">
 	<section>
 		<svg
-			class="absolute right-0"
+			class="absolute right-0 z-[-1] md:flex hidden"
 			xmlns="http://www.w3.org/2000/svg"
 			width="1363.724"
 			height="483.796"
@@ -113,6 +119,14 @@
 					<img src="ps_logo.svg" alt="Logo" width="42px" />
 					<span class="font-bold text-[1.75rem] ml-2 self-center">PorphyStruct</span>
 				</div>
+				<p class="flex md:place-content-end mt-4">
+					<a href="/imprint">Legal Notice</a>
+					<a class="ml-6" href="/privacy">Privacy Policy</a>
+				</p>
+			</div>
+			<div class="flex flex-wrap">
+				<ContactJens />
+				<ContactMartin />
 			</div>
 		</Wrapper>
 	</section>

@@ -93,7 +93,7 @@
 					>
 					and <span class="font-bold">quantitative conformational Analysis</span> using the NSD-technique.
 				</p>
-				<div class="bg-white rounded p-5 mt-12 text-dark md:flex">
+				<div class="bg-white rounded p-5 mt-4 text-dark md:flex">
 					<figure class="md:w-36">
 						<a href="https://doi.org/10.1002/chem.202101243">
 							<img srcset={cover} type="image/webp" alt="cover" loading="lazy" />
@@ -160,7 +160,7 @@
 			</p>
 			<div class="mt-10">
 				<H3>Supported Macrocyclic Frameworks:</H3>
-				<ul class="list-disc">
+				<ul>
 					<li>Porphyrin (Isoporphyrins, Phtalocyanines, N-confused Porphyrins, Porphyrazines)</li>
 					<li>
 						Corrole (Isocorroles, Heterocorroles, N-confused Corroles, Corrolazines, Corrins¹)
