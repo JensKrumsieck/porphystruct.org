@@ -2,7 +2,7 @@
 	// @ts-ignore
 	import screenshot_hero from '../../static/screenshot_hero.png?w=100;200;300;400;500;600;700;800;1000;1200;1500;1600;1800&format=webp&srcset';
 	// @ts-ignore
-	import cover from '../../static/ps_cover.jpg?w=100;200;300;400;500;600;700;800;1000;1200;1500;1600;1800&format=webp&srcset';
+	import cover from '../../static/ps_cover.jpg?w=50;100;200;300;400;500;600;700;800;1000;1200;1500;1600;1800&format=webp&srcset';
 
 	import { gdprSettings } from '../store.js';
 	let currentSettings = $gdprSettings;
@@ -101,7 +101,7 @@
 				<div class="bg-white rounded p-5 mt-4 text-dark md:flex">
 					<figure class="md:w-36">
 						<a href="https://doi.org/10.1002/chem.202101243">
-							<img srcset={cover} type="image/webp" alt="cover" loading="lazy" />
+							<img srcset={cover} type="image/webp" alt="cover" />
 						</a>
 					</figure>
 					<div class="ml-3">
@@ -160,8 +160,8 @@
 				The automated Analysis of <span class="font-bold">hundreds</span> of structures is possible
 				due to the implemented Batch processing feature. The Output will be merged into a csv file
 				for further Analysis in Excel or as a Pandas DataFrame in Python scripts. Did you know? Some
-				python scripts to Play with are available
-				<a href="https://github.com/JensKrumsieck/porphystruct-scripts">here</a>.
+				python scripts to Play with are available here:
+				<a href="https://github.com/JensKrumsieck/porphystruct-scripts">porphystruct-scripts</a>.
 			</p>
 			<div class="mt-10">
 				<H3>Supported Macrocyclic Frameworks:</H3>

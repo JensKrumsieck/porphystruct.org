@@ -15,6 +15,13 @@ const config = {
 				'process.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString()),
 			},
 			plugins: [imagetools({ force: true })],
+			build: {
+				rollupOptions: {
+					output: {
+						manualChunks: undefined
+					}
+				}
+			}
 		}
 	}
 };

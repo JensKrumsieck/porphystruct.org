@@ -96,7 +96,7 @@
 		</div>
 	</div>
 {:else}
-	<button
+	<button title="Open Cookie Consent Window"
 		class="z-[9999] rounded-full flex flex-col fixed bg-blue p-2 shadow-xl bottom-2 right-2 max-w-lg text-white"
 		on:click={() => (currentSettings.show = true)}
 	>

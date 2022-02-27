@@ -1,5 +1,16 @@
 <script>
 	import SimpleIcon from '$lib/components/common/SimpleIcon.svelte';
+	import {
+		siResearchgate,
+		siOrcid,
+		siGithub,
+		siInstagram,
+		siTwitter,
+		siYoutube,
+		siLinkedin,
+		siXing
+	} from 'simple-icons/icons';
+
 	export let img = '';
 	export let url = '';
 	export let name = '';
@@ -25,42 +36,42 @@
 		<p class="flex social">
 			{#if researchgate != ''}
 				<a href={'https://www.researchgate.net/profile/' + researchgate}>
-					<SimpleIcon slug="ResearchGate" size="1.25rem" />
+					<SimpleIcon svg={siResearchgate.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if orcid != ''}
 				<a href={'https://orcid.org/' + orcid}>
-					<SimpleIcon slug="orcid" size="1.25rem" />
+					<SimpleIcon svg={siOrcid.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if github != ''}
 				<a href={'https://github.com/' + github}>
-					<SimpleIcon slug="github" size="1.25rem" />
+					<SimpleIcon svg={siGithub.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if twitter != ''}
 				<a href={'https://twitter.com/' + twitter}>
-					<SimpleIcon slug="Twitter" size="1.25rem" />
+					<SimpleIcon svg={siTwitter.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if instagram != ''}
 				<a href={'https://instagram.com/' + instagram}>
-					<SimpleIcon slug="instagram" size="1.25rem" />
+					<SimpleIcon svg={siInstagram.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if youtube != ''}
 				<a href={'https://youtube.com/c/' + youtube}>
-					<SimpleIcon slug="youtube" size="1.25rem" />
+					<SimpleIcon svg={siYoutube.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if xing != ''}
 				<a href={'https://www.xing.com/profile/' + xing}>
-					<SimpleIcon slug="xing" size="1.25rem" />
+					<SimpleIcon svg={siXing.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if linkedin != ''}
 				<a href={'https://www.linkedin.com/in/' + linkedin}>
-					<SimpleIcon slug="linkedin" size="1.25rem" />
+					<SimpleIcon svg={siLinkedin.svg} size="1.25rem" />
 				</a>
 			{/if}
 		</p>
