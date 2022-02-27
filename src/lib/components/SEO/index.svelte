@@ -30,7 +30,7 @@
 		alt: defaultAlt
 	};
 	const url = `${siteUrl}/${slug}`;
-	const pageTitle = `${siteTitle}${title ? ' - ' + title : ''}`;
+	const pageTitle = `${title ? title + ' - ' : ''}${siteTitle}`;
 
 	const openGraphProps = {
 		image: ogImage,

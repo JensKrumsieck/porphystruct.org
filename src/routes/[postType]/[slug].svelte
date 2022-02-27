@@ -23,18 +23,16 @@
 	import { onMount } from 'svelte';
 	import Arrow from 'svelte-material-icons/ChevronRight.svelte';
 	import './content.scss';
-	// @ts-ignore
 	export let post;
 	let cover;
 	onMount(async () => {
 		cover = await import(
-			`../../../static/${post.image}?w=50;100;200;300;400;500;600;700;800;1000;1200;1500;1600;1800&format=webp&srcset`
+			`../../../static${post.image}?w=50;100;200;300;400;500;600;700;800;1000;1200;1500;1600;1800&format=webp&srcset`
 		);
-		console.log(cover);
 	});
 </script>
 
-<SEO title={post.title} slug={post.slug} />
+<SEO title={post.title} slug="{post.postType}/{post.slug}" />
 
 <section class="bg-off-white py-12">
 	<Wrapper notFullHeight>
@@ -63,7 +61,7 @@
 		<article class="mt-6 w-full">
 			<figure class="rounded-lg shadow-lg md:float-right md:w-1/3">
 				{#if cover !== undefined}
-					<img srcset={cover.default} alt="Cover" title={post} class="rounded-lg"/>
+					<img srcset={cover.default} alt="Cover" title={post} class="rounded-lg" />
 				{/if}
 			</figure>
 			<div class="content">

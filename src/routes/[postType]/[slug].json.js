@@ -36,7 +36,7 @@ export async function get({ params }) {
 
     return {
         body: {
-            html, ...data, postType
+            html, ...data, postType, slug
         }
     };
 }
