@@ -39,7 +39,7 @@
 			</div>
 			<div class="logo-footer md:w-2/3 w-full md:mt-0 mt-10">
 				<div class="flex md:place-content-end">
-					<img src="ps_logo.svg" alt="Logo" width="42px" />
+					<img src="/ps_logo.svg" alt="Logo" width="42px" />
 					<span class="font-bold text-[1.75rem] ml-2 self-center">PorphyStruct</span>
 				</div>
 				<p class="flex md:place-content-end mt-4">

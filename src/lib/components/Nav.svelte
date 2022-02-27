@@ -1,14 +1,14 @@
 <script>
 	import Button from '$lib/components/common/Button.svelte';
 	import Windows from 'svelte-material-icons/Windows.svelte';
-import NavLink from './NavLink.svelte';
+	import NavLink from './NavLink.svelte';
 	let open = false;
 </script>
 
 <nav class="container mx-auto justify-between px-4 flex flex-wrap ">
 	<div class="logo py-3">
 		<a class="flex" href="/">
-			<img src="ps_logo.svg" alt="Logo" width="42px" />
+			<img src="/ps_logo.svg" alt="Logo" width="42px" />
 			<span class="md:flex hidden font-bold text-[1.75rem] ml-2 self-center">PorphyStruct</span>
 		</a>
 	</div>

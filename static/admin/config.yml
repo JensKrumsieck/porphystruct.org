@@ -1,0 +1,24 @@
+backend:
+  name: github
+  branch: master
+  repo: jenskrumsieck/porphystruct_website
+  
+media_folder: static/uploads
+public_folder: /uploads
+
+
+collections:
+  - name: "manuals"
+    label: "Manuals"
+    label_singular: "Manual"
+    folder: "content/manual"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "manual/{{slug}}"
+    fields:
+    - label: "Title"
+      name: "title"
+      widget: "string"
+    - label: "Body"
+      name: "body"
+      widget: "markdown"

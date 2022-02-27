@@ -22,6 +22,7 @@
 	import H3 from '$lib/components/common/H3.svelte';
 	import Circles from '../lib/components/circles.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
+	import H1 from '$lib/components/common/H1.svelte';
 
 	let size = '5em';
 	let macrocycles = [
@@ -44,7 +45,7 @@
 	<Wrapper>
 		<div class="left w-full md:w-1/4 self-center  z-20">
 			<p class="uppercase font-semibold text-blue text-xs">PorphyStruct</p>
-			<h1 class="md:text-4xl lg:text-5xl text-2xl mt-0 lg:w-[80vw] md:w-[85vw] w-[90vw]">
+			<H1>
 				Analyze your
 				<span class="font-bold">
 					{#each macrocycles as item, i}
@@ -56,7 +57,7 @@
 						</span>
 					{/each}
 				</span>
-			</h1>
+			</H1>
 			<h2 class="md:text-2xl text-xl font-semibold mt-1 mb-10">
 				Structural Analysis of Porphyrinoids
 			</h2>
