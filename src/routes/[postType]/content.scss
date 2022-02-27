@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content {
+    img {
+        max-height: 30vh;
+        margin: theme("margin.4") 0;
+    }
+}

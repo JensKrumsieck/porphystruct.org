@@ -47,7 +47,7 @@
 			<p class="uppercase font-semibold text-blue text-xs">PorphyStruct</p>
 			<H1>
 				Analyze your
-				<span class="font-bold">
+				<span class="font-bold changing">
 					{#each macrocycles as item, i}
 						<span class:hidden={i != active}>
 							{item}
@@ -292,23 +292,6 @@
 {/if}
 
 <style lang="scss">
-	.hero {
-		h1 {
-			position: relative;
-			display: block;
-			> span > span {
-				position: absolute;
-				opacity: 1;
-				visibility: visible;
-				padding-left: 0.3em;
-				transition: all 0.5s ease-in-out;
-				&.hidden {
-					opacity: 0;
-					visibility: collapse;
-				}
-			}
-		}
-	}
 	.shadow-svg {
 		filter: drop-shadow(0 20px 25px rgb(0 0 0 / 0.1));
 	}
