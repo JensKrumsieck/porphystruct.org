@@ -35,17 +35,13 @@
 <section class="bg-off-white py-12">
 	<Wrapper notFullHeight>
 		<H1>{title}</H1>
-		<div class="mt-8 flex flex-wrap">
+		<div class="mt-8 flex gap-8">
 			{#if posts.length != 0}
-				<ul>
-					{#each posts as post}
-						<li>
-							<Card title={post.title} image={post.image} url="{postType}/{post.slug}">
-								{post.text}
-							</Card>
-						</li>
-					{/each}
-				</ul>
+				{#each posts as post}
+					<Card title={post.title} image={post.image} url="{postType}/{post.slug}">
+						{post.text}
+					</Card>
+				{/each}
 			{:else}
 				<p>No {postType} entries were found.</p>
 			{/if}
