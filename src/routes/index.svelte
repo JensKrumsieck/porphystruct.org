@@ -107,7 +107,7 @@
 							</a>
 						</h3>
 						<p>
-							J. Krumsieck, M. Bröring, <span class="font-italic">Chem. Eur J.</span>,
+							J. Krumsieck, M. Bröring, <span class="italic">Chem. Eur J.</span>,
 							<span class="font-bold">2021</span>, <span class="italic">27</span>, 11580-11588, DOI:
 							<a href="https://doi.org/10.1002/chem.202101243">10.1002/chem.202101243</a>.
 						</p>

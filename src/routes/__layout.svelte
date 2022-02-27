@@ -1,16 +1,20 @@
 <script>
 	import Button from '../lib/components/Button.svelte';
 	import Windows from 'svelte-material-icons/Windows.svelte';
-	import "@fontsource/source-sans-pro"
+	import '@fontsource/source-sans-pro';
 	import '../app.css';
+	import GdprConsent from '$lib/components/GdprConsent.svelte';
 	let open = false;
 </script>
 
+<GdprConsent />
 <header class="bg-off-white z-50 relative">
 	<nav class="container mx-auto justify-between px-4 flex flex-wrap ">
-		<div class="logo flex py-3">
-			<img src="ps_logo.svg" alt="Logo" width="42px" />
-			<span class="md:flex hidden font-bold text-[1.75rem] ml-2 self-center">PorphyStruct</span>
+		<div class="logo py-3">
+			<a class="flex" href="/">
+				<img src="ps_logo.svg" alt="Logo" width="42px" />
+				<span class="md:flex hidden font-bold text-[1.75rem] ml-2 self-center">PorphyStruct</span>
+			</a>
 		</div>
 		<div class="flex md:order-2 ">
 			<Button
