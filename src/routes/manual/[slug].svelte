@@ -13,18 +13,34 @@
 	import Container from '$lib/components/common/Container.svelte';
 	import H1 from '$lib/components/common/H1.svelte';
 	import H3 from '$lib/components/common/H3.svelte';
-	import Wrapper from '$lib/components/common/Wrapper.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
 	import Arrow from 'svelte-material-icons/ChevronRight.svelte';
 	import './content.scss';
 	export let post;
 </script>
 
-<SEO title={post.title} slug="manual/{post.slug}" />
-
+<SEO title={post.post.title} slug="manual/{post.post.slug}" />
 <Container _class="py-12">
-	<Wrapper notFullHeight>
-		{#if post.title != undefined}
+	<aside
+		class="hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-y-auto"
+	>
+		<ul>
+			{#each Object.keys(post.posts) as cat}
+				<li>
+					<H3>{cat}</H3>
+					<ul>
+						{#each post.posts[cat] as post}
+							<li>
+								<a href={'/manual/' + post.slug}>{post.title}</a>
+							</li>
+						{/each}
+					</ul>
+				</li>
+			{/each}
+		</ul>
+	</aside>
+	<div class="lg:pl-[19.5rem]">
+		{#if post.post.title != undefined}
 			<nav aria-label="Breadcrumb" class="flex mb-5">
 				<ol class="inline-flex items-center space-x-1">
 					<li class="inline-flex items-center">
@@ -39,25 +55,24 @@
 					</li>
 					<li class="inline-flex items-center" aria-current="page">
 						<Arrow size="1.25rem" />
-						{post.title}
+						{post.post.title}
 					</li>
 				</ol>
 			</nav>
-
-			<H1>{post.title}</H1>
-			<article class="mt-6 w-full">
+			<H1>{post.post.title}</H1>
+			<article class="mt-6">
 				<figure class="rounded-lg shadow-lg md:float-right md:w-1/3">
-					{#if post.image !== undefined}
-						<img src={post.image} alt="Cover" title={post} class="rounded-lg" />
+					{#if post.post.image !== undefined}
+						<img src={post.post.image} alt="Cover" title={post.post.title} class="rounded-lg" />
 					{/if}
 				</figure>
 				<div class="content">
-					{@html post.html}
+					{@html post.post.html}
 				</div>
 			</article>
 		{:else}
 			<H1>404 - NOT FOUND!</H1>
 			<H3>Nothing here!</H3>
 		{/if}
-	</Wrapper>
+	</div>
 </Container>
