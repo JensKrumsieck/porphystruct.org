@@ -4,8 +4,10 @@ import grayMatter from 'gray-matter';
 import { marked } from 'marked';
 
 export function getAllPosts(postType: string) {
+
     try {
-        return fs.readdirSync(`content/${postType}/`).map((fileName) => {
+        const categories = getCatgories()
+        const content = fs.readdirSync(`content/${postType}/`).map((fileName) => {
             const slug = fileName.slice(0, -3);
             const file = fs.readFileSync(
                 path.resolve(`content/${postType}/`, fileName),
@@ -23,14 +25,27 @@ export function getAllPosts(postType: string) {
             marked.use({ renderer });
             let text = marked(content, renderer);
             text = text.substr(0, 160) + "\u2026";
-            return { ...data, slug, text };
+            let category = data.category
+            return { ...data, slug, text, category };
         });
+        const result = {}
+        categories.forEach(c => {
+            result[c.name] = content.filter(s => s.category == c.name)
+        });
+        console.log(result)
+        return result;
     } catch (e) {
         if (e.code == 'ENOENT') {
             return false;
         }
         return [];
     }
+}
+
+export function getCatgories() {
+    let rawdata = fs.readFileSync(path.resolve('content/categories.json'), "utf-8");
+    let data = JSON.parse(rawdata);
+    return data.categories;
 }
 
 export function getPost(postType: string, slug: string) {

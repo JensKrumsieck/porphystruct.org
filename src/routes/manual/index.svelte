@@ -25,12 +25,19 @@
 <Container _class="py-12">
 	<Wrapper notFullHeight>
 		<H1>{title}</H1>
-		<div class="mt-8 flex gap-8">
-			{#if posts.length != undefined && posts.length != 0}
-				{#each posts as post}
-					<Card title={post.title} image={post.image} url="{postType}/{post.slug}">
-						{post.text}
-					</Card>
+		<div>
+			{#if posts != undefined}
+				{#each Object.keys(posts) as category}
+					<H3>{category}</H3>
+					{#if posts[category].length != 0}
+						<div class="mt-8 flex gap-8">
+							{#each posts[category] as post}
+								<Card title={post.title} image={post.image} url="{postType}/{post.slug}">
+									{post.text}
+								</Card>
+							{/each}
+						</div>
+					{/if}
 				{/each}
 			{:else}
 				<H3>No {postType} entries were found.</H3>
