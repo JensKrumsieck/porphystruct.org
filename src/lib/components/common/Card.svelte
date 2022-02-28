@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	export let title = '';
 	export let image = '';
 	export let url = '';
