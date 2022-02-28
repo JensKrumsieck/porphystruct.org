@@ -1,10 +1,12 @@
 <script>
+	import Container from '$lib/components/common/Container.svelte';
 	import H3 from '$lib/components/common/H3.svelte';
-	import Wrapper from '$lib/components/common/Wrapper.svelte';    
-	import SEO from '$lib/components/SEO/index.svelte'
+	import Wrapper from '$lib/components/common/Wrapper.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
 </script>
-<SEO slug="imprint" title="Legal Notice"  />
-<section class="bg-off-white md:-mt-16">
+
+<SEO slug="imprint" title="Legal Notice" />
+<Container _class=" md:-mt-16">
 	<Wrapper>
 		<div>
 			<h1 class="font-bold text-4xl">Impressum nach §5 TMG | Legal Notice</h1>
@@ -15,8 +17,8 @@
 				Celler Str. 108
 				<br />
 				D-38114 Braunschweig
-                <br/>
-                Germany
+				<br />
+				Germany
 				<br />
 				[+49]17630629281
 				<br />
@@ -32,4 +34,4 @@
 			</p>
 		</div>
 	</Wrapper>
-</section>
+</Container>

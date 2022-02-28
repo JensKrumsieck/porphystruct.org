@@ -1,11 +1,12 @@
 <script>
+	import Container from '$lib/components/common/Container.svelte';
 	import H3 from '$lib/components/common/H3.svelte';
 	import Wrapper from '$lib/components/common/Wrapper.svelte';
-    import SEO from '$lib/components/SEO/index.svelte'
+	import SEO from '$lib/components/SEO/index.svelte';
 </script>
 
 <SEO title="Privacy Policy" slug="privacy" />
-<section class="bg-off-white py-12">
+<Container _class="py-12">
 	<Wrapper>
 		<div class="mt-5">
 			<H3>Privacy Policy</H3>
@@ -989,7 +990,7 @@
 			</p>
 		</div>
 	</Wrapper>
-</section>
+</Container>
 
 <style lang="scss">
 	h4 {

@@ -25,7 +25,7 @@
 	export let linkedin = '';
 </script>
 
-<div class="flex mt-5 py-2 pr-8 bg-white rounded-lg">
+<div class="flex mt-5 py-2 pr-8 rounded-lg">
 	<figure class="w-16 h-16 rounded-full bg-dark overflow-hidden">
 		{@html img}
 	</figure>

@@ -23,7 +23,7 @@
 		<button
 			data-collapse-toggle="main-menu"
 			type="button"
-			class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+			class="inline-flex items-center p-2 text-sm rounded-lg md:hidden  focus:outline-none focus:ring-2"
 			aria-controls="main-menu"
 			aria-expanded="false"
 			on:click={() => (open = !open)}
@@ -61,7 +61,7 @@
 		id="main-menu"
 	>
 		<ul class="flex md:flex-row flex-col navbar">
-			<li class="p-4">Docs</li>
+			<NavLink prefetch href="/manual">Docs</NavLink>
 			<NavLink href="https://github.com/jenskrumsieck/porphystruct/issues">Report Bug</NavLink>
 		</ul>
 	</div>

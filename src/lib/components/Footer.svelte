@@ -1,4 +1,4 @@
-<script>    
+<script>
 	import Button from '$lib/components/common/Button.svelte';
 	import Windows from 'svelte-material-icons/Windows.svelte';
 	import Wrapper from '$lib/components/common/Wrapper.svelte';
@@ -6,10 +6,11 @@
 	import Badge from '$lib/components/common/Badge.svelte';
 	import ContactJens from '$lib/components/ContactJens.svelte';
 	import ContactMartin from '$lib/components/ContactMartin.svelte';
+	import Container from './common/Container.svelte';
 </script>
 
 <footer class="mt-12">
-	<section>
+	<Container>
 		<svg
 			class="absolute right-0 z-[-1] md:flex hidden"
 			xmlns="http://www.w3.org/2000/svg"
@@ -47,10 +48,10 @@
 					<a class="ml-6" href="/privacy">Privacy Policy</a>
 				</p>
 			</div>
-			<div class="flex flex-wrap">
+			<div class="flex flex-wrap bg-off-white rounded">
 				<ContactJens />
 				<ContactMartin />
 			</div>
 		</Wrapper>
-	</section>
+	</Container>
 </footer>

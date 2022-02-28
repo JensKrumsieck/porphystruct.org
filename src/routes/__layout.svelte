@@ -16,7 +16,7 @@
 >
 	<Top size="1.25rem" />
 </a>
-<header class="bg-off-white z-50 relative" id="top">
+<header class="z-50 relative" id="top">
 	<Nav />
 </header>
 

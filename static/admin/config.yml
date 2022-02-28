@@ -6,22 +6,26 @@ backend:
 media_folder: static/uploads
 public_folder: /uploads
 
-
 collections:
-  - name: "manuals"
-    label: "Manuals"
-    label_singular: "Manual"
-    folder: "content/manual"
+  - name: 'manuals'
+    label: 'Manuals'
+    label_singular: 'Manual'
+    folder: 'content/manual'
     create: true
-    slug: "{{slug}}"
-    preview_path: "manual/{{slug}}"
+    slug: '{{slug}}'
+    preview_path: 'manual/{{slug}}'
     fields:
-    - label: "Title"
-      name: "title"
-      widget: "string"
-    - label: "Image"
-      name: "image"
-      widget: "image"
-    - label: "Body"
-      name: "body"
-      widget: "markdown"
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
+          options:
+            [
+              { label: Get Started, value: 'get-started' },
+              { label: Analysis, value: 'analysis' },
+              { label: Customization, value: 'customization' }
+            ]
+        }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

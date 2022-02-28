@@ -23,6 +23,7 @@
 	import Circles from '../lib/components/circles.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
 	import H1 from '$lib/components/common/H1.svelte';
+	import Container from '$lib/components/common/Container.svelte';
 
 	let size = '5em';
 	let macrocycles = [
@@ -41,9 +42,9 @@
 </script>
 
 <SEO />
-<section class="hero bg-off-white md:-mt-16">
+<Container _class="hero md:-mt-16">
 	<Wrapper>
-		<div class="left w-full md:w-1/4 self-center  z-20">
+		<div class="left w-full md:w-1/4 self-center z-20">
 			<p class="uppercase font-semibold text-blue text-xs">PorphyStruct</p>
 			<H1>
 				Analyze your
@@ -78,11 +79,12 @@
 				type="image/webp"
 				alt="Screenshot"
 			/>
-			<Circles />
+			<Circles _class="max-h-[90vh]" />
 		</div>
 	</Wrapper>
-</section>
-<section class="bg-dark">
+</Container>
+
+<Container _class="bg-dark">
 	<Wrapper>
 		<div class="left w-full md:w-1/2 self-center bg-white rounded md:p-5 md:mt-0 mt-12">
 			<img src="analysis.svg" alt="analysis" />
@@ -151,9 +153,9 @@
 			</div>
 		</div>
 	</Wrapper>
-</section>
+</Container>
 
-<section class="bg-off-white overflow-hidden">
+<Container _class="overflow-hidden">
 	<Wrapper>
 		<div class="left w-full md:w-1/2 self-center md:pr-16 z-20">
 			<H3>Batch Processing</H3>
@@ -227,9 +229,9 @@
 			<Circles _class="z-0 circle_shift -top-1/4" />
 		</div>
 	</Wrapper>
-</section>
+</Container>
 
-<section class="py-24">
+<Container _class="py-24">
 	<Wrapper notFullHeight>
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 content-around text-center ">
 			<div class="col flex flex-col items-center">
@@ -265,9 +267,9 @@
 			</div>
 		</div>
 	</Wrapper>
-</section>
+</Container>
 {#if currentSettings.youtube}
-	<section>
+	<Container>
 		<Wrapper notFullHeight>
 			<div class="flex flex-wrap gap-12 place-items-center mx-auto">
 				<iframe
@@ -288,7 +290,7 @@
 				/>
 			</div>
 		</Wrapper>
-	</section>
+	</Container>
 {/if}
 
 <style lang="scss">
