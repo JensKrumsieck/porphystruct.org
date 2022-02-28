@@ -87,7 +87,7 @@
 <Container _class="bg-dark">
 	<Wrapper>
 		<div class="left w-full md:w-1/2 self-center bg-white rounded md:p-5 md:mt-0 mt-12">
-			<img src="analysis.svg" alt="analysis" />
+			<img src="/analysis.svg" alt="analysis" />
 		</div>
 		<div class="right w-full md:w-1/2 justify-center md:mt-0 mt-12 relative">
 			<div class="z-10 justify-center text-white p-5">
@@ -198,7 +198,7 @@
 						height="100%"
 						viewBox="0 0 1000 437"
 					>
-						<image width="1000" height="437" xlink:href="screenshot_batch.png" />
+						<image width="1000" height="437" xlink:href="/screenshot_batch.png" />
 					</pattern>
 				</defs>
 				<rect
