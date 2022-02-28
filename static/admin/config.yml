@@ -7,8 +7,8 @@ media_folder: static/uploads
 public_folder: /uploads
 
 collections:
-  - name: 'categories'
-    label: 'Categories'
+  - name: 'relation_files'
+    label: 'Relations'
     files:
       - name: "categories"
         label: "Categories"        
@@ -27,18 +27,18 @@ collections:
     create: true
     slug: '{{slug}}'
     preview_path: 'manual/{{slug}}'
+    sortable_fields: ['priority', 'category']
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - {
           label: 'Category',
           name: 'category',
-          widget: 'select',
-          options:
-            [
-              { label: Get Started, value: 'get-started' },
-              { label: Analysis, value: 'analysis' },
-              { label: Customization, value: 'customization' }
-            ]
+          widget: 'relation',
+          collection: 'relation_files',
+          file: "categories",
+          search_fields: ["categories.*.name"],
+          display_fields: ["categories.*.name"],
+          value_field: "categories.*.name"
         }
       - { label: 'Priority', name: 'priority', widget: 'number' }
       - { label: 'Image', name: 'image', widget: 'image' }
