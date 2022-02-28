@@ -12,7 +12,7 @@ collections:
     files:
       - name: "categories"
         label: "Categories"        
-        file: "content/categories.yml"
+        file: "content/categories.json"
         fields:
           - {label: Title, name: title, widget: string}
           - label: Categories
