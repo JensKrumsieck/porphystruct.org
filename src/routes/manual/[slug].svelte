@@ -18,6 +18,7 @@
 	import H3 from '$lib/components/common/H3.svelte';
 	import OpenClose from '$lib/components/common/OpenClose.svelte';
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 	export let post;
 	let open = false;
 	let top = 0;
@@ -58,7 +59,8 @@
 									{#each post.posts[cat] as post}
 										<li>
 											<a
-												class="text-md text-dark-blue hover:text-dark hover:bg-white rounded p-2 w-full block"
+												class:active={post.slug == $page.params.slug}
+												class="text-md text-dark-blue hover:underline rounded p-2 w-full block"
 												href={'/manual/' + post.slug}>{post.title}</a
 											>
 										</li>
@@ -125,3 +127,11 @@
 		</div>
 	</div>
 </Container>
+
+<style lang="scss">
+	.active {
+		color:  theme('colors.white');
+		background: theme('colors.dark-blue');
+		font-weight: 600;
+	}
+</style>
