@@ -32,7 +32,6 @@ export function getAllPosts(postType: string) {
         categories.forEach(c => {
             result[c.name] = content.filter(s => s.category == c.name)
         });
-        console.log(result)
         return result;
     } catch (e) {
         if (e.code == 'ENOENT') {
