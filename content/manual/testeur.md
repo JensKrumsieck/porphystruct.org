@@ -1,7 +1,8 @@
 ---
 title: Testeur
+category: Get Started
+priority: 0
 image: /uploads/screenshot-2022-02-24-182514.png
-category: get-started
 ---
 This is just a t**est a**nd will be delet*ed later.*
 
