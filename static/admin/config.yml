@@ -7,6 +7,19 @@ media_folder: static/uploads
 public_folder: /uploads
 
 collections:
+  - name: 'categories'
+    label: 'Categories'
+    files:
+      - name: "categories"
+        label: "Categories"        
+        file: "content/categories.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - label: Categories
+            name: categories
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
   - name: 'manuals'
     label: 'Manuals'
     label_singular: 'Manual'
@@ -27,5 +40,6 @@ collections:
               { label: Customization, value: 'customization' }
             ]
         }
+      - { label: 'Priority', name: 'priority', widget: 'number' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
