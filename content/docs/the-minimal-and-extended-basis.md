@@ -2,7 +2,7 @@
 title: The Minimal and Extended Basis
 category: cd697a60-9cab-48ea-ac79-876466906b99
 priority: 0
-image: ""
+image: /uploads/extendedsim.png
 ---
 After[ completing the first analysis](https://porphystruct.org/docs/analyzing-porphyrinoids) with Copper Corrole [KAGGIJ from CCDC](https://www.ccdc.cam.ac.uk/structures/Search?Ccdcid=202423&DatabaseToSearch=Published) the attentive reader noticed, that the simulated Out-of-Plane Distortion Parameter Doop (sim.) and the experimental one Doop (exp.) differ by 0.119 Å, which is about 14% of the experimental value.
 
