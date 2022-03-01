@@ -15,16 +15,7 @@ export function getAllPosts(postType: string) {
             );
             // @ts-ignore
             const { data, content } = grayMatter(file);
-            const renderer = {
-                link(href, title, text) { return text; },
-                paragraph(text) { return htmlEscapeToText(text) + '\r\n'; },
-                strong(text) { return text; },
-                em(text) { return text; },
-                image(href, title, text) { return ''; }
-            }
-            marked.use({ renderer });
-            let text = marked(content, renderer);
-            text = text.substr(0, 160) + "\u2026";
+            let text = getExcerpt(content)
             let category = data.category
             return { ...data, slug, text, category };
         });
@@ -63,8 +54,9 @@ export function getPost(postType: string, slug: string) {
     // @ts-ignore
     const { data, content } = grayMatter(file);
     const html = marked(content, { renderer });
+    var excerpt = getExcerpt(content);
     return {
-        ...data, slug, html, postType
+        ...data, slug, html, postType, excerpt
     }
 }
 
@@ -123,3 +115,17 @@ const getContent = (postType, fileName) => {
         return [];
     }
 };
+
+function getExcerpt(content) {
+    const renderer = {
+        link(href, title, text) { return text; },
+        paragraph(text) { return htmlEscapeToText(text) + '\r\n'; },
+        strong(text) { return text; },
+        em(text) { return text; },
+        image(href, title, text) { return ''; }
+    }
+    marked.use({ renderer });
+    var text = marked(content, renderer);
+    text = text.substr(0, 160) + "\u2026";
+    return text;
+}

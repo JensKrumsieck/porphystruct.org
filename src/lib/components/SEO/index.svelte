@@ -21,6 +21,7 @@
 		'PorphyStruct, a new digital tool for the analysis of non-planar distortion modes of different porphyrinoids.';
 	export let title = '';
 	export let slug = '';
+	export let description = '';
 	export let ogImage = {
 		url: defaultOgImage,
 		alt: defaultAlt
@@ -31,10 +32,10 @@
 	};
 	const url = `${siteUrl}/${slug}`;
 	const pageTitle = `${title ? title + ' - ' : ''}${siteTitle}`;
-
+	description = description != '' ? description : metaDescription;
 	const openGraphProps = {
 		image: ogImage,
-		metaDescription,
+		description,
 		ogLanguage,
 		pageTitle,
 		siteTitle,
@@ -50,7 +51,7 @@
 <svelte:head>
 	<title>{pageTitle}</title>
 
-	<meta name="description" content={metaDescription} />
+	<meta name="description" content={description} />
 	<meta
 		name="robots"
 		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"

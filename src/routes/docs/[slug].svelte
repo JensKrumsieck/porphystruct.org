@@ -41,7 +41,7 @@
 </script>
 
 <svelte:window on:scroll={scrollFixed} />
-<SEO title={post.post.title} slug="docs/{post.post.slug}" />
+<SEO title={post.post.title} slug="docs/{post.post.slug}" description={post.post.excerpt} />
 <Container>
 	<div class="flex">
 		<!--sidebar-->
