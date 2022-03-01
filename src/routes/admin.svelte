@@ -5,6 +5,6 @@
 
 <Container>
 	<Wrapper>
-		<iframe src="/admin/index.html" title="Admin" class="w-full h-screen" />
+		<iframe src="/cms/index.html" title="Admin" class="w-full h-screen" />
 	</Wrapper>
 </Container>
