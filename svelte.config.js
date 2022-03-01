@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 import { imagetools } from 'vite-imagetools';
 import preprocess from 'svelte-preprocess';
 
@@ -7,7 +7,6 @@ const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: preprocess(),
-
 	kit: {
 		adapter: adapter({ precompress: true }),
 		vite: {
