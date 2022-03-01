@@ -4,7 +4,6 @@ import grayMatter from 'gray-matter';
 import { marked } from 'marked';
 
 export function getAllPosts(postType: string) {
-
     try {
         const categories = getCatgories()
         const content = fs.readdirSync(path.resolve(`./content/${postType}/`)).map((fileName) => {
@@ -62,7 +61,7 @@ export function getPost(postType: string, slug: string) {
 }
 
 export async function loadFiles(postType: string, { fetch }) {
-    const res = await fetch(`/${postType}.json`);
+    const res = await fetch(`${postType}.json`);
     if (res.ok) {
         const data = await res.json()
         return {
