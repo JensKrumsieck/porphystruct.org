@@ -6,10 +6,10 @@ import { marked } from 'marked';
 export function getAllPosts(postType: string) {
     try {
         const categories = getCatgories()
-        const content = fs.readdirSync(path.resolve(`./content/${postType}/`)).map((fileName) => {
+        const content = fs.readdirSync(`src/lib/content/${postType}/`).map((fileName) => {
             const slug = fileName.slice(0, -3);
             const file = fs.readFileSync(
-                path.resolve(`./content/${postType}/`, fileName),
+                path.resolve(`src/lib/content/${postType}/`, fileName),
                 'utf-8'
             );
             // @ts-ignore
@@ -35,7 +35,7 @@ export function getAllPosts(postType: string) {
 }
 
 export function getCatgories() {
-    let rawdata = fs.readFileSync(path.resolve('./content/categories.json'), "utf-8");
+    let rawdata = fs.readFileSync(path.resolve('src/lib/content/categories.json'), "utf-8");
     let data = JSON.parse(rawdata);
     return data.categories;
 }
@@ -105,7 +105,7 @@ function htmlEscapeToText(text) {
 const getContent = (postType, fileName) => {
     try {
         return fs.readFileSync(
-            path.resolve(`content/${postType}/`, `${fileName}.md`),
+            path.resolve(`src/lib/content/${postType}/`, `${fileName}.md`),
             'utf-8'
         );
     } catch (e) {
