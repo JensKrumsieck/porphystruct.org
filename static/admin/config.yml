@@ -20,6 +20,7 @@ collections:
             widget: list
             fields:
               - {label: Name, name: name, widget: string}
+              - {label: "ID", name: "id", widget: "uuid"} 
   - name: 'manuals'
     label: 'Manuals'
     label_singular: 'Manual'
@@ -38,7 +39,7 @@ collections:
           file: "categories",
           search_fields: ["categories.*.name"],
           display_fields: ["categories.*.name"],
-          value_field: "categories.*.name"
+          value_field: "categories.*.id"
         }
       - { label: 'Priority', name: 'priority', widget: 'number' }
       - { label: 'Image', name: 'image', widget: 'image' }

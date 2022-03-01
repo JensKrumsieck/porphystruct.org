@@ -30,7 +30,9 @@ export function getAllPosts(postType: string) {
         });
         const result = {}
         categories.forEach(c => {
-            result[c.name] = content.filter(s => s.category == c.name)
+            var data = content.filter(s => s.category == c.id)
+            if (data.length != 0)
+                result[c.name] = data;
         });
         return result;
     } catch (e) {
