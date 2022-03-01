@@ -6,15 +6,15 @@ import { marked } from 'marked';
 export function getAllPosts(postType: string) {
     try {
         const categories = getCatgories()
-        const content = fs.readdirSync(path.join(path.dirname(''),`content/${postType}/`)).map((fileName) => {
+        const content = fs.readdirSync(path.join(path.dirname(''), `content/${postType}/`)).map((fileName) => {
             const slug = fileName.slice(0, -3);
             const file = fs.readFileSync(
-                path.resolve(path.join(path.dirname(''),`content/${postType}/`), fileName),
+                path.resolve(path.join(path.dirname(''), `content/${postType}/`), fileName),
                 'utf-8'
             );
             // @ts-ignore
             const { data, content } = grayMatter(file);
-            let text = getExcerpt(content)
+            let text = getExcerpt(content, true)
             let category = data.category
             return { ...data, slug, text, category };
         });
@@ -35,7 +35,7 @@ export function getAllPosts(postType: string) {
 }
 
 export function getCatgories() {
-    let rawdata = fs.readFileSync(path.resolve(path.join(path.dirname(''),'content/categories.json')), "utf-8");
+    let rawdata = fs.readFileSync(path.resolve(path.join(path.dirname(''), 'content/categories.json')), "utf-8");
     let data = JSON.parse(rawdata);
     return data.categories;
 }
@@ -63,7 +63,7 @@ export function getPost(postType: string, slug: string) {
 const getContent = (postType, fileName) => {
     try {
         return fs.readFileSync(
-            path.resolve(path.join(path.dirname(''),`content/${postType}/`), `${fileName}.md`),
+            path.resolve(path.join(path.dirname(''), `content/${postType}/`), `${fileName}.md`),
             'utf-8'
         );
     } catch (e) {
@@ -116,17 +116,18 @@ function htmlEscapeToText(text) {
     });
 
 }
-function getExcerpt(content) {
+function getExcerpt(content, html = false) {
+    var newline = html ? "<br/>" : "\r\n";
     const renderer = {
         link(href, title, text) { return text; },
-        paragraph(text) { return htmlEscapeToText(text) + '\r\n'; },
+        paragraph(text) { return htmlEscapeToText(text) + newline; },
         strong(text) { return text; },
         em(text) { return text; },
         image(href, title, text) { return ''; },
-        heading(text, number, raw, slugger){return raw + '\r\n';}
+        heading(text, number, raw, slugger) { return raw + newline; }
     }
     marked.use({ renderer });
     var text = marked(content, renderer);
-    text = text.substr(0, 160) + "\u2026";
+    text = text.substr(0, 250) + "\u2026";
     return text;
 }

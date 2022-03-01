@@ -5,7 +5,7 @@
 </script>
 
 <div class="lg:w-1/4 md:w-1/3 w-1/2 bg-white rounded-lg shadow-lg align-center">
-	<a sveltekit:prefetch class="block hover:text-blue" href={url}>
+	<a sveltekit:prefetch class="contents hover:text-blue" href={url}>
 		{#if image != undefined}
 			<img src={image} alt="Cover" {title} class="rounded-t-lg object-cover h-1/2 w-full" />
 		{/if}

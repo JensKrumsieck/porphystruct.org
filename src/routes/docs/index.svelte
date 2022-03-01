@@ -33,7 +33,7 @@
 						<div class="mt-8 flex gap-8">
 							{#each posts[category] as post}
 								<Card title={post.title} image={post.image} url="docs/{post.slug}">
-									{post.text}
+									{@html post.text}
 								</Card>
 							{/each}
 						</div>
