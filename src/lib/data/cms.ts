@@ -50,6 +50,11 @@ export function getPost(postType: string, slug: string) {
     }
 
     const renderer = new marked.Renderer();
+    renderer.image = (href, text, title) => {
+        var alt = text != undefined && text != "" ? `alt="${text}"`: ""
+        var titel = title != undefined && title != "" ? `title="${title}"`: ""
+        return `<a href="${href}" target="_blank"><img class="content-image" src="${href}" ${alt} ${titel}/></a>`
+    };
 
     // @ts-ignore
     const { data, content } = grayMatter(file);

@@ -73,7 +73,7 @@
 			</div>
 		</div>
 		<!--content-->
-		<div class="flex-1 md:p-8 w-full pt-4">
+		<div class="flex-1 md:px-12 w-full pt-8 pb-5">
 			<div class="flex mb-5 md:static sticky top-0 bg-off-white md:py-0 py-4" id="bc">
 				<button
 					type="button"
