@@ -72,7 +72,7 @@ export async function loadFiles(postType: string, { fetch }) {
     }
     return {
         status: res.status,
-        error: new Error(`There was an error while loading the manual}`)
+        error: new Error(`${res.status} - There was an error while loading the manual.\n${res.json}`)
     };
 }
 
@@ -87,7 +87,7 @@ export async function loadFile(postType: string, slug: string, { fetch }) {
     }
     return {
         status: res.status,
-        error: new Error(`Could not load ${url}`)
+        error: new Error(`${res.status} - Could not load ${url}`)
     };
 }
 
