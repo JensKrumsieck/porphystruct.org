@@ -109,7 +109,7 @@
 					</figure>
 					<div class="ml-3">
 						<h3 class="text-lg font-semibold">
-							<a href="https://doi.org/10.1002/chem.202101243">
+							<a class="hover:underline" href="https://doi.org/10.1002/chem.202101243">
 								PorphyStruct – A Digital Tool for the Quantitative Assignment of Non-Planar
 								Distortion Modes in Four-Membered Porphyrinoids
 							</a>
@@ -117,32 +117,42 @@
 						<p>
 							J. Krumsieck, M. Bröring, <span class="italic">Chem. Eur J.</span>,
 							<span class="font-bold">2021</span>, <span class="italic">27</span>, 11580-11588, DOI:
-							<a href="https://doi.org/10.1002/chem.202101243">10.1002/chem.202101243</a>.
+							<a class="hover:underline" href="https://doi.org/10.1002/chem.202101243"
+								>10.1002/chem.202101243</a
+							>.
 						</p>
 						<p>
 							<strong>VIP Paper</strong> -
-							<a href="http://doi.org/10.1002/chem.202101992">Front Cover</a>
-							- <a href="http://doi.org/10.1002/chem.202101993">Cover Profile</a>
+							<a class="hover:underline" href="http://doi.org/10.1002/chem.202101992">Front Cover</a
+							>
+							-
+							<a class="hover:underline" href="http://doi.org/10.1002/chem.202101993"
+								>Cover Profile</a
+							>
 						</p>
 						Featured in:
 						<ul class="indent-4">
 							<li>
 								<a
+									class="hover:underline"
 									href="https://www.chemistryviews.org/details/ezine/11308216/PorphyStruct_Conformational_Analysis_of_Porphyrinoids.html"
 									>Chemistry Views</a
 								>
 							</li>
 							<li>
 								<a
+									class="hover:underline"
 									href="https://magazin.tu-braunschweig.de/en/pi-post/digital-tools-for-observing-molecular-gymnastics/"
 									>TU Braunschweig Magazine</a
 								>
 								(<a
+									class="hover:underline"
 									href="https://magazin.tu-braunschweig.de/en/pi-post/digital-tools-for-observing-molecular-gymnastics/"
 									>EN</a
 								>
 								|
 								<a
+									class="hover:underline"
 									href="https://magazin.tu-braunschweig.de/pi-post/digitale-helfer-zur-beobachtung-von-molekuel-gymnastik/"
 									>DE</a
 								>)
@@ -164,7 +174,9 @@
 				due to the implemented Batch processing feature. The Output will be merged into a csv file
 				for further Analysis in Excel or as a Pandas DataFrame in Python scripts. Did you know? Some
 				python scripts to Play with are available here:
-				<a href="https://github.com/JensKrumsieck/porphystruct-scripts">porphystruct-scripts</a>.
+				<a class="hover:underline" href="https://github.com/JensKrumsieck/porphystruct-scripts"
+					>porphystruct-scripts</a
+				>.
 			</p>
 			<div class="mt-10">
 				<H3>Supported Macrocyclic Frameworks:</H3>
