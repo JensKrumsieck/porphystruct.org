@@ -5,7 +5,7 @@
 	 */
 	export async function load({ url, params, fetch }) {
 		const { slug } = params;
-		return await loadFile('manual', slug, { fetch });
+		return await loadFile('docs', slug, { fetch });
 	}
 </script>
 
@@ -41,7 +41,7 @@
 </script>
 
 <svelte:window on:scroll={scrollFixed} />
-<SEO title={post.post.title} slug="manual/{post.post.slug}" />
+<SEO title={post.post.title} slug="docs/{post.post.slug}" />
 <Container>
 	<div class="flex">
 		<!--sidebar-->
@@ -61,7 +61,7 @@
 											<a
 												class:active={post.slug == $page.params.slug}
 												class="text-md text-dark-blue hover:underline rounded p-2 w-full block"
-												href={'/manual/' + post.slug}>{post.title}</a
+												href={'/docs/' + post.slug}>{post.title}</a
 											>
 										</li>
 									{/each}
@@ -99,7 +99,7 @@
 						</li>
 						<li class="inline-flex items-center">
 							<Arrow size="1.25rem" />
-							<a href="/manual" class="hover:text-blue"> Manual </a>
+							<a href="/docs" class="hover:text-blue"> Manual </a>
 						</li>
 						<li class="inline-flex items-center" aria-current="page">
 							<Arrow size="1.25rem" />

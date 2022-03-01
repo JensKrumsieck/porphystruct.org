@@ -21,7 +21,7 @@
 	let title = 'Manual';
 </script>
 
-<SEO {title} slug={postType} />
+<SEO {title} slug="docs" />
 <Container _class="py-12">
 	<Wrapper notFullHeight>
 		<H1>{title}</H1>
@@ -32,7 +32,7 @@
 					{#if posts[category].length != 0}
 						<div class="mt-8 flex gap-8">
 							{#each posts[category] as post}
-								<Card title={post.title} image={post.image} url="{postType}/{post.slug}">
+								<Card title={post.title} image={post.image} url="docs/{post.slug}">
 									{post.text}
 								</Card>
 							{/each}

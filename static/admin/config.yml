@@ -21,13 +21,13 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: "ID", name: "id", widget: "uuid"} 
-  - name: 'manuals'
+  - name: 'docs'
     label: 'Manuals'
     label_singular: 'Manual'
-    folder: 'content/manual'
+    folder: 'content/docs'
     create: true
     slug: '{{slug}}'
-    preview_path: 'manual/{{slug}}'
+    preview_path: 'docs/{{slug}}'
     sortable_fields: ['priority', 'category']
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
