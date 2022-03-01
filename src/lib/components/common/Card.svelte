@@ -4,10 +4,10 @@
 	export let url = '';
 </script>
 
-<div class="lg:w-1/4 md:w-1/3 w-1/2 bg-white rounded-lg shadow-lg align-center">
-	<a sveltekit:prefetch class="contents hover:text-blue" href={url}>
+<div class="lg:w-1/4 md:w-1/3 w-full bg-white rounded-lg shadow-lg align-center h-[390px]">
+	<a sveltekit:prefetch class="hover:text-blue w-full" href={url}>
 		{#if image != undefined}
-			<img src={image} alt="Cover" {title} class="rounded-t-lg object-cover h-1/2 w-full" />
+			<img src={image} alt="Cover" {title} class="rounded-t-lg object-cover w-full h-1/2"/>
 		{/if}
 		<h3 class="font-bold py-2 px-6 text-2xl">
 			{title}

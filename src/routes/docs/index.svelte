@@ -30,7 +30,7 @@
 				{#each Object.keys(posts) as category}
 					<H3>{category}</H3>
 					{#if posts[category].length != 0}
-						<div class="mt-8 flex gap-8">
+						<div class="mt-8 flex gap-8 flex-wrap">
 							{#each posts[category] as post}
 								<Card title={post.title} image={post.image} url="docs/{post.slug}">
 									{@html post.text}
