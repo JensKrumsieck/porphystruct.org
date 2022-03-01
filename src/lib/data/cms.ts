@@ -6,10 +6,10 @@ import { marked } from 'marked';
 export function getAllPosts(postType: string) {
     try {
         const categories = getCatgories()
-        const content = fs.readdirSync(`static/content/${postType}/`).map((fileName) => {
+        const content = fs.readdirSync(path.resolve('.', `content/${postType}/`)).map((fileName) => {
             const slug = fileName.slice(0, -3);
             const file = fs.readFileSync(
-                path.resolve(`static/content/${postType}/`, fileName),
+                path.resolve('.', `content/${postType}/`, fileName),
                 'utf-8'
             );
             // @ts-ignore
@@ -35,7 +35,7 @@ export function getAllPosts(postType: string) {
 }
 
 export function getCatgories() {
-    let rawdata = fs.readFileSync(path.resolve('static/content/categories.json'), "utf-8");
+    let rawdata = fs.readFileSync(path.resolve('.', 'content/categories.json'), "utf-8");
     let data = JSON.parse(rawdata);
     return data.categories;
 }
@@ -59,6 +59,21 @@ export function getPost(postType: string, slug: string) {
         ...data, slug, html, postType, excerpt
     }
 }
+
+const getContent = (postType, fileName) => {
+    try {
+        return fs.readFileSync(
+            path.resolve('.', `content/${postType}/`, `${fileName}.md`),
+            'utf-8'
+        );
+    } catch (e) {
+        if (e.code == 'ENOENT') {
+            return false;
+        }
+        return [];
+    }
+};
+
 
 export async function loadFiles(postType: string, { fetch }) {
     const res = await fetch(`${postType}.json`);
@@ -101,21 +116,6 @@ function htmlEscapeToText(text) {
     });
 
 }
-
-const getContent = (postType, fileName) => {
-    try {
-        return fs.readFileSync(
-            path.resolve(`static/content/${postType}/`, `${fileName}.md`),
-            'utf-8'
-        );
-    } catch (e) {
-        if (e.code == 'ENOENT') {
-            return false;
-        }
-        return [];
-    }
-};
-
 function getExcerpt(content) {
     const renderer = {
         link(href, title, text) { return text; },
