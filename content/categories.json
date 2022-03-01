@@ -2,10 +2,16 @@
   "title": "Categories",
   "categories": [
     {
-      "name": "Get Started"
+      "name": "Get Started",
+      "id": "2323b2b3-7df9-4a90-8708-41eb4ebdb374"
     },
     {
-      "name": "Test"
+      "name": "Lol Test Löl",
+      "id": "826a4c5d-2a59-4345-adc4-207aaac1aba6"
+    },
+    {
+      "id": "ef120074-f3d7-4da0-ae07-aaf118492826",
+      "name": "Halooo"
     }
   ]
 }
