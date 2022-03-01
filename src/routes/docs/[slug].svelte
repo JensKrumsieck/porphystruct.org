@@ -111,11 +111,11 @@
 			{#if post.post.title != undefined}
 				<H1>{post.post.title}</H1>
 				<article class="mt-6">
-					<figure class="rounded-lg shadow-lg md:float-right md:w-1/3">
-						{#if post.post.image !== undefined}
+					{#if post.post.image != undefined}
+						<figure class="rounded-lg shadow-lg md:float-right md:w-1/3 ml-6">
 							<img src={post.post.image} alt="Cover" title={post.post.title} class="rounded-lg" />
-						{/if}
-					</figure>
+						</figure>
+					{/if}
 					<div class="content">
 						{@html post.post.html}
 					</div>
@@ -130,7 +130,7 @@
 
 <style lang="scss">
 	.active {
-		color:  theme('colors.white');
+		color: theme('colors.white');
 		background: theme('colors.dark-blue');
 		font-weight: 600;
 	}

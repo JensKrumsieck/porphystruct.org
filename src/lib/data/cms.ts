@@ -122,7 +122,8 @@ function getExcerpt(content) {
         paragraph(text) { return htmlEscapeToText(text) + '\r\n'; },
         strong(text) { return text; },
         em(text) { return text; },
-        image(href, title, text) { return ''; }
+        image(href, title, text) { return ''; },
+        heading(text, number, raw, slugger){return raw + '\r\n';}
     }
     marked.use({ renderer });
     var text = marked(content, renderer);

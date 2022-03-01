@@ -17,14 +17,14 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 
 	export let posts;
-	let postType = 'manual';
-	let title = 'Manual';
+	let postType = 'docs';
+	let title = 'Docs';
 </script>
 
 <SEO {title} slug="docs" />
 <Container _class="py-12">
+	<H1>{title}</H1>
 	<Wrapper notFullHeight>
-		<H1>{title}</H1>
 		<div>
 			{#if posts != undefined}
 				{#each Object.keys(posts) as category}

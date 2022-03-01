@@ -7,4 +7,26 @@
         max-height: 30vh;
         margin: theme("margin.4") 0;
     }
+    h3 {
+        margin-top: theme("margin.8");
+        margin-bottom: theme("margin.2");
+        font-weight: bold;
+        font-size: theme("fontSize.2xl");
+        color: theme("colors.dark");
+    }
+    p {
+        margin-bottom: theme("margin.4");
+    }
+    a {
+        text-decoration: underline;
+        &:hover{
+            color: theme("colors.dark-blue")
+        }
+    }
+    code {
+        color: theme("colors.white");
+        background-color: theme("colors.dark-blue");
+        padding: theme("padding.1");
+        border-radius: theme("borderRadius.md")
+    }
 }
