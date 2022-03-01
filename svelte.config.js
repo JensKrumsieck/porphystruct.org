@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-vercel';
 import { imagetools } from 'vite-imagetools';
 import preprocess from 'svelte-preprocess';
 
@@ -8,7 +8,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: preprocess(),
 	kit: {
-		adapter: adapter({ precompress: true }),
+		adapter: adapter(),
 		vite: {
 			define: {
 				'process.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString()),
@@ -19,6 +19,11 @@ const config = {
 					output: {
 						manualChunks: undefined
 					}
+				}
+			},
+			server: {
+				fs: {
+					strict: false
 				}
 			}
 		}
