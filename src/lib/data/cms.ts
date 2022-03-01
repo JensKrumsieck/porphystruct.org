@@ -87,7 +87,7 @@ export async function loadFile(postType: string, slug: string, { fetch }) {
     }
     return {
         status: res.status,
-        error: new Error(`${res.status} - Could not load ${url}\n${res.json()`)
+        error: new Error(`${res.status} - Could not load ${url}\n${res.json()}`)
     };
 }
 
