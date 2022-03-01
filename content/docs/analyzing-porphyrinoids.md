@@ -2,6 +2,7 @@
 title: Analyzing Porphyrinoids
 category: cd697a60-9cab-48ea-ac79-876466906b99
 priority: 0
+image: /uploads/1stanalysis.png
 ---
 Now, that your are familiar which PorphyStruct, it is time for the first analysis.
 
