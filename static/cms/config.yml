@@ -14,17 +14,17 @@ collections:
   - name: 'relation_files'
     label: 'Relations'
     files:
-      - name: "categories"
-        label: "Categories"        
-        file: "content/categories.json"
+      - name: 'categories'
+        label: 'Categories'
+        file: 'content/categories.json'
         fields:
-          - {label: Title, name: title, widget: string}
+          - { label: Title, name: title, widget: string }
           - label: Categories
             name: categories
             widget: list
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: "ID", name: "id", widget: "uuid"} 
+              - { label: Name, name: name, widget: string }
+              - { label: 'ID', name: 'id', widget: 'uuid' }
   - name: 'docs'
     label: 'Manuals'
     label_singular: 'Manual'
@@ -40,11 +40,11 @@ collections:
           name: 'category',
           widget: 'relation',
           collection: 'relation_files',
-          file: "categories",
-          search_fields: ["categories.*.name"],
-          display_fields: ["categories.*.name"],
-          value_field: "categories.*.id"
+          file: 'categories',
+          search_fields: ['categories.*.name'],
+          display_fields: ['categories.*.name'],
+          value_field: 'categories.*.id'
         }
-      - { label: 'Priority', name: 'priority', widget: 'number' }
-      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Priority', name: 'priority', widget: 'number', default: 0, value_type: "int" }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
