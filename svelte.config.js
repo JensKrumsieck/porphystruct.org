@@ -13,7 +13,7 @@ const config = {
 			define: {
 				'process.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString()),
 			},
-			plugins: [imagetools({ force: true })],
+			plugins: [imagetools()],
 			build: {
 				rollupOptions: {
 					output: {
