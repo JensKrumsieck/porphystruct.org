@@ -2,16 +2,20 @@
   "title": "Categories",
   "categories": [
     {
-      "name": "Get Started",
-      "id": "2323b2b3-7df9-4a90-8708-41eb4ebdb374"
+      "id": "b53a821a-2f11-4695-8bc9-56e34e5d1e5d",
+      "name": "Get Started"
     },
     {
-      "name": "Lol Test Löl",
-      "id": "826a4c5d-2a59-4345-adc4-207aaac1aba6"
+      "id": "cd697a60-9cab-48ea-ac79-876466906b99",
+      "name": "Analysis"
     },
     {
-      "id": "ef120074-f3d7-4da0-ae07-aaf118492826",
-      "name": "Halooo"
+      "id": "b1b868a2-fb92-4b97-b582-ef7201e5f450",
+      "name": "Customization"
+    },
+    {
+      "id": "3199ed78-426d-4060-be58-74200c486e76",
+      "name": "Settings"
     }
   ]
 }
