@@ -7,7 +7,7 @@ export function getAllPosts(postType: string) {
 
     try {
         const categories = getCatgories()
-        const content = fs.readdirSync(`content/${postType}/`).map((fileName) => {
+        const content = fs.readdirSync(path.resolve(`content/${postType}/`)).map((fileName) => {
             const slug = fileName.slice(0, -3);
             const file = fs.readFileSync(
                 path.resolve(`content/${postType}/`, fileName),
