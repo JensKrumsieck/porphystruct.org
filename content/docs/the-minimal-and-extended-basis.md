@@ -10,11 +10,13 @@ After[ completing the first analysis](https://porphystruct.org/docs/analyzing-po
 
 To see the out-of-plane distortion of the simulated structure, you can click "Simulation" in the top toolbar. A second graph will appear with less opacity showing, that the simulation does not quite fit with the experimental values. The fear has been proven true. (To indicate that a simulation is active, the menu item now has a blue background).
 
-![Analysis and Simulation](/uploads/analysis_sim.png "Analysis and Simulation")
+
 
 ### The Minimal Basis
 
 The simulation was done with the so called minimal basis. The minimal basis features only one set of reference structures - one for each characteristic mode: Doming, Saddling, Ruffling, Waving X & Y and Propellering. In most cases this is enough to describe the conformation properly. 
+
+![Analysis and Simulation](/uploads/analysis_sim.png "Analysis and Simulation")
 
 ### The Extended Basis
 
