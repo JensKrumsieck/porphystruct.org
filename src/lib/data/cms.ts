@@ -62,7 +62,7 @@ export function getPost(postType: string, slug: string) {
 }
 
 export async function loadFiles(postType: string, { fetch }) {
-    const res = await fetch(`${postType}.json`);
+    const res = await fetch(`/${postType}.json`);
     if (res.ok) {
         const data = await res.json()
         return {
