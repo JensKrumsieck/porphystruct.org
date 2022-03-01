@@ -1,6 +1,6 @@
 ---
 title: Zweiter Test
-category: Test
+category: ef120074-f3d7-4da0-ae07-aaf118492826
 priority: 0
 image: /uploads/2rwi1lhdvrv61.jpg
 ---
