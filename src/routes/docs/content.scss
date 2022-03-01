@@ -4,8 +4,10 @@
 
 .content {
     img {
-        max-height: 30vh;
-        margin: theme("margin.4") 0;
+        max-height: 50vh;
+        margin: theme("margin.6") 0;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: theme("borderRadius.md");
     }
     h3 {
         margin-top: theme("margin.8");
@@ -19,14 +21,25 @@
     }
     a {
         text-decoration: underline;
-        &:hover{
-            color: theme("colors.dark-blue")
+        &:hover {
+            color: theme("colors.dark-blue");
         }
     }
     code {
         color: theme("colors.white");
         background-color: theme("colors.dark-blue");
         padding: theme("padding.1");
-        border-radius: theme("borderRadius.md")
+        border-radius: theme("borderRadius.md");
+    }
+    ul {
+        margin-top: theme("margin.2");
+        list-style: initial;
+    }
+    ol {
+        margin-top: theme("margin.2");
+        list-style: decimal;
+    }
+    li {
+        margin-top: theme("margin.2");
     }
 }
