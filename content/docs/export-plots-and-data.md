@@ -30,80 +30,49 @@ Analysis (.md/.json/.png/.svg) offers 4 different options to export the analysis
 
 
 
-`### Simulation`
+```
+### Simulation
+* Doming: -0.727 Å
+* Saddling: 0.104 Å
+* Ruffling: 0.203 Å
+* WavingX: -0.070 Å
+* WavingY: 0.021 Å
+* Propellering: -0.006 Å
+* Doop (exp.): 0.769 Å
+* Doop (sim.): 0.767 Å
 
-`* Doming: -0.727 Å`
+### Cavity
+* Cavity size: 7.195 Å²
 
-`* Saddling: 0.104 Å`
+### Distances
+* N1 - N3: 3.787 Å
+* N2 - N4: 3.800 Å
+* Mo - N1: 2.033 Å
+* Mo - N2: 2.039 Å
+* Mo - N3: 2.038 Å
+* Mo - N4: 2.035 Å
+* Mo - Mean Plane: -0.964 Å
+* Mo - N4 Plane: 0.729 Å
 
-`* Ruffling: 0.203 Å`
+### Angles
+* N1 - Mo - N4: 74.948 °
+* N2 - Mo - N3: 88.983 °
+* C6 - C5 - C4: 123.307 °
+* C16 - C15 - C14: 123.294 °
+* C11 - C10 - C9: 126.149 °
+* [N1-Mo-N4]x[N2-Mo-N3]: 56.941 °
 
-`* WavingX: -0.070 Å`
+### Dihedrals
+* N1 - N2 - N3 - N4: -0.495 °
+* C3 - C4 - C6 - C7: 11.821 °
+* C2 - C1 - C19 - C18: 1.615 °
+* C13 - C14 - C16 - C17: -20.930 °
+* C8 - C9 - C11 - C12: 6.966 °
+* C4 - N1 - N3 - C11: 7.288 °
+* C9 - N2 - N4 - C16: -3.911 °
+* N1 - C4 - C6 - N2: 3.501 °
+* N1 - C1 - C19 - N4: 0.606 °
+* N3 - C14 - C16 - N4: -6.155 °
+* N2 - C9 - C11 - N3: 2.093 °
 
-`* WavingY: 0.021 Å`
-
-`* Propellering: -0.006 Å`
-
-`* Doop (exp.): 0.769 Å`
-
-`* Doop (sim.): 0.767 Å`
-
-`### Cavity`
-
-`* Cavity size: 7.195 Å²`
-
-`### Distances`
-
-`* N1 - N3: 3.787 Å`
-
-`* N2 - N4: 3.800 Å`
-
-`* Mo - N1: 2.033 Å`
-
-`* Mo - N2: 2.039 Å`
-
-`* Mo - N3: 2.038 Å`
-
-`* Mo - N4: 2.035 Å`
-
-`* Mo - Mean Plane: -0.964 Å`
-
-`* Mo - N4 Plane: 0.729 Å`
-
-`### Angles`
-
-`* N1 - Mo - N4: 74.948 °`
-
-`* N2 - Mo - N3: 88.983 °`
-
-`* C6 - C5 - C4: 123.307 °`
-
-`* C16 - C15 - C14: 123.294 °`
-
-`* C11 - C10 - C9: 126.149 °`
-
-`* [N1-Mo-N4]x[N2-Mo-N3]: 56.941 °`
-
-`### Dihedrals`
-
-`* N1 - N2 - N3 - N4: -0.495 °`
-
-`* C3 - C4 - C6 - C7: 11.821 °`
-
-`* C2 - C1 - C19 - C18: 1.615 °`
-
-`* C13 - C14 - C16 - C17: -20.930 °`
-
-`* C8 - C9 - C11 - C12: 6.966 °`
-
-`* C4 - N1 - N3 - C11: 7.288 °`
-
-`* C9 - N2 - N4 - C16: -3.911 °`
-
-`* N1 - C4 - C6 - N2: 3.501 °`
-
-`* N1 - C1 - C19 - N4: 0.606 °`
-
-`* N3 - C14 - C16 - N4: -6.155 °`
-
-`* N2 - C9 - C11 - N3: 2.093 °`
+```
