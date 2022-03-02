@@ -20,7 +20,8 @@ export function getAllPosts(postType: string) {
         });
         const result = {}
         categories.forEach(c => {
-            var data = content.filter(s => s.category == c.id)
+            // @ts-ignore
+            var data = content.filter(s => s.category == c.id).sort((a, b) => -(a.priority - b.priority) || a.slug.localeCompare(b.slug));
             if (data.length != 0)
                 result[c.name] = data;
         });
