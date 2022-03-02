@@ -1,7 +1,7 @@
 ---
 title: Simple Analysis
 category: cd697a60-9cab-48ea-ac79-876466906b99
-priority: 0
+priority: 1000
 image: /uploads/mocor-min.png
 ---
 ### Opening a File
