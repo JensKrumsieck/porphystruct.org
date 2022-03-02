@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .content {
-    img {
+    img:not(td *) {
         max-height: 50vh;
         margin: theme("margin.6") 0;
         border: 1px solid rgba(0, 0, 0, 0.2);
@@ -18,7 +18,7 @@
     }
     p {
         margin-bottom: theme("margin.4");
-        font-size: theme('fontSize.lg');
+        font-size: theme("fontSize.lg");
     }
     a {
         text-decoration: underline;
@@ -42,5 +42,12 @@
     }
     li {
         margin-top: theme("margin.2");
+    }
+    td,
+    th {
+        padding: theme("padding.2");
+    }
+    th {
+        min-width: 6rem;
     }
 }

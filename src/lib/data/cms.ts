@@ -56,6 +56,22 @@ export function getPost(postType: string, slug: string) {
         var titel = title != undefined && title != "" ? `title="${title}"` : ""
         return `<a href="${href}" target="_blank"><img class="content-image" src="${href}" ${alt} ${titel}/></a>`
     };
+    renderer.table = (header, body) => {
+        return `
+        <div class="flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block py-2 min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden shadow-md sm:rounded-lg">
+                        <table class="min-w-full table-auto">
+                            <thead class="bg-dark-blue text-white font-normal text-center">${header}</thead>
+                            <tbody class="divide-y text-center">${body}</tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+                `
+    };
 
     // @ts-ignore
     const { data, content } = grayMatter(file);
