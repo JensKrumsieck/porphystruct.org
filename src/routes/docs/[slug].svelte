@@ -30,7 +30,7 @@
 	afterUpdate(() => {
 		generateToc();
 	});
-	
+
 	function scrollFixed() {
 		var sb = document.getElementById('sb');
 		if (window.innerWidth > 768) {
@@ -59,22 +59,22 @@
 			var id = hx.id;
 			var type = hx.localName;
 			var content = hx.textContent;
-			var i = to_number(type.match('(d+)'));
+			var i = to_number(type.match('\\d+'));
 			var element = '';
+			if (lastI != 0 && lastI > i) {
+				element += '</ol>';
+			}
 			if (lastI != 0 && lastI < i) {
-				element += '<ul>';
+				element += '<ol class="pl-8 list-decimal">';
 			}
 			element += `
 			<li class="py-1">
 				<a class="underline lg:hover:white" href="#${id}">${content}</a>
 			</li>		
 				`;
-
-			if (lastI != 0 && lastI < i) {
-				element += '</ul>';
-			}
 			element += '\n';
 			result += element;
+			console.log(i + '-' + lastI);
 			lastI = i;
 		});
 		result =
