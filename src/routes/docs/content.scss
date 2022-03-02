@@ -32,12 +32,15 @@
         padding: theme("padding.1");
         border-radius: theme("borderRadius.md");
     }
-    ul {
+    ul,
+    ol {
+        margin-left: theme("margin.8");
         margin-top: theme("margin.2");
+    }
+    ul {
         list-style: initial;
     }
     ol {
-        margin-top: theme("margin.2");
         list-style: decimal;
     }
     li {
