@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { loadFile } from '$lib/data/cms';
 	/**
 	 * @type {import('@sveltejs/kit').Load}
@@ -9,7 +9,7 @@
 	}
 </script>
 
-<script>
+<script lang="ts">
 	import './content.scss';
 	import Container from '$lib/components/common/Container.svelte';
 	import H1 from '$lib/components/common/H1.svelte';
@@ -19,12 +19,18 @@
 	import OpenClose from '$lib/components/common/OpenClose.svelte';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
+	import { afterUpdate, to_number } from 'svelte/internal';
 	export let post;
 	let open = false;
 	let top = 0;
+
 	onMount(() => {
 		scrollFixed();
 	});
+	afterUpdate(() => {
+		generateToc();
+	});
+	
 	function scrollFixed() {
 		var sb = document.getElementById('sb');
 		if (window.innerWidth > 768) {
@@ -37,6 +43,45 @@
 			top = value;
 			sb.style.top = top + 'px';
 		}
+	}
+
+	function generateToc() {
+		var content = document.getElementsByClassName('content')[0];
+		var toc = document.getElementById('toc');
+		var headings = content.querySelectorAll('h1,h2,h3,h4,h5,h6');
+		if (headings.length == 0) {
+			toc.innerHTML = '';
+			return;
+		}
+		var lastI = 0;
+		var result = '';
+		headings.forEach((hx) => {
+			var id = hx.id;
+			var type = hx.localName;
+			var content = hx.textContent;
+			var i = to_number(type.match('(d+)'));
+			var element = '';
+			if (lastI != 0 && lastI < i) {
+				element += '<ul>';
+			}
+			element += `
+			<li class="py-1">
+				<a class="underline lg:hover:white" href="#${id}">${content}</a>
+			</li>		
+				`;
+
+			if (lastI != 0 && lastI < i) {
+				element += '</ul>';
+			}
+			element += '\n';
+			result += element;
+			lastI = i;
+		});
+		result =
+			'<h2 class="text-xl">Table Of Contents</h2>\n<ol class="pl-8 list-decimal">' +
+			result +
+			'</ol>';
+		toc.innerHTML = result;
 	}
 </script>
 
@@ -109,13 +154,18 @@
 				</nav>
 			</div>
 			{#if post.post.title != undefined}
-				<H1>{post.post.title}</H1>
-				<article class="mt-6">
+				<H1 _class="mb-6">{post.post.title}</H1>
+				<div
+					class="text-md lg:shadow-lg lg:float-right lg:p-8 lg:max-w-[50%] xl:max-w-[25%] lg:ml-8 lg:bg-dark-blue lg:rounded-lg lg:text-white"
+				>
 					{#if post.post.image != undefined}
-						<figure class="rounded-lg shadow-lg md:float-right md:w-1/3 ml-6">
+						<figure class="rounded-lg mb-8">
 							<img src={post.post.image} alt="Cover" title={post.post.title} class="rounded-lg" />
 						</figure>
 					{/if}
+					<div id="toc" class="" />
+				</div>
+				<article class="mt-6">
 					<div class="content">
 						{@html post.post.html}
 					</div>
