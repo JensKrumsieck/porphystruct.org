@@ -66,7 +66,7 @@ D_{oop} = \sqrt{\sum_{i=1}^m(\Delta_i^z)^2}
 ```
 For estimating the goodness of the fit the experimental displacement parameter can be compared to the simulated one. This is often called `math\delta_{oop}`.
 
-### Summary
+### Mode Symmetries
 
 |-|Doming|Saddling|Ruffling|Waving (X,Y)|Propellering|
 |---|---|---|---|---|---|
