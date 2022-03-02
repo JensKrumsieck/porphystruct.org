@@ -27,6 +27,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
     "gray-matter": "^4.0.3",
+    "katex": "^0.15.2",
     "marked": "^4.0.12",
     "node-sass": "^7.0.1",
     "postcss": "^8.4.7",

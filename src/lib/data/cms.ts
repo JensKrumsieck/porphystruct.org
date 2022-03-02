@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import grayMatter from 'gray-matter';
 import { marked } from 'marked';
+import katex from 'katex'
 
 export function getAllPosts(postType: string) {
     try {
@@ -51,12 +52,12 @@ export function getPost(postType: string, slug: string) {
     }
 
     const renderer = new marked.Renderer();
-    renderer.image = (href, text, title) => {
+    renderer.image = (href: string, text: string, title: string) => {
         var alt = text != undefined && text != "" ? `alt="${text}"` : ""
         var titel = title != undefined && title != "" ? `title="${title}"` : ""
         return `<a href="${href}" target="_blank"><img class="content-image" src="${href}" ${alt} ${titel}/></a>`
     };
-    renderer.table = (header, body) => {
+    renderer.table = (header: string, body: string) => {
         return `
         <div class="flex flex-col">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -70,12 +71,23 @@ export function getPost(postType: string, slug: string) {
                 </div>
             </div>
         </div>
-                `
+      `
     };
 
+    const originalCode = renderer.code;
+    const originalCodeSpan = renderer.codespan;
+    renderer.code = (code: string, lang: string, escaped: boolean) => {
+        if (lang == "math") return renderTex(code, true)
+        return originalCode(code, lang, escaped);
+    };
+
+    renderer.codespan = (code: string) => {
+        if (code.startsWith("math")) return renderTex(code.substring(4))
+        return originalCodeSpan(code);
+    }
     // @ts-ignore
-    const { data, content } = grayMatter(file);
-    const html = marked(content, { renderer });
+    var { data, content } = grayMatter(file);
+    var html = marked(content, { renderer });
     var excerpt = getExcerpt(content);
     var categoryName = getCategoryName(data.category);
     return {
@@ -142,6 +154,11 @@ function htmlEscapeToText(text) {
     });
 
 }
+
+function renderTex(content, block: boolean = false) {
+    return katex.renderToString(content, { displayMode: block, output: 'mathml' });
+}
+
 function getExcerpt(content, html = false) {
     var newline = html ? "<br/>" : "\r\n";
     const renderer = {
