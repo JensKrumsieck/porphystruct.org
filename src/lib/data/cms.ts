@@ -51,8 +51,8 @@ export function getPost(postType: string, slug: string) {
 
     const renderer = new marked.Renderer();
     renderer.image = (href, text, title) => {
-        var alt = text != undefined && text != "" ? `alt="${text}"`: ""
-        var titel = title != undefined && title != "" ? `title="${title}"`: ""
+        var alt = text != undefined && text != "" ? `alt="${text}"` : ""
+        var titel = title != undefined && title != "" ? `title="${title}"` : ""
         return `<a href="${href}" target="_blank"><img class="content-image" src="${href}" ${alt} ${titel}/></a>`
     };
 
@@ -60,12 +60,17 @@ export function getPost(postType: string, slug: string) {
     const { data, content } = grayMatter(file);
     const html = marked(content, { renderer });
     var excerpt = getExcerpt(content);
+    var categoryName = getCategoryName(data.category);
     return {
-        ...data, slug, html, postType, excerpt
+        ...data, slug, html, postType, excerpt, categoryName
     }
 }
 
-const getContent = (postType, fileName) => {
+function getCategoryName(id) {
+    var categories = getCatgories();
+    return categories.filter(s => s.id == id)[0].name;
+}
+function getContent(postType, fileName) {
     try {
         return fs.readFileSync(
             path.resolve(path.join(path.dirname(''), `content/${postType}/`), `${fileName}.md`),
@@ -77,8 +82,7 @@ const getContent = (postType, fileName) => {
         }
         return [];
     }
-};
-
+}
 
 export async function loadFiles(postType: string, { fetch }) {
     const res = await fetch(`${postType}.json`);
@@ -133,6 +137,6 @@ function getExcerpt(content, html = false) {
     }
     marked.use({ renderer });
     var text = marked(content, renderer);
-    text = text.substr(0, 250) + "\u2026";
+    text = text.substr(0, 160) + "\u2026";
     return text;
 }

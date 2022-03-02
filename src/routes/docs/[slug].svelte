@@ -60,7 +60,7 @@
 										<li>
 											<a
 												class:active={post.slug == $page.params.slug}
-												class="text-md text-dark-blue hover:underline rounded p-2 w-full block"
+												class="text-md text-dark-blue hover:bg-blue hover:text-white rounded p-2 w-full block"
 												href={'/docs/' + post.slug}>{post.title}</a
 											>
 										</li>
@@ -99,7 +99,7 @@
 						</li>
 						<li class="inline-flex items-center">
 							<Arrow size="1.25rem" />
-							<a href="/docs" class="hover:text-blue"> Manual </a>
+							{post.post.categoryName}
 						</li>
 						<li class="inline-flex items-center" aria-current="page">
 							<Arrow size="1.25rem" />
@@ -131,7 +131,6 @@
 <style lang="scss">
 	.active {
 		color: theme('colors.white');
-		background: theme('colors.dark-blue');
-		font-weight: 600;
+		background: theme('colors.dark');
 	}
 </style>
