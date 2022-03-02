@@ -73,12 +73,11 @@ export function getPost(postType: string, slug: string) {
         </div>
       `
     };
-    
-    const originalCode = renderer.code;
+    const unchanged = new marked.Renderer();
     const originalCodeSpan = renderer.codespan;
     renderer.code = (code: string, lang: string, escaped: boolean) => {
         if (lang == "math") return renderTex(code, true)
-        return originalCode.call(this, code, lang, escaped);
+        return unchanged.code(code, lang, escaped);
     };
 
     renderer.codespan = (code: string) => {

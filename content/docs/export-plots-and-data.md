@@ -27,3 +27,18 @@ Graph (.png/.svg) will save the displacement diagram as shown in the GUI. The fi
 Analysis (.md/.json/.png/.svg) offers 4 different options to export the analysis data. For .png and .svg files, the same applies as in the previous section. The .md (Markdown) File is a text file, which can be opened with any text editor (even notepad.exe), but can also be rendered to .html or other formats easily ([like this page, which is also a .md file](https://github.com/JensKrumsieck/porphystruct.org/tree/master/content/docs)). The .md File contains the analysis data (simulation, cavity, distances, angles and dihedrals) in a human readable format. A .json file contains the same data but in a machine readable format. JSON stands for JavaScript Object Notation. With this file, automated merging is possible (these are used by i.e. Batch Processing Feature of PorphyStruct)
 
 ![Analysis with minimal Basis](/uploads/295698_analysis.svg)
+
+The first lines of the markdown file are shown here:
+
+```
+### Simulation
+* Doming: -0.727 Å
+* Saddling: 0.104 Å
+* Ruffling: 0.203 Å
+* WavingX: -0.070 Å
+* WavingY: 0.021 Å
+* Propellering: -0.006 Å
+* Doop (exp.): 0.769 Å
+* Doop (sim.): 0.767 Å
+[...]
+```
