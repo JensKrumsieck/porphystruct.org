@@ -53,7 +53,7 @@ While the conformational features of porphyrins have been extensively investigat
 
 <!--StartFragment-->
 
-### PorphyStruct – A Digital Tool for the Quantitative Assignment of Non-Planar Distortion Modes in Four-Membered Porphyrinoids
+**PorphyStruct – A Digital Tool for the Quantitative Assignment of Non-Planar Distortion Modes in Four-Membered Porphyrinoids**
 
 **J. Krumsieck**, M. Bröring, *Chem. Eur J.*, **2021**, *27*, 11580-11588, DOI: [10.1002/chem.202101243](https://doi.org/10.1002/chem.202101243)\
 ▶️ **Very Important Paper** - **[Front Cover](http://doi.org/10.1002/chem.202101992)** - **[Cover Profile](http://doi.org/10.1002/chem.202101993)**
