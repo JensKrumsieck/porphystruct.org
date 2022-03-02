@@ -156,8 +156,8 @@ function htmlEscapeToText(text) {
 }
 
 function renderTex(content, block: boolean = false) {
-    var prefix = block ? '\\Large ' : '';
-    return katex.renderToString(prefix + content, { displayMode: block, output: 'mathml', throwOnError: false });
+    var prefix = block ? '\\large ' : '';
+    return katex.renderToString(prefix + content, { displayMode: block,throwOnError: false });
 }
 
 function getExcerpt(content, html = false) {
