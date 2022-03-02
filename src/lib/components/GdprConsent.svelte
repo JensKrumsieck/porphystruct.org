@@ -11,7 +11,6 @@
 	import { GoogleAnalytics } from '@beyonk/svelte-google-analytics';
 	import { gdprSettings } from '../../store.js';
 	import H3 from '$lib/components/common/H3.svelte';
-
 	import Cookie from 'svelte-material-icons/Cookie.svelte';
 
 	let pageLoaded = false;

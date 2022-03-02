@@ -31,6 +31,11 @@
 		generateToc();
 	});
 
+	$: {
+		open = false;
+		let url = $page;
+	}
+
 	function scrollFixed() {
 		var sb = document.getElementById('sb');
 		if (window.innerWidth > 768) {
@@ -74,7 +79,6 @@
 				`;
 			element += '\n';
 			result += element;
-			console.log(i + '-' + lastI);
 			lastI = i;
 		});
 		result =

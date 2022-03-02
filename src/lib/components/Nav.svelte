@@ -3,10 +3,16 @@
 	import Windows from 'svelte-material-icons/Windows.svelte';
 	import NavLink from './NavLink.svelte';
 	import OpenClose from '$lib/components/common/OpenClose.svelte';
+
+	import { page } from '$app/stores';
 	let open = false;
+	$: {
+		open = false;
+		let url = $page;
+	}
 </script>
 
-<nav class="container mx-auto justify-between px-4 flex flex-wrap">
+<nav class="container mx-auto justify-between px-4 flex flex-wrap md:bg-transparent bg-off-white">
 	<div class="logo py-3">
 		<a class="flex" href="/">
 			<img src="/ps_logo.svg" alt="Logo" width="42px" />

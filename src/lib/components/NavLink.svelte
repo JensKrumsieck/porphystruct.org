@@ -1,10 +1,15 @@
 <script>
+	import { page } from '$app/stores';
 	export let href = '';
-	export let active = false;
 	export let prefetch = false;
+	let active = false;
+	$: active = $page.url.href == href || $page.url.pathname.startsWith(href);
 </script>
 
-<li class="md:hover:text-blue hover:text-white hover:font-semibold md:hover:bg-transparent hover:bg-blue" class:active>
+<li
+	class="md:hover:text-blue hover:text-white hover:font-semibold md:hover:bg-transparent hover:bg-blue"
+	class:active
+>
 	{#if prefetch}
 		<a {href} sveltekit:prefetch class="flex p-4">
 			<slot />
@@ -19,6 +24,6 @@
 <style>
 	.active {
 		font-weight: bold;
-		border-top: 4em solid #0092ca;
+		border-top: .25rem solid #0092ca;
 	}
 </style>
