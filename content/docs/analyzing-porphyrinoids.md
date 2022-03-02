@@ -1,5 +1,5 @@
 ---
-title: Analyzing Porphyrinoids
+title: Simple Analysis
 category: cd697a60-9cab-48ea-ac79-876466906b99
 priority: 0
 image: /uploads/1stanalysis.png
