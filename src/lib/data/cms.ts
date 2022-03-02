@@ -73,17 +73,17 @@ export function getPost(postType: string, slug: string) {
         </div>
       `
     };
-
+    
     const originalCode = renderer.code;
     const originalCodeSpan = renderer.codespan;
     renderer.code = (code: string, lang: string, escaped: boolean) => {
         if (lang == "math") return renderTex(code, true)
-        return originalCode(code, lang, escaped);
+        return originalCode.call(this, code, lang, escaped);
     };
 
     renderer.codespan = (code: string) => {
         if (code.startsWith("math")) return renderTex(code.substring(4))
-        return originalCodeSpan(code);
+        return originalCodeSpan.call(this, code);
     }
     // @ts-ignore
     var { data, content } = grayMatter(file);

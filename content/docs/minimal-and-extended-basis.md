@@ -1,7 +1,7 @@
 ---
 title: Minimal and Extended Basis
 category: cd697a60-9cab-48ea-ac79-876466906b99
-priority: 0
+priority: 100
 image: /uploads/doop.png
 ---
 ### Introduction
