@@ -42,7 +42,7 @@ Furthermore, the cyclic structures are automatically detected and the analysis i
 
 <!--StartFragment-->
 
-## Why should i care
+### Why should i care
 
 While the conformational features of porphyrins have been extensively investigated in recent years using J.A. Shelnutt's NSD method \[1], the limitations of this method have left other macrocycles such as Corrole far behind. Studies have shown correlations of conformation with photophysical and chemical properties such as reactivity. \[2] For example, the metallation rates of porphyrins with large amounts of saddling are several orders of magnitude higher than for their planar counterparts. \[2b] Due to the large number of correlations found for porphyrins, a transfer of this method to other tetrapyrrolic systems is required as there a little to none correlations reported for e.g. corroles. This is the idea behind "**PorphyStruct**". PorphyStruct implements a variation of the NSD method on corroles, norcorroles, porphycenes, corrphycenes (and porphyrins).
 
