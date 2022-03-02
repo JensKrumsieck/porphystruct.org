@@ -35,42 +35,41 @@ Each out-of-plane symmetry corresponds to a specific mode:
 * Doming: `mathB_{1}`
 * Saddling: `mathA_{2}`
 * Ruffling: `mathB_{1}`
-* Waving: `mathB_{1} & A_{2}`
+* Waving: `mathB_{1} / A_{2}`
 * Propellering: `mathA_{2}`
 
 To see the mode representations, [visit this site: Modes.](/docs/modes#corrole)
 
 ### Norcorrole
-The D<sub>2h</sub> point group contains 4 symmetries out-of-plane(B<sub>3u</sub>, A<sub>u</sub>, B<sub>1g</sub> and B<sub>2g</sub>). These out-of-plane modes are distributed as follows:
-```math
-\Gamma_{oop} = 10A_{2} + 10B_{1}
-```
+The D<sub>2h</sub> point group contains 4 symmetries out-of-plane(B<sub>3u</sub>, A<sub>u</sub>, B<sub>1g</sub> and B<sub>2g</sub>).
 Each out-of-plane symmetry corresponds to a specific mode:
 * Doming: `mathB_{3u}`
 * Saddling: `mathA_{u}`
 * Ruffling: `mathB_{3u}`
-* Waving: `mathB_{1g} & A_{2g}`
+* Waving: `mathB_{1g} / A_{2g}`
 * Propellering: `mathA_{u}`
 
 To see the mode representations, [visit this site: Modes.](/docs/modes#norcorrole)
 
 ### Simulation
-#### Procedure
+#### Simulation Procedure
 These modes are used as references when simulating the experimental structure (extended basis uses second set of modes). Die displacement vectors of each mode are created by calculating the mean square plane deviation for each atom of the reference structure. These 6 (or 12) vectors form the matrix `mathD_{oop}^{mxn}`. Using the Matrix QR Algorithm the following equation system is solved:
 ```math
-\hat{D_{oop}} = \hat{d_{oop}} * D_{oop}^{mxn}
+\hat{D}_{oop} = \hat{d}_{oop} * D_{oop}^{mxn}
 ```
-The solution `math\hat{d_{oop}}` beeing the coefficients of the linear combination which correspond to the mode strengths.
+The solution `math\hat{d}_{oop}` beeing the coefficients of the linear combination which correspond to the mode strengths. With these coefficients a simulated distortion is computed by multiplying the coefficients with the normalized references.
 
 #### Displacement parameter
 One important value is the overall displacement parameter `mathD_{oop}` which quantifies the overall out-of-plane distortion by using the euclidean norm of all atom displacements. The value is calculated as follows:
 ```math
-D_{oop} = \sqrt(\sum_{i=1}^m(\Delta_i^z)^2
+D_{oop} = \sqrt{\sum_{i=1}^m(\Delta_i^z)^2}
 ```
+For estimating the goodness of the fit the experimental displacement parameter can be compared to the simulated one. This is often called `math\delta_{oop}`.
 
 ### Summary
-||Doming|Saddling|Ruffling|Waving (X,Y)|Propellering|
-|---|---|---|---|---|
-|Porphyrin (D4h)|	A2u|	B1u|	B2u|	Eg|	A1u|
+
+|-|Doming|Saddling|Ruffling|Waving (X,Y)|Propellering|
+|---|---|---|---|---|---|
+|Porphyrin (D4h)|A2u|B1u|B2u|Eg|A1u|
 |Corrole (C2v)|B1|A2|B1|B1 / A2|A2|
 |Norcorrole (D2h)|B3u|Au|B3u|B1g / B2g|Au|
