@@ -5,14 +5,6 @@ priority: 0
 ---
 This page gives an overview of which modes are used in the simulation procedure for the respective macrocycles. You can use any image visible on this page for your publications when using (and citing) PorphyStruct (J. Krumsieck, M. Bröring, *Chem. Eur J*., **2021**, *27*, 11580-11588, DOI: [10.1002/chem.202101243](https://doi.org/10.1002/chem.202101243).)
 
-### Table Of Contents
-
-1. [Porphyrin](#porphyrin)
-2. [Corrole](#corrole)
-3. [Norcorrole](#norcorrole)
-4. [Porphycene](#porphycene)
-5. [Corrphycene](#corrphycene)
-
 ### Porphyrin
 
 | Doming                         | Saddling                         | Ruffling                         | Waving X                        | Waving Y                        | Propellering                         |
