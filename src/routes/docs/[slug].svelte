@@ -25,13 +25,15 @@
 	export let post;
 	let open = false;
 	let top = 0;
-
+	const forceUpdate = async (_) => {};
+	let doRerender = 0;
 	onMount(() => {
 		scrollFixed();
 	});
 	afterUpdate(() => {
 		generateToc(document);
 		expandCode(document);
+		doRerender++;
 	});
 
 	$: {
@@ -55,7 +57,9 @@
 </script>
 
 <svelte:window on:scroll={scrollFixed} />
-<SEO title={post.post.title} slug="docs/{post.post.slug}" description={post.post.excerpt} />
+{#await forceUpdate(doRerender) then _}
+	<SEO title={post.post.title} slug="docs/{post.post.slug}" description={post.post.excerpt} />
+{/await}
 <Container>
 	<div class="flex">
 		<!--sidebar-->
