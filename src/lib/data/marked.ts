@@ -4,7 +4,7 @@ import Prism from 'prismjs';
 import loadLanguage from 'prismjs/components/index.js'
 
 export function renderMarkdown(text) {
-    loadLanguage()
+    loadLanguage(['markdown', 'json', 'csharp', 'python'])
     marked.setOptions({
         highlight: function (code, lang) {
             if (Prism.languages[lang]) {
