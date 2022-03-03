@@ -7,7 +7,7 @@
 </script>
 
 <li
-	class="md:hover:text-blue hover:text-white hover:font-semibold md:hover:bg-transparent hover:bg-blue"
+	class="md:hover:text-blue hover:text-white hover:font-semibold md:hover:bg-transparent hover:bg-blue nav-link"
 	class:active
 >
 	{#if prefetch}
@@ -22,6 +22,9 @@
 </li>
 
 <style>
+	.nav-link{		
+		border-top: .25rem solid transparent;
+	}
 	.active {
 		font-weight: bold;
 		border-top: .25rem solid #0092ca;
