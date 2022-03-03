@@ -41,7 +41,7 @@ export function renderMarkdown(text) {
     renderer.code = (code: string, lang: string, escaped: boolean) => {
         if (lang == "math") return renderTex(code, true)
         return `
-        <div class="rounded-lg bg-dark overflow-x-auto overflow-y-hidden w-full flex shadow-lg p-4">
+        <div class="rounded-lg bg-dark overflow-x-auto overflow-y-hidden w-full shadow-lg p-4 mt-4 collapsible relative">
             ${unchanged.code(code, lang, escaped)}
         </div>
             `

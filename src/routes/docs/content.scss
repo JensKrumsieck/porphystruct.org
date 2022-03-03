@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'katex/dist/katex.min.css';
-@import 'prismjs/themes/prism-tomorrow.min.css';
+@import "katex/dist/katex.min.css";
+@import "prismjs/themes/prism-tomorrow.min.css";
 
 .content {
     img:not(td *) {
@@ -10,6 +10,9 @@
         margin: theme("margin.6") 0;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: theme("borderRadius.md");
+        @media screen and (min-width: 769px) {
+            max-width: 50%;
+        }
     }
     h3 {
         margin-top: theme("margin.8");
@@ -18,7 +21,7 @@
         font-size: theme("fontSize.2xl");
         color: theme("colors.dark");
     }
-    h4{
+    h4 {
         margin-top: theme("margin.8");
         margin-bottom: theme("margin.2");
         font-weight: bold;
@@ -61,5 +64,14 @@
     }
     th {
         min-width: 6rem;
+    }
+    .katex-display {
+        overflow-x: auto;
+    }
+    .collapsible {
+        transition: all ease-in-out 0.3s;
+        &.collapsed {
+            height: 200px;
+        }
     }
 }

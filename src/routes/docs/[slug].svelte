@@ -19,7 +19,9 @@
 	import OpenClose from '$lib/components/common/OpenClose.svelte';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import { afterUpdate, to_number } from 'svelte/internal';
+	import { afterUpdate } from 'svelte/internal';
+	import { generateToc } from '$lib/util/toc';
+	import { expandCode } from '$lib/util/expandCode';
 	export let post;
 	let open = false;
 	let top = 0;
@@ -28,7 +30,8 @@
 		scrollFixed();
 	});
 	afterUpdate(() => {
-		generateToc();
+		generateToc(document);
+		expandCode(document);
 	});
 
 	$: {
@@ -48,44 +51,6 @@
 			top = value;
 			sb.style.top = top + 'px';
 		}
-	}
-
-	function generateToc() {
-		var content = document.getElementsByClassName('content')[0];
-		var toc = document.getElementById('toc');
-		var headings = content.querySelectorAll('h1,h2,h3,h4,h5,h6');
-		if (headings.length == 0) {
-			toc.innerHTML = '';
-			return;
-		}
-		var lastI = 0;
-		var result = '';
-		headings.forEach((hx) => {
-			var id = hx.id;
-			var type = hx.localName;
-			var content = hx.textContent;
-			var i = to_number(type.match('\\d+'));
-			var element = '';
-			if (lastI != 0 && lastI > i) {
-				element += '</ol>';
-			}
-			if (lastI != 0 && lastI < i) {
-				element += '<ol class="pl-8 list-decimal">';
-			}
-			element += `
-			<li class="py-1">
-				<a class="underline lg:hover:white" href="#${id}">${content}</a>
-			</li>		
-				`;
-			element += '\n';
-			result += element;
-			lastI = i;
-		});
-		result =
-			'<h2 class="text-xl">Table Of Contents</h2>\n<ol class="pl-8 list-decimal">' +
-			result +
-			'</ol>';
-		toc.innerHTML = result;
 	}
 </script>
 
