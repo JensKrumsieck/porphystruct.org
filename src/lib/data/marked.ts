@@ -1,10 +1,13 @@
 import { marked } from 'marked';
 import katex from 'katex'
 import Prism from 'prismjs';
-import loadLanguage from 'prismjs/components/index.js'
+import 'prismjs/components/prism-markdown'
+import 'prismjs/components/prism-csharp'
+import 'prismjs/components/prism-json'
+import 'prismjs/components/prism-python'
+
 
 export function renderMarkdown(text) {
-    loadLanguage(['markdown', 'json', 'csharp', 'python'])
     marked.setOptions({
         highlight: function (code, lang) {
             if (Prism.languages[lang]) {
