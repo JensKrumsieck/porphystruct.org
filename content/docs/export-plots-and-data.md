@@ -28,7 +28,7 @@ Analysis (.md/.json/.png/.svg) offers 4 different options to export the analysis
 
 ![Analysis with minimal Basis](/uploads/295698_analysis.svg)
 
-The first lines of the markdown file are shown here:
+The first contents of the json and markdown files are shown below:
 
 ```markdown
 ### Simulation
@@ -74,7 +74,6 @@ The first lines of the markdown file are shown here:
 * N1 - C1 - C19 - N4: 0.606 °
 * N3 - C14 - C16 - N4: -6.155 °
 * N2 - C9 - C11 - N3: 2.093 °
-
 ```
 
 ```json
@@ -319,5 +318,22 @@ The first lines of the markdown file are shown here:
     "Unit": "\u00C5"
   }
 }
-
 ```
+
+#### XYData
+
+XYData (.csv/.dat) contains the X and Y coordinates of the displacement diagram if you want to plot it yourself using e.g. OriginPro. These files are also neccessary for the use of the comparison function. It will be suffixed with _data.
+
+
+
+#### Molecule/Macrocycle
+
+Molecule and Macrocycle both export a .mol2 File containing either the full loaded data or the current detected  macrocycle containing the perimeter atoms.
+
+
+
+#### Viewport
+
+The Viewport Export renders the 3D Representation seen in the top right corner of the User Interface as .png Image (suffixed with _viewport).
+
+![Viewport Export](/uploads/295698_viewport.png)
