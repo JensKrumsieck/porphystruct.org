@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import grayMatter from 'gray-matter';
-import { marked } from 'marked';
-import katex from 'katex'
+import { renderExcerpt, renderMarkdown } from './marked';
 
 export function getAllPosts(postType: string) {
     try {
@@ -15,9 +14,8 @@ export function getAllPosts(postType: string) {
             );
             // @ts-ignore
             const { data, content } = grayMatter(file);
-            let text = getExcerpt(content, true)
             let category = data.category
-            return { ...data, slug, text, category };
+            return { ...data, slug, category };
         });
         const result = {}
         categories.forEach(c => {
@@ -51,43 +49,10 @@ export function getPost(postType: string, slug: string) {
         }
     }
 
-    const renderer = new marked.Renderer();
-    renderer.image = (href: string, text: string, title: string) => {
-        var alt = text != undefined && text != "" ? `alt="${text}"` : ""
-        var titel = title != undefined && title != "" ? `title="${title}"` : ""
-        return `<a href="${href}" target="_blank"><img class="content-image" src="${href}" ${alt} ${titel}/></a>`
-    };
-    renderer.table = (header: string, body: string) => {
-        return `
-        <div class="flex flex-col">
-            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div class="inline-block py-2 min-w-full sm:px-6 lg:px-8">
-                    <div class="overflow-hidden shadow-md sm:rounded-lg">
-                        <table class="min-w-full table-auto">
-                            <thead class="bg-dark-blue text-white font-normal text-center">${header}</thead>
-                            <tbody class="divide-y text-center">${body}</tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-      `
-    };
-    const unchanged = new marked.Renderer();
-    const originalCodeSpan = renderer.codespan;
-    renderer.code = (code: string, lang: string, escaped: boolean) => {
-        if (lang == "math") return renderTex(code, true)
-        return unchanged.code(code, lang, escaped);
-    };
-
-    renderer.codespan = (code: string) => {
-        if (code.startsWith("math")) return renderTex(code.substring(4))
-        return originalCodeSpan.call(this, code);
-    }
     // @ts-ignore
     var { data, content } = grayMatter(file);
-    var html = marked(content, { renderer });
-    var excerpt = getExcerpt(content);
+    var html = renderMarkdown(content)
+    var excerpt = renderExcerpt(content)
     var categoryName = getCategoryName(data.category);
     return {
         ...data, slug, html, postType, excerpt, categoryName
@@ -141,36 +106,4 @@ export async function loadFile(postType: string, slug: string, { fetch }) {
         status: res.status,
         error: new Error(`${res.status} - Could not load ${url}\n${await res.statusText}`)
     };
-}
-
-function htmlEscapeToText(text) {
-    return text.replace(/\&\#[0-9]*;|&amp;/g, function (escapeCode) {
-        if (escapeCode.match(/amp/)) {
-            return '&';
-        }
-        return String.fromCharCode(escapeCode.match(/[0-9]+/));
-
-    });
-
-}
-
-function renderTex(content, block: boolean = false) {
-    var prefix = block ? '\\large ' : '';
-    return katex.renderToString(prefix + content, { displayMode: block,throwOnError: false });
-}
-
-function getExcerpt(content, html = false) {
-    var newline = html ? "<br/>" : "\r\n";
-    const renderer = {
-        link(href, title, text) { return text; },
-        paragraph(text) { return htmlEscapeToText(text) + newline; },
-        strong(text) { return text; },
-        em(text) { return text; },
-        image(href, title, text) { return ''; },
-        heading(text, number, raw, slugger) { return raw + newline; }
-    }
-    marked.use({ renderer });
-    var text = marked(content, renderer);
-    text = text.substr(0, 160) + "\u2026";
-    return text;
 }

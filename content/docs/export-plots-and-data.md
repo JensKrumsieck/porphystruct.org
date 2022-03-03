@@ -30,7 +30,7 @@ Analysis (.md/.json/.png/.svg) offers 4 different options to export the analysis
 
 The first lines of the markdown file are shown here:
 
-```
+```markdown
 ### Simulation
 * Doming: -0.727 Å
 * Saddling: 0.104 Å
@@ -40,5 +40,5 @@ The first lines of the markdown file are shown here:
 * Propellering: -0.006 Å
 * Doop (exp.): 0.769 Å
 * Doop (sim.): 0.767 Å
-[...]
+
 ```
