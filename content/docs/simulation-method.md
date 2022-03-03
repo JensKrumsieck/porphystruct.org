@@ -14,7 +14,7 @@ For non-linear molecules there are 3N-6 degrees of freedom which results 66 mode
 
 ### Simulation
 #### Simulation Procedure
-These modes are used as references when simulating the experimental structure (extended basis uses second set of modes). Die displacement vectors of each mode are created by calculating the mean square plane deviation for each atom of the reference structure. These 6 (or 12) vectors form the matrix `mathD_{oop}^{mxn}`. Using the Matrix QR Algorithm the following equation system is solved:
+These modes are used as references when simulating the experimental structure (extended basis uses second set of modes). Die displacement vectors of each mode are created by calculating the mean square plane deviation for each atom of the reference structure. These 6 (or 12) vectors form the reference matrix `mathD_{oop}^{mxn}`. Using the Matrix QR Algorithm the following equation system is solved:
 ```math
 \hat{D}_{oop} = \hat{d}_{oop} * D_{oop}^{mxn}
 ```
