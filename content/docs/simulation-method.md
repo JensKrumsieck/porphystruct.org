@@ -10,7 +10,7 @@ The three-dimensional structure of each molecule `mathD_{obs}` is expressed by a
 ```math
 D_{obs} = \sum_{\Gamma,m}d_m^{\Gamma} D_m^{\Gamma} = \sum_{\Gamma_{oop},m}d_m^{\Gamma_{oop}} D_m^{\Gamma_{oop}} + \sum_{\Gamma_{ip},m}d_m^{\Gamma_{ip}} D_m^{\Gamma_{ip}} = D_{obs}^{oop} + D_{obs}^{ip}
 ```
-For non-linear molecules there are 3N-6 degrees of freedom which results 66 modes for the 24 framework atoms of the C<sub>20</sub>N<sub>4</sub> perimeter (Porphyrin, Porphycene, Corrphycene). For the C<sub>19</sub>N<sub>4</sub> (Corrole) and C<sub>18</sub>N<sub>4</sub> perimeter (Norcorrole) this results in 63 and 60 modes respectively. Of this 3N-6 modes N-3 modes are out-of-plane distortions (21 for Porphyrin) and 2N-3 modes (45 for Porphyrin) are in-plane distortions. 
+For non-linear molecules there are 3N-6 degrees of freedom which results 66 modes for the 24 framework atoms of the C<sub>20</sub>N<sub>4</sub> perimeter (Porphyrin, Porphycene, Corrphycene). For the C<sub>19</sub>N<sub>4</sub> (Corrole) and C<sub>18</sub>N<sub>4</sub> perimeter (Norcorrole) this results in 63 and 60 modes respectively. Of this 3N-6 modes N-3 modes are out-of-plane distortions (21 for Porphyrin, Porphycene, Corrphycene - 20 for Corrole, 19 for Norcorrole) and 2N-3 modes (45 for Porphyrin, Corrphycene, Porphycene, 43 for Corrole, 41 for Norcorrole) are in-plane distortions. 
 
 ### Porphyrin
 The D<sub>4h</sub> point group contains 5 symmetries for each, out-of-plane and in-plane distortions (B<sub>2u</sub>, B<sub>1u</sub>, A<sub>2u</sub>, E<sub>g</sub>(x,y), A<sub>1u</sub>, and A<sub>1g</sub>, A<sub>2g</sub>, B<sub>1g</sub>, B<sub>2g</sub> and E<sub>u</sub>(x,y), respectively). These out-of-plane modes are distributed as follows:
@@ -42,6 +42,12 @@ To see the mode representations, [visit this site: Modes.](/docs/modes#corrole)
 
 ### Norcorrole
 The D<sub>2h</sub> point group contains 4 symmetries out-of-plane(B<sub>3u</sub>, A<sub>u</sub>, B<sub>1g</sub> and B<sub>2g</sub>).
+
+These out-of-plane modes are distributed as follows:
+```math
+\Gamma_{oop} = 5B_{3u} + 4A_u + 4B_{1g} + 5B_{2g}
+```
+
 Each out-of-plane symmetry corresponds to a specific mode:
 * Doming: `mathB_{3u}`
 * Saddling: `mathA_{u}`
@@ -50,6 +56,37 @@ Each out-of-plane symmetry corresponds to a specific mode:
 * Propellering: `mathA_{u}`
 
 To see the mode representations, [visit this site: Modes.](/docs/modes#norcorrole)
+
+### Porphycene
+Porphycene's Pointgroup also is D<sub>2h</sub>. The D<sub>2h</sub> point group contains 4 symmetries out-of-plane(B<sub>3u</sub>, A<sub>u</sub>, B<sub>1g</sub> and B<sub>2g</sub>).
+
+These out-of-plane modes are distributed as follows:
+```math
+\Gamma_{oop} = 5B_{3u} + 6A_u + 5B_{1g} + 5B_{2g}
+```
+
+Each out-of-plane symmetry corresponds to a specific mode:
+* Doming: `mathB_{3u}`
+* Saddling: `mathA_{u}`
+* Ruffling: `mathB_{3u}`
+* Waving: `mathB_{1g} / A_{2g}`
+* Propellering: `mathA_{u}`
+
+To see the mode representations, [visit this site: Modes.](/docs/modes#porphycene)
+
+### Corrphycene
+Corrphycene features the same point group as the corrole. The C<sub>2v</sub> point group contains 2 symmetries for each, out-of-plane and in-plane distortions (B<sub>1</sub>, A<sub>2</sub> and A<sub>1</sub>, B<sub>2</sub> respectively). These out-of-plane modes are distributed as follows:
+```math
+\Gamma_{oop} = 11A_{2} + 10B_{1}
+```
+Each out-of-plane symmetry corresponds to a specific mode:
+* Doming: `mathB_{1}`
+* Saddling: `mathA_{2}`
+* Ruffling: `mathB_{1}`
+* Waving: `mathB_{1} / A_{2}`
+* Propellering: `mathA_{2}`
+
+To see the mode representations, [visit this site: Modes.](/docs/modes#corrphycene)
 
 ### Simulation
 #### Simulation Procedure
@@ -70,6 +107,8 @@ For estimating the goodness of the fit the experimental displacement parameter c
 
 |-|Doming|Saddling|Ruffling|Waving (X,Y)|Propellering|
 |---|---|---|---|---|---|
-|Porphyrin (D4h)|A2u|B1u|B2u|Eg|A1u|
-|Corrole (C2v)|B1|A2|B1|B1 / A2|A2|
-|Norcorrole (D2h)|B3u|Au|B3u|B1g / B2g|Au|
+|Porphyrin (D<sub>4h</sub>)|A<sub>2u</sub>|B<sub>1u</sub>|B<sub>2u</sub>|E<sub>g</sub>|A<sub>1u</sub>|
+|Corrole (C<sub>2v</sub>)|B<sub>1</sub>|A<sub>2</sub>|B<sub>1</sub>|B<sub>1</sub> / A<sub>2</sub>|A<sub>2</sub>|
+|Norcorrole (D<sub>2h</sub>)|B<sub>3u</sub>|A<sub>u</sub>|B<sub>3u</sub>|B<sub>1g</sub> / B<sub>2g</sub>|A<sub>u</sub>|
+|Porphycene (D<sub>2h</sub>)|B<sub>3u</sub>|A<sub>u</sub>|B<sub>3u</sub>|B<sub>1g</sub> / B<sub>2g</sub>|A<sub>u</sub>|
+|Corrphycene (C<sub>2v</sub>)|B<sub>1</sub>|A<sub>2</sub>|B<sub>1</sub>|B<sub>1</sub> / A<sub>2</sub>|A<sub>2</sub>|
