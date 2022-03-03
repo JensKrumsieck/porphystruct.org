@@ -59,7 +59,7 @@ export function renderMarkdown(text) {
 }
 export function renderTex(content, block: boolean = false) {
     var prefix = block ? '\\large ' : '';
-    return katex.renderToString(prefix + content, { displayMode: block, throwOnError: false });
+    return katex.renderToString(prefix + content, { displayMode: block, throwOnError: false, strict: false });
 }
 
 export function renderExcerpt(content, html = false) {
