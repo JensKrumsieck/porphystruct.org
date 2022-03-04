@@ -2,7 +2,7 @@
 title: Export Plots and Data
 category: cd697a60-9cab-48ea-ac79-876466906b99
 priority: 0
-image: /analysis.svg
+image: /uploads/save-dialog.png
 ---
 ### Introduction
 
