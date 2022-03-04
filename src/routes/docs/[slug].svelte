@@ -27,7 +27,11 @@
 	let top = 0;
 	const forceUpdate = async (_) => {};
 	let doRerender = 0;
+
+	let sb, bc;
 	onMount(() => {
+		sb = document.getElementById('sb');
+		bc = document.getElementById('bc');
 		scrollFixed();
 	});
 	afterUpdate(() => {
@@ -42,23 +46,24 @@
 	}
 
 	function scrollFixed() {
-		var sb = document.getElementById('sb');
+		if (sb == undefined || bc == undefined) return;
 		if (window.innerWidth > 768) {
 			sb.style.removeProperty('top');
 			sb.style.removeProperty('height');
+			top = 0;
 			return;
 		}
-		var offset = document.getElementById('bc').getBoundingClientRect();
+		var offset = bc.getBoundingClientRect();
 		var value = offset.top + offset.height;
 		if (value != top) {
 			top = value;
 			sb.style.top = top + 'px';
-			sb.style.height = window.innerHeight - top + "px";
+			sb.style.height = window.innerHeight - top + 'px';
 		}
 	}
 </script>
 
-<svelte:window on:scroll={scrollFixed} />
+<svelte:window on:scroll={scrollFixed} on:resize={scrollFixed} />
 {#await forceUpdate(doRerender) then _}
 	<SEO title={post.post.title} slug="docs/{post.post.slug}" description={post.post.excerpt} />
 {/await}
