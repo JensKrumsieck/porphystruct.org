@@ -28,10 +28,11 @@
 	const forceUpdate = async (_) => {};
 	let doRerender = 0;
 
-	let sb, bc;
+	let sb: HTMLElement, bc: HTMLElement, navHeight: number;
 	onMount(() => {
 		sb = document.getElementById('sb');
 		bc = document.getElementById('bc');
+		navHeight = document.getElementsByTagName('header')[0].getBoundingClientRect().height;
 		scrollFixed();
 	});
 	afterUpdate(() => {
@@ -49,7 +50,13 @@
 		if (sb == undefined || bc == undefined) return;
 		if (window.innerWidth > 768) {
 			sb.style.removeProperty('top');
-			sb.style.removeProperty('height');
+			if (window.scrollY > navHeight && sb.style.height != window.innerHeight + 'px')
+				sb.style.height = window.innerHeight + 'px';
+			else if (
+				window.scrollY < navHeight &&
+				sb.style.height != window.innerHeight - navHeight + 'px'
+			)
+				sb.style.height = window.innerHeight - navHeight + 'px';
 			top = 0;
 			return;
 		}
@@ -71,7 +78,7 @@
 	<div class="flex">
 		<!--sidebar-->
 		<div
-			class="z-30 md:static fixed md:sticky left-0 md:top-0 bg-off-white overflow-x-hidden overflow-y-auto self-start md:h-screen h-full md:pl-0 pl-4 pb-8"
+			class="sidebar z-30 md:static fixed md:sticky left-0 md:top-0 bg-off-white overflow-x-hidden overflow-y-auto self-start md:h-screen h-full md:pl-0 pl-4 pb-8"
 			id="sb"
 		>
 			<div class="md:block w-64 pt-6" class:hidden={!open}>
