@@ -24,3 +24,9 @@ You can also compare Structures of multiple files. Open the compare dialog and h
 ![Appended File](/uploads/appended.png)
 
 ![Result Compare](/uploads/compare4.png)
+
+### Exported Image
+
+A customized plot can be achieved through Settings and Quick Settings menus. An example is shown below:
+
+![Compare Export](/uploads/1978931compare_graph.png)
