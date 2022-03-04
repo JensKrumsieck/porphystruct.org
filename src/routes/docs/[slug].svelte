@@ -66,7 +66,7 @@
 	<div class="flex">
 		<!--sidebar-->
 		<div
-			class="z-30 md:static fixed md:sticky left-0 md:top-0 bg-off-white overflow-x-hidden overflow-y-auto self-start md:h-auto h-full md:pl-0 pl-4 pb-8"
+			class="z-30 md:static fixed md:sticky left-0 md:top-0 bg-off-white overflow-x-hidden overflow-y-auto self-start md:h-screen h-full md:pl-0 pl-4 pb-8"
 			id="sb"
 		>
 			<div class="md:block w-64 pt-6" class:hidden={!open}>
