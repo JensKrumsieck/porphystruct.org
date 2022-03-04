@@ -21,6 +21,6 @@ The default path selected when opening files, useful when you analyze multiple s
 #### Export Path
 The default path to save analysis data to. (default: empty)
 
-### Updated
+### Updates
 #### Auto Update
 Allows PorphyStruct to automatically search for and download updates from our GitHub site.
