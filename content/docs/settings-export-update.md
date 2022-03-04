@@ -4,7 +4,7 @@ category: 3199ed78-426d-4060-be58-74200c486e76
 priority: 0
 image: /uploads/export.png
 ---
-![](/uploads/export.png)
+![Export & Update](/uploads/export.png)
 ### Export
 #### Height
 The height of the exported images (default: 1500)
