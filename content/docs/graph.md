@@ -1,7 +1,7 @@
 ---
 title: Graph
 category: 3199ed78-426d-4060-be58-74200c486e76
-priority: 0
+priority: 3
 image: /uploads/prefgraph.png
 ---
 ![](/uploads/prefgraph.png)
