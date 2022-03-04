@@ -45,6 +45,7 @@
 		var sb = document.getElementById('sb');
 		if (window.innerWidth > 768) {
 			sb.style.removeProperty('top');
+			sb.style.removeProperty('height');
 			return;
 		}
 		var offset = document.getElementById('bc').getBoundingClientRect();
@@ -52,6 +53,7 @@
 		if (value != top) {
 			top = value;
 			sb.style.top = top + 'px';
+			sb.style.height = window.innerHeight - top + "px";
 		}
 	}
 </script>
@@ -64,7 +66,7 @@
 	<div class="flex">
 		<!--sidebar-->
 		<div
-			class="z-30 md:static fixed md:sticky left-0 md:top-0 bg-off-white overflow-visible self-start md:h-auto h-full md:pl-0 pl-4"
+			class="z-30 md:static fixed md:sticky left-0 md:top-0 bg-off-white overflow-x-visible overflow-y-auto self-start md:h-auto h-full md:pl-0 pl-4 pb-8"
 			id="sb"
 		>
 			<div class="md:block w-64 pt-6" class:hidden={!open}>

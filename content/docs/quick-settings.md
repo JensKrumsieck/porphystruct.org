@@ -1,5 +1,5 @@
 ---
-title: Quick Settings
+title: Customization - Quick Settings
 category: cd66e9b9-2947-4750-a0fa-fc07b1efc3a5
 priority: 909088
 ---
