@@ -24,6 +24,6 @@ The extended basis adds another set of reference structures to the simulation. 1
 
 <!--StartFragment-->
 
-If possible choose the minimal basis. This is a good choice in most cases and is easier to describe. If the Doop-Values differ to much, like about 3-5% of the D<sub>oop</sub> (exp.) Value one should use the extended basis. If you are not sure look at the simulation graph. If it gets significantly better, use the extended basis, if it's already fine, stick with the minimal basis.
+If possible choose the minimal basis. This is a good choice in most cases and is easier to describe. If the D<sub>oop</sub>-Values differ to much, like about 3-5% of the D<sub>oop</sub> (exp.) Value one should use the extended basis. If you are not sure look at the simulation graph. If it gets significantly better, use the extended basis, if it's already fine, stick with the minimal basis.
 
 <!--EndFragment-->
