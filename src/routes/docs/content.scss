@@ -43,6 +43,7 @@
         background-color: theme("colors.dark-blue");
         padding: theme("padding.1");
         border-radius: theme("borderRadius.md");
+        word-break: break-word;
     }
     ul,
     ol {
@@ -57,6 +58,7 @@
     }
     li {
         margin-top: theme("margin.2");
+        word-wrap: break-word;
     }
     td,
     th {
