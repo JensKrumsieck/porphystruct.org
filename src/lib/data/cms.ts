@@ -3,7 +3,7 @@ import path from 'path';
 import grayMatter from 'gray-matter';
 import { renderExcerpt, renderMarkdown } from './marked';
 
-export function getAllPosts(postType: string) {
+export function getAllPosts(postType: string): {[categoryID: string]: []} {
     try {
         const categories = getCatgories()
         const content = fs.readdirSync(path.join(path.dirname(''), `content/${postType}/`)).map((fileName) => {
@@ -28,9 +28,9 @@ export function getAllPosts(postType: string) {
     } catch (e) {
         console.log(e)
         if (e.code == 'ENOENT') {
-            return false;
+            return {};
         }
-        return [];
+        return {};
     }
 }
 
