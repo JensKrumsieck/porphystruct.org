@@ -5,25 +5,12 @@ priority: 1000
 ---
 ### Introducing PorphyStruct
 
-<!--StartFragment-->
-
 *PorphyStruct*, a new digital tool for the analysis of non-planar distortion modes of different porphyrinoids - The program makes use of the normal-coordinate structure decomposition technique (NSD) and employs sets of normal modes equivalent to those established for porphyrins in order to describe the out-of-plane dislocation pattern of perimeter atoms from corroles, norcorroles, porphycenes and other porphyrinoids quantitatively and in analogy to the established terminology.
-
-<!--EndFragment-->
-
-<!--StartFragment-->
 
 *PorphyStruct* not only allows the generation of **displacement diagrams** (a.k.a cylinder projection) in split seconds but also offers a fast **NSD-type analysis of tetrapyrroles** with different perimeters. Additionally specific Bond distances, dihedrals oder angles such as the interplanar angle, helicity and the size of the N4 Cavity are calculated.
 
-<!--EndFragment-->
-
-<!--StartFragment-->
 
 Furthermore, the cyclic structures are automatically detected and the analysis is fully automatic for **multiple structures per crystal**. Therefore, **batch processing** and statistical evaluation is also possible.
-
-<!--EndFragment-->
-
-<!--StartFragment-->
 
 ### Features list
 
@@ -38,9 +25,6 @@ Furthermore, the cyclic structures are automatically detected and the analysis i
 * Batch processing and statistics (wip)
 * Automatic Update (1.0.2+)
 
-<!--EndFragment-->
-
-<!--StartFragment-->
 
 ### Why should i care
 
@@ -49,13 +33,9 @@ While the conformational features of porphyrins have been extensively investigat
 * \[1] W. Jentzen, J.-G. Ma, J. A. Shelnutt, *Biophys. J.* **1998**, *74*, 753–763; W. Jentzen, X.-Z. Song, J. A. Shelnutt, *J. Phys. Chem. B* **1997**, *101*, 1684–1699.
 * \[2] a) M. O. Senge, S. A. MacGowan, J. M. O'Brien, *Chem. Commun.* **2015**, *51*, 17031–17063; M. O. Senge, *Chem. Commun.* **2006**, 243–256 b) J. Takeda, T. Ohya, M. Sato, *Inorg. Chem.* **1992**, *31*, 2877–2880.
 
-<!--EndFragment-->
-
-<!--StartFragment-->
 
 **PorphyStruct – A Digital Tool for the Quantitative Assignment of Non-Planar Distortion Modes in Four-Membered Porphyrinoids**
 
 **J. Krumsieck**, M. Bröring, *Chem. Eur J.*, **2021**, *27*, 11580-11588, DOI: [10.1002/chem.202101243](https://doi.org/10.1002/chem.202101243)\
 ▶️ **Very Important Paper** - **[Front Cover](http://doi.org/10.1002/chem.202101992)** - **[Cover Profile](http://doi.org/10.1002/chem.202101993)**
 
-<!--EndFragment-->
