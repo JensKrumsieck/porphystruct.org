@@ -374,6 +374,14 @@
 			<div class="flex flex-wrap gap-12 place-items-center mx-auto">
 				<iframe
 					class="w-80 md:w-96 h-44 md:h-56"
+					src="https://www.youtube-nocookie.com/embed/zwIAVYFFJIU"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				/>
+				<iframe
+					class="w-80 md:w-96 h-44 md:h-56"
 					src="https://www.youtube-nocookie.com/embed/YCA3ZIYyLQw"
 					title="YouTube video player"
 					frameborder="0"
