@@ -71,6 +71,8 @@
 </script>
 
 <svelte:window on:scroll={scrollFixed} on:resize={scrollFixed} />
+
+<SEO title={post.post.title} slug="docs/{post.post.slug}" description={post.post.excerpt} />
 {#await forceUpdate(doRerender) then _}
 	<SEO title={post.post.title} slug="docs/{post.post.slug}" description={post.post.excerpt} />
 {/await}

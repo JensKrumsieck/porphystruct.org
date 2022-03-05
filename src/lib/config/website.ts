@@ -1,7 +1,7 @@
 const website = {
     author: 'Jens Krumsieck',
     ogLanguage: 'en_US',
-    siteLangugae: 'en-US',
+    siteLanguage: 'en-US',
     siteTitle: 'PorphyStruct - Structural Analysis of Porphyrinoids',
     siteShortTitle: 'PorphyStruct',
     siteUrl: 'https://porphystruct.org',
