@@ -1,11 +1,20 @@
 <script context="module" lang="ts">
-	import { loadFile } from '$lib/data/cms';
+	import { base } from '$app/paths';
 	/**
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ url, params, fetch }) {
-		const { slug } = params;
-		return await loadFile('docs', slug, { fetch });
+		const res = await fetch(`${base}/docs/${params.slug}.json`);
+		if (res.ok) {
+			const data = await res.json();
+			return {
+				props: { post: data.post, posts: data.posts }
+			};
+		}
+		return {
+			status: res.status,
+			error: new Error(`${res.status} - ${await res.statusText} - URL was ${url}`)
+		};
 	}
 </script>
 
@@ -22,11 +31,12 @@
 	import { afterUpdate } from 'svelte/internal';
 	import { generateToc } from '$lib/util/toc';
 	import { expandCode } from '$lib/util/expandCode';
+
 	export let post;
+	export let posts;
+
 	let open = false;
 	let top = 0;
-	const forceUpdate = async (_) => {};
-	let doRerender = 0;
 
 	let sb: HTMLElement, bc: HTMLElement, navHeight: number;
 	onMount(() => {
@@ -38,12 +48,11 @@
 	afterUpdate(() => {
 		generateToc(document);
 		expandCode(document);
-		doRerender++;
 	});
 
 	$: {
 		open = false;
-		let url = $page;
+		let site = $page;
 	}
 
 	function scrollFixed() {
@@ -71,9 +80,8 @@
 </script>
 
 <svelte:window on:scroll={scrollFixed} on:resize={scrollFixed} />
-{#await forceUpdate(doRerender) then _}
-	<SEO title={post.post.title} slug="docs/{post.post.slug}" description={post.post.excerpt} />
-{/await}
+<SEO title={post.title} slug="docs/{$page.params.slug}" description={post.excerpt} />
+
 <Container>
 	<div class="flex">
 		<!--sidebar-->
@@ -84,11 +92,11 @@
 			<div class="md:block w-64 pt-6" class:hidden={!open}>
 				<nav>
 					<ul>
-						{#each Object.keys(post.posts) as cat}
+						{#each Object.keys(posts) as cat}
 							<li>
 								<h5 class="py-2 font-bold text-lg text-dark">{cat}</h5>
 								<ul>
-									{#each post.posts[cat] as post}
+									{#each posts[cat] as post}
 										<li>
 											<a
 												class:active={post.slug == $page.params.slug}
@@ -131,30 +139,30 @@
 						</li>
 						<li class="inline-flex items-center">
 							<Arrow size="1.25rem" />
-							{post.post.categoryName}
+							{post.categoryName}
 						</li>
 						<li class="inline-flex items-center" aria-current="page">
 							<Arrow size="1.25rem" />
-							{post.post.title}
+							{post.title}
 						</li>
 					</ol>
 				</nav>
 			</div>
-			{#if post.post.title != undefined}
-				<H1 _class="mb-6">{post.post.title}</H1>
+			{#if post.title != undefined}
+				<H1 _class="mb-6">{post.title}</H1>
 				<div
 					class="text-md lg:shadow-lg lg:float-right lg:p-8 lg:max-w-[50%] xl:max-w-[25%] lg:ml-8 lg:bg-dark-blue lg:rounded-lg lg:text-white"
 				>
-					{#if post.post.image != undefined}
+					{#if post.image != undefined}
 						<figure class="rounded-lg mb-8">
-							<img src={post.post.image} alt="Cover" title={post.post.title} class="rounded-lg" />
+							<img src={post.image} alt="Cover" title={post.title} class="rounded-lg" />
 						</figure>
 					{/if}
 					<div id="toc" class="" />
 				</div>
 				<article class="mt-6">
 					<div class="content">
-						{@html post.post.html}
+						{@html post.html}
 					</div>
 				</article>
 			{:else}

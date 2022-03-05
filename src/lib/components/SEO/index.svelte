@@ -49,7 +49,7 @@
 
 <svelte:head>
 	<title>{pageTitle}</title>
-
+	<meta name="title" content={pageTitle} />
 	<meta name="description" content={description} />
 	<meta
 		name="robots"

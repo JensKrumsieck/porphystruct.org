@@ -3,7 +3,7 @@ import path from 'path';
 import grayMatter from 'gray-matter';
 import { renderExcerpt, renderMarkdown } from './marked';
 
-export function getAllPosts(postType: string): {[categoryID: string]: []} {
+export function getAllPosts(postType: string): { [categoryID: string]: [] } {
     try {
         const categories = getCatgories()
         const content = fs.readdirSync(path.join(path.dirname(''), `content/${postType}/`)).map((fileName) => {
@@ -75,35 +75,4 @@ function getContent(postType, fileName) {
         }
         return [];
     }
-}
-
-export async function loadFiles(postType: string, { fetch }) {
-    const res = await fetch(`${postType}.json`);
-    if (res.ok) {
-        const data = await res.json()
-        return {
-            props: {
-                posts: data
-            }
-        };
-    }
-    return {
-        status: res.status,
-        error: new Error(`${res.status} - There was an error while loading the manual.\n${res.statusText}`)
-    };
-}
-
-export async function loadFile(postType: string, slug: string, { fetch }) {
-    const url = `/${postType}/${slug}`;
-    const res = await fetch(`${url}.json`);
-    if (res.ok) {
-        const data = await res.json()
-        return {
-            props: { post: data }
-        };
-    }
-    return {
-        status: res.status,
-        error: new Error(`${res.status} - Could not load ${url}\n${await res.statusText}`)
-    };
 }
