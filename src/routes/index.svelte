@@ -5,7 +5,6 @@
 	 */
 	export async function load({ url, params, fetch }) {
 		const res = await fetch(`${base}/docs.json`);
-		console.log(res);
 		if (res.ok) {
 			const data = await res.json();
 			return {
