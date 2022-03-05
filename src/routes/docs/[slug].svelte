@@ -31,9 +31,14 @@
 	import { afterUpdate } from 'svelte/internal';
 	import { generateToc } from '$lib/util/toc';
 	import { expandCode } from '$lib/util/expandCode';
+	import website from '$lib/config/website';
 
 	export let post;
 	export let posts;
+	let image = {
+		url: website.siteUrl + post.image,
+		alt: post.title
+	};
 
 	let open = false;
 	let top = 0;
@@ -80,7 +85,17 @@
 </script>
 
 <svelte:window on:scroll={scrollFixed} on:resize={scrollFixed} />
-<SEO title={post.title} slug="docs/{$page.params.slug}" description={post.excerpt} />
+{#if post.image == ''}
+	<SEO title={post.title} slug="docs/{$page.params.slug}" description={post.excerpt} />
+{:else}
+	<SEO
+		title={post.title}
+		slug="docs/{$page.params.slug}"
+		description={post.excerpt}
+		ogImage={image}
+		twitterImage={image}
+	/>
+{/if}
 
 <Container>
 	<div class="flex">

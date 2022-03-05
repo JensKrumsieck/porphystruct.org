@@ -20,8 +20,6 @@
 	<meta property="og:description" content={description} />
 	{#if image}
 		<meta property="og:image" content={image.url} />
-		<meta property="og:image:width" content="1200" />
-		<meta property="og:image:height" content="640" />
 		<meta property="og:image:alt" content={image.alt} />
 	{/if}
 </svelte:head>
