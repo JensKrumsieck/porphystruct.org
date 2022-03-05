@@ -12,7 +12,8 @@
 		siteTitle,
 		siteUrl,
 		githubPage,
-		twitterUsername
+		twitterUsername, 
+		keywords
 	} = website;
 
 	const defaultAlt = siteTitle;
@@ -51,6 +52,7 @@
 	<title>{pageTitle}</title>
 	<meta name="title" content={pageTitle} />
 	<meta name="description" content={description} />
+	<meta name="keywords" content={keywords} />
 	<meta
 		name="robots"
 		content="index, follow"

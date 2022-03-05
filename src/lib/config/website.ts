@@ -11,5 +11,6 @@ const website = {
     contactEmail: 'mail@jenskrumsieck.de',
     githubPage: 'jenskrumsieck',
     twitterUsername: 'jens_ation',
+    keywords: "PorphyStruct, Corrole, Porphyrin, Corrphycene, Porphycene, Norcorrole, Conformation, Analysis, NSD, Isoporphyrin, Structural"
 }
 export { website as default }
