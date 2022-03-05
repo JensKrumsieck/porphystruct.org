@@ -67,7 +67,7 @@
 <Container _class="hero md:-mt-16">
 	<Wrapper>
 		<div class="left w-full md:w-1/4 self-center z-20">
-			<p class="uppercase font-semibold text-blue text-xs">PorphyStruct</p>
+			<p class="uppercase font-semibold text-blue text-sm">PorphyStruct</p>
 			<H1 _class="lg:w-[80vw] md:w-[85vw] w-[90vw]">
 				Analyze your
 				<span class="font-bold changing">
@@ -81,7 +81,7 @@
 					{/each}
 				</span>
 			</H1>
-			<h2 class="md:text-2xl text-xl font-semibold mt-1 mb-10">
+			<h2 class="md:text-2xl text-xl font-semibold mt-4 mb-10">
 				Structural Analysis of Porphyrinoids
 			</h2>
 			<p class="italic text-base my-3">Fast. Free. Open Source.</p>
@@ -105,7 +105,6 @@
 		</div>
 	</Wrapper>
 </Container>
-
 <Container _class="bg-dark">
 	<Wrapper>
 		<div class="left w-full md:w-1/2 self-center bg-white rounded md:p-5 md:mt-0 mt-12">
@@ -313,12 +312,12 @@
 		</div>
 	</Wrapper>
 </Container>
-<Container _class="my-16 bg-dark text-white py-16">
+<Container _class="mt-16 bg-dark text-white py-16">
 	<div class="md:w-1/2">
-		<H3>
-			<span class="flex gap-4 items-center"><Book size="1.75rem" /> Documentation</span>
-		</H3>
-		<p>
+		<h2 class="font-bold text-4xl">
+			<span class="flex gap-4 items-center"><Book size="2.5rem" /> Documentation</span>
+		</h2>
+		<p class="mt-3">
 			Documentation of the main features and concepts is available on our site. This will always be
 			extended with new features or updated with changes. If you still have questions, please use
 			our
@@ -351,6 +350,22 @@
 			</div>
 		{/each}
 	</div>
+</Container>
+
+<Container _class="bg-green py-16 mb-16">
+	<p class="text-4xl md:text-6xl font-black">Free and Open Source</p>
+	<p class="mt-6 text-xl">
+		PorphyStruct is a public project, licensed under
+		<a class="underline" href="https://github.com/JensKrumsieck/PorphyStruct/blob/master/LICENSE"
+			>MIT License</a
+		>.
+	</p>
+	<p class="mt-6  text-xl">
+		PorphyStruct is free and <a
+			class="underline"
+			href="https://github.com/JensKrumsieck/PorphyStruct">open source</a
+		> and always will be!
+	</p>
 </Container>
 
 {#if currentSettings.youtube}

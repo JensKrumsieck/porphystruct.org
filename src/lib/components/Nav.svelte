@@ -16,7 +16,7 @@
 	<div class="logo py-3">
 		<a class="flex" href="/">
 			<img src="/ps_logo.svg" alt="Logo" width="42px" />
-			<span class="md:flex hidden font-bold text-[1.75rem] ml-2 self-center">PorphyStruct</span>
+			<span class="md:flex hidden font-bold text-3xl ml-2 self-center">PorphyStruct</span>
 		</a>
 	</div>
 	<div class="flex md:order-2 ">
@@ -41,7 +41,7 @@
 	</div>
 	<div
 		class:hidden={!open}
-		class="font-normal text-lg md:flex md:w-auto w-full md:order-1  justify-between items-center"
+		class="font-normal text-xl md:flex md:w-auto w-full md:order-1 justify-between items-center"
 		id="main-menu"
 	>
 		<ul class="flex md:flex-row flex-col navbar">
