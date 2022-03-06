@@ -1,6 +1,10 @@
 <script>
 	import Top from 'svelte-material-icons/ArrowUpThick.svelte';
 	import '@fontsource/source-sans-pro';
+	import '@fontsource/source-sans-pro/400-italic.css';
+	import '@fontsource/source-sans-pro/600.css';
+	import '@fontsource/source-sans-pro/700.css';
+	import '@fontsource/source-sans-pro/900.css';
 	import '../app.css';
 	import GdprConsent from '$lib/components/GdprConsent.svelte';
 	import Nav from '$lib/components/Nav.svelte';
