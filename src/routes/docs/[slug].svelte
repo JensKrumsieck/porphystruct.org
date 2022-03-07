@@ -85,7 +85,7 @@
 </script>
 
 <svelte:window on:scroll={scrollFixed} on:resize={scrollFixed} />
-{#if post.image == ''}
+{#if post.image == '' || post.image == undefined || post.image == "undefined"}
 	<SEO title={post.title} slug="docs/{$page.params.slug}" description={post.excerpt} />
 {:else}
 	<SEO
