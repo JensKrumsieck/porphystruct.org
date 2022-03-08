@@ -72,7 +72,7 @@
 	<Wrapper>
 		<div class="left w-full md:w-1/4 self-center z-20">
 			<p class="uppercase font-semibold text-blue text-sm">PorphyStruct</p>
-			<H1 _class="lg:w-[80vw] md:w-[85vw] w-[90vw]">
+			<H1 _class="md:w-[85vw] w-[90vw]">
 				Analyze your
 				<span class="font-bold changing">
 					{#each macrocycles as item, i}
