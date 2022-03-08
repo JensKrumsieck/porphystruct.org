@@ -16,7 +16,7 @@ Version 1.0.0 Release Candidate 1 has just been released!
 * Added Mode Calculator
 * Added Export: Analysis bar charts
 * Added Export: Viewport renders
-* :warning: [bugfix - critical] changed porphyrin simulation to not use C20 two times ;)
+* ⚠️ [bugfix - critical] changed porphyrin simulation to not use C20 two times ;)
 * [bugfix] fixed UI block during detection phase
 * [bugfix] batch processing ignored last item in list
 * [bugfix] batch processing no longer reports failed items if count i 0
