@@ -21,7 +21,7 @@
 		</div>
 		<div class="flex place-items-center">
 			<Time />
-			<span class="ml-1 mr-4r">{moment(news.date).fromNow()}</span>
+			<span class="ml-1 mr-4r" title={moment(news.date).format("YYYY/MM/DD")}>{moment(news.date).fromNow()}</span>
 		</div>
 	</div>
 	<div class="flex place-items-center">
