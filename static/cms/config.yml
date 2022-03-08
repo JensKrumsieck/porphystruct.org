@@ -18,13 +18,33 @@ collections:
         label: 'Categories'
         file: 'content/categories.json'
         fields:
-          - { label: Title, name: title, widget: string }
           - label: Categories
             name: categories
             widget: list
             fields:
               - { label: Name, name: name, widget: string }
               - { label: 'ID', name: 'id', widget: 'uuid' }
+      - name: 'tags'
+        label: 'Tags'
+        file: 'content/tags.json'
+        fields: 
+          - label: Tags
+            name: tags
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: 'ID', name: 'id', widget: 'uuid' }
+      - name: 'authors'
+        label: 'Authors'
+        file: 'content/authors.json'
+        fields:
+          - label: Authors
+            name: authors
+            widget: list
+            fields:            
+              - { label: Name, name: name, widget: string }
+              - { label: Twitter, name: twitter, widget: string }
+              - { label: Website, name: website, widget: string }
   - name: 'docs'
     label: 'Manuals'
     label_singular: 'Manual'
@@ -47,4 +67,38 @@ collections:
         }
       - { label: 'Priority', name: 'priority', widget: 'number', default: 0, value_type: "int" }
       - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'news'
+    label: 'News'
+    label_singular: 'News'
+    folder: 'content/news'
+    create: true
+    slug: '{{year}}-{{month}}-{{slug}}'    
+    preview_path: 'news/{{slug}}'    
+    sortable_fields: ['tags', 'category']
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'relation_files',
+          file: 'authors',
+          search_fields: ['authors.*.name'],
+          display_fields: ['authors.*.name'],
+          value_field: 'authors.*.name'
+        }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'relation',
+          collection: 'relation_files',
+          file: 'tags',
+          search_fields: ['tags.*.name'],
+          display_fields: ['tags.*.name'],
+          value_field: 'tags.*.id',
+          multiple: true
+        }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
