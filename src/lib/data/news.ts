@@ -1,5 +1,6 @@
 import { getAllContent, getAuthor, getContent, getTagName } from "./cms";
 import grayMatter from 'gray-matter';
+import moment from 'moment'
 import { renderExcerpt, renderMarkdown } from "./marked";
 
 export function getNews(year: string, month: string, slug: string) {
@@ -12,7 +13,7 @@ export function getNews(year: string, month: string, slug: string) {
     return getData(file);
 }
 
-export function getAllNews(year: string = "", month: string = "") {
+export function getAllNews(year: string = "", month: string = "", start = 0, limit = 0): any[] {
     try {
         let news = getAllContent("news");
         if (year != "") {
@@ -25,17 +26,19 @@ export function getAllNews(year: string = "", month: string = "") {
             // @ts-ignore
             var data = getData(file);
             var slug = fileName.split(".")[0].split("-").slice(2).join("-");
-            return {...data, slug}
+            return { ...data, slug }
         });
-
+        //@ts-ignore
+        content = content.sort((n1, n2) => (moment(n2.date) - moment(n1.date)));
+        if (limit != 0) content = content.slice(start, limit + start);
         return content;
     }
     catch (e) {
         console.log(e)
         if (e.code == 'ENOENT') {
-            return {};
+            return {}[0];
         }
-        return {};
+        return {}[0];
     }
 }
 

@@ -1,5 +1,7 @@
 import website from "$lib/config/website";
 import { getAllPosts } from "$lib/data/docs"
+import { getAllNews } from "$lib/data/news";
+import moment from "moment";
 
 export async function get() {
     const headers = {
@@ -7,8 +9,9 @@ export async function get() {
         'Content-Type': 'application/xml',
     }
 
-    const pages = ["privacy", "imprint"]
+    const pages = ["privacy", "imprint", "news"]
 
+    const news = getAllNews();
     const docs = getAllPosts("docs");
     let allDocs = []
     for (var key in docs) allDocs = allDocs.concat(docs[key]);
@@ -22,8 +25,17 @@ export async function get() {
             <changefreq>daily</changefreq>
             <priority>0.7</priority>
         </url>
-        ${allDocs.map(item =>
+        ${news.map(item =>
             `
+            <url>
+                <loc>${website.siteUrl}/news/${moment(item.date).format("YYYY/MM")}/${item.slug}</loc>
+                <changefreq>daily</changefreq>
+                <priority>0.7</priority>
+                <lastmod>${moment(item.date).format("YYYY-MM-DD")}</lastmod>
+            </url>
+        `).join('')}
+        ${allDocs.map(item =>
+                `
             <url>
                 <loc>${website.siteUrl}/docs/${item.slug}</loc>
                 <changefreq>daily</changefreq>
@@ -31,7 +43,7 @@ export async function get() {
             </url>
         `).join('')}
         ${pages.map(item =>
-                `
+                    `
             <url>
                 <loc>${website.siteUrl}/${item}</loc>
                 <changefreq>daily</changefreq>

@@ -75,7 +75,7 @@ collections:
     create: true
     slug: '{{year}}-{{month}}-{{slug}}'    
     preview_path: 'news/{{slug}}'    
-    sortable_fields: ['tags', 'category']
+    sortable_fields: ['tags', 'date']
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - {

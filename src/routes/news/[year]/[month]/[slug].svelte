@@ -29,9 +29,6 @@
 	import Container from '$lib/components/common/Container.svelte';
 	import H3 from '$lib/components/common/H3.svelte';
 	import Arrow from 'svelte-material-icons/ChevronRight.svelte';
-	import Time from 'svelte-material-icons/Clock.svelte';
-	import User from 'svelte-material-icons/Account.svelte';
-	import moment from 'moment';
 	import { monthNames } from '$lib/data/cms';
 	import { to_number } from 'svelte/internal';
 	import AuthorInfo from '$lib/components/news/AuthorInfo.svelte';
@@ -52,6 +49,8 @@
 		title={news.title}
 		slug="news/{$page.params.year}/{$page.params.month}/{$page.params.slug}"
 		description={news.excerpt}
+		twitterHandle={news.author.twitter}
+		postAuthor={news.author.name}
 	/>
 {:else}
 	<SEO
@@ -60,6 +59,8 @@
 		description={news.excerpt}
 		ogImage={image}
 		twitterImage={image}
+		twitterHandle={news.author.twitter}
+		postAuthor={news.author.name}
 	/>
 {/if}
 <Container>

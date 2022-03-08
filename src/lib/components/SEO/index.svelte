@@ -12,7 +12,7 @@
 		siteTitle,
 		siteUrl,
 		githubPage,
-		twitterUsername, 
+		twitterUsername,
 		keywords
 	} = website;
 
@@ -30,9 +30,14 @@
 		url: defaultTwitterImage,
 		alt: defaultAlt
 	};
+	export let postAuthor = '';
+	postAuthor = author != '' ? author : author;
+	export let twitterHandle = '';
+	twitterHandle = twitterHandle != '' ? twitterHandle : twitterUsername;
 	const url = `${siteUrl}/${slug}`;
 	const pageTitle = `${title ? title + ' - ' : ''}${siteTitle}`;
 	description = description != '' ? description : metaDescription;
+
 	const openGraphProps = {
 		image: ogImage,
 		description,
@@ -42,8 +47,8 @@
 		url
 	};
 	const twitterProps = {
-		author,
-		twitterUsername,
+		author: postAuthor,
+		twitterUsername: twitterHandle,
 		image: twitterImage
 	};
 </script>
@@ -53,10 +58,8 @@
 	<meta name="title" content={pageTitle} />
 	<meta name="description" content={description} />
 	<meta name="keywords" content={keywords} />
-	<meta
-		name="robots"
-		content="index, follow"
-	/>
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content={postAuthor} />
 	<html lang={siteLanguage} />
 	<link rel="canonical" href={url} />
 </svelte:head>

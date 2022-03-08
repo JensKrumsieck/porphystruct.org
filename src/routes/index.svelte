@@ -4,17 +4,18 @@
 	 * @type {import('@sveltejs/kit').Load}
 	 */
 	export async function load({ url, params, fetch }) {
-		const res = await fetch(`${base}/docs.json`);
-		if (res.ok) {
-			const data = await res.json();
-			return {
-				props: { post: data.post, posts: data.posts }
-			};
+		const resDocs = await fetch(`${base}/docs.json`);
+		const resNews = await fetch(`${base}/news.json?limit=3`);
+		let props = {};
+		if (resDocs.ok) {
+			const data = await resDocs.json();
+			props['posts'] = data.posts;
 		}
-		return {
-			status: res.status,
-			error: new Error(`${res.status} - ${await res.statusText} - URL was ${url}`)
-		};
+		if (resNews.ok) {
+			const data = await resNews.json();
+			props['news'] = data;
+		}
+		return { props };
 	}
 </script>
 
@@ -45,8 +46,11 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 	import H1 from '$lib/components/common/H1.svelte';
 	import Container from '$lib/components/common/Container.svelte';
+	import NewsCard from '$lib/components/news/NewsCard.svelte';
 
 	export let posts;
+	export let news;
+
 	let size = '5em';
 	let macrocycles = [
 		'Corroles',
@@ -104,6 +108,20 @@
 			<Circles _class="max-h-[90vh]" />
 		</div>
 	</Wrapper>
+</Container>
+<Container>
+	<div class="py-24">
+		<h2 class="text-4xl">Latest News</h2>
+		<div class="flex">
+			<ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 grid-cols-1 mt-8">
+				{#each news as theNews}
+					<li>
+						<NewsCard news={theNews} />
+					</li>
+				{/each}
+			</ul>
+		</div>
+	</div>
 </Container>
 <Container _class="bg-dark">
 	<Wrapper>
@@ -312,6 +330,7 @@
 		</div>
 	</Wrapper>
 </Container>
+
 <Container _class="mt-16 bg-dark text-white py-16">
 	<div class="md:w-1/2">
 		<h2 class="font-bold text-4xl">

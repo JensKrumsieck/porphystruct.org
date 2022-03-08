@@ -3,7 +3,7 @@
 
 	/**
 	 * @type {import('@sveltejs/kit').Load}
-     * TODO: Add Pagination later
+	 * TODO: Add Pagination later
 	 */
 	export async function load({ url, params, fetch }) {
 		const res = await fetch(`${base}/news.json`);
@@ -25,11 +25,12 @@
 	import Container from '$lib/components/common/Container.svelte';
 	import H1 from '$lib/components/common/H1.svelte';
 	import NewsCard from '$lib/components/news/NewsCard.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
 	export let news;
 </script>
-
-<Container>
-	<H1 _class="mt-8">News</H1>
+<SEO title="News" slug="news"/>
+<Container _class="mt-12">
+	<H1>News</H1>
 	<ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 grid-cols-1 mt-8">
 		{#each news as theNews}
 			<li>
