@@ -21,7 +21,7 @@ Uses Extended Basis for all analysis. Has been made obsolete in Version 1.0.2.
 #### 3D: Non macrocyclic opacity
 Opacity value of non perimeter atoms after detection in 3D representation.
 
-### Experimental/Simulation/Comparison
+### Experimental / Simulation / Comparison
 #### Marker Color
 Color of Atoms when option "[Use Single Marker Color](/docs/settings-graph#use-single-marker-color)" is set. For comparisons a list for Marker and Bond Color is given.  
 
