@@ -45,6 +45,7 @@
 		id="main-menu"
 	>
 		<ul class="flex md:flex-row flex-col navbar">
+			<NavLink prefetch href="/news">News</NavLink>
 			<NavLink prefetch href="/docs">Docs</NavLink>
 			<NavLink href="https://github.com/jenskrumsieck/porphystruct/issues">Report Bug</NavLink>
 		</ul>

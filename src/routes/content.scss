@@ -17,26 +17,10 @@
     h3 {
         margin-top: theme("margin.8");
         margin-bottom: theme("margin.2");
-        font-weight: bold;
-        font-size: theme("fontSize.2xl");
-        color: theme("colors.dark");
     }
     h4 {
         margin-top: theme("margin.8");
         margin-bottom: theme("margin.2");
-        font-weight: bold;
-        font-size: theme("fontSize.xl");
-        color: theme("colors.dark");
-    }
-    p {
-        margin-bottom: theme("margin.4");
-        font-size: theme("fontSize.lg");
-    }
-    a {
-        text-decoration: underline;
-        &:hover {
-            color: theme("colors.dark-blue");
-        }
     }
     code:not(pre > *) {
         color: theme("colors.white");
@@ -45,20 +29,13 @@
         border-radius: theme("borderRadius.md");
         word-break: break-word;
     }
-    ul,
-    ol {
-        margin-left: theme("margin.8");
-        margin-top: theme("margin.2");
-    }
-    ul {
-        list-style: initial;
-    }
-    ol {
-        list-style: decimal;
-    }
+    
     li {
-        margin-top: theme("margin.2");
         word-wrap: break-word;
+    }
+    table,pre{margin-top: 0; margin-bottom: 0;}
+    code{
+        &:before, &:after{content: ''!important;}
     }
     td,
     th {
@@ -66,6 +43,7 @@
     }
     th {
         min-width: 6rem;
+        color: theme("colors.white");
     }
     .katex-display {
         overflow-x: auto;

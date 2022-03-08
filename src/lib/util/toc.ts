@@ -1,12 +1,12 @@
 import { to_number } from "svelte/internal";
 
-export function generateToc(doc) {
+export function generateToc(doc) : boolean{
     var content = doc.getElementsByClassName('content')[0];
     var toc = doc.getElementById('toc');
     var headings = content.querySelectorAll('h1,h2,h3,h4,h5,h6');
     if (headings.length == 0) {
         toc.innerHTML = '';
-        return;
+        return false;
     }
     var lastI = 0;
     var result = '';
@@ -36,4 +36,5 @@ export function generateToc(doc) {
         result +
         '</ol>';
     toc.innerHTML = result;
+    return true;
 }

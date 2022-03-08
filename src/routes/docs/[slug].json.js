@@ -1,4 +1,4 @@
-import { getAllPosts, getPost } from '$lib/data/cms';
+import { getAllPosts, getPost } from '$lib/data/docs';
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get({ params }) {

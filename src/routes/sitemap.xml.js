@@ -1,5 +1,5 @@
 import website from "$lib/config/website";
-import { getAllPosts } from "$lib/data/cms"
+import { getAllPosts } from "$lib/data/docs"
 
 export async function get() {
     const headers = {

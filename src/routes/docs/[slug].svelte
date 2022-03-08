@@ -18,8 +18,8 @@
 	}
 </script>
 
-<script lang="ts">
-	import './content.scss';
+<script lang="ts">	
+	import '../content.scss';
 	import Container from '$lib/components/common/Container.svelte';
 	import H1 from '$lib/components/common/H1.svelte';
 	import SEO from '$lib/components/SEO/index.svelte';
@@ -40,6 +40,7 @@
 		alt: post.title
 	};
 
+	let toc = true;
 	let open = false;
 	let top = 0;
 
@@ -51,7 +52,7 @@
 		scrollFixed();
 	});
 	afterUpdate(() => {
-		generateToc(document);
+		toc = generateToc(document);
 		expandCode(document);
 	});
 
@@ -165,6 +166,7 @@
 			</div>
 			{#if post.title != undefined}
 				<H1 _class="mb-6">{post.title}</H1>
+				{#if toc || post.image != undefined}
 				<div
 					class="text-md lg:shadow-lg lg:float-right lg:p-8 lg:max-w-[50%] xl:max-w-[25%] lg:ml-8 lg:bg-dark-blue lg:rounded-lg lg:text-white"
 				>
@@ -175,8 +177,9 @@
 					{/if}
 					<div id="toc" class="" />
 				</div>
+				{/if}
 				<article class="mt-6">
-					<div class="content">
+					<div class="content prose prose-lg prose-h3:text-3xl prose-h4:text-xl max-w-none prose-headings:font-bold">
 						{@html post.html}
 					</div>
 				</article>

@@ -21,5 +21,7 @@ module.exports = {
       sans: ['Source Sans Pro', 'sans-serif']
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
