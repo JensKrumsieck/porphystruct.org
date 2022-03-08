@@ -28,7 +28,8 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 	export let news;
 </script>
-<SEO title="News" slug="news"/>
+
+<SEO title="News" slug="news" />
 <Container _class="mt-12">
 	<H1>News</H1>
 	<ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 grid-cols-1 mt-8">

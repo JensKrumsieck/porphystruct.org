@@ -11,7 +11,7 @@
 			style={`background-image: url(${news.image != undefined ? news.image : '/ps_logo.svg'});`}
 		/>
 		<div class="p-4">
-			<div class="h-40">
+			<div class="h-36 overflow-hidden">
 				<h3 class="text-2xl font-semibold">
 					<a href={`/news/${moment(news.date).format('YYYY/MM')}/${news.slug}`}>
 						{news.title}
