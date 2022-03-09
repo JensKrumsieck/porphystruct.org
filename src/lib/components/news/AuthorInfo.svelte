@@ -3,7 +3,7 @@
 	import User from 'svelte-material-icons/Account.svelte';
 	import Twitter from 'svelte-material-icons/Twitter.svelte';
 	import GitHub from 'svelte-material-icons/GithubCircle.svelte'
-	import LinkedIn from 'svelte-material-icons/LinkedIn.svelte';
+	import LinkedIn from 'svelte-material-icons/Linkedin.svelte';
 	import moment from 'moment';
 	export let news;
 </script>
