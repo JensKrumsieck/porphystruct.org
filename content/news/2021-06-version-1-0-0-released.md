@@ -1,6 +1,6 @@
 ---
 title: Version 1.0.0 Released!
-author: Jens
+author: Jens Krumsieck
 tags:
   - f5cf8734-b29e-439c-b746-a71cfdbd5044
 date: 2021-06-10T00:00:00.000Z

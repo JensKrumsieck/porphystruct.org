@@ -1,55 +1,75 @@
-<script>
+<script lang="ts">
 	import website from '$lib/config/website';
 	import defaultOgImage from '$lib/assets/open-graph.png';
-	import defaultTwitterImage from '$lib/assets/open-graph.png';
-	import Twitter from './Twitter.svelte';
-	import OpenGraph from './OpenGraph.svelte';
+	import type { Author } from '$lib/data/types';
+
 	const {
 		author,
 		ogLanguage,
 		siteLanguage,
-		siteShortTitle,
+		shortTitle,
 		siteTitle,
 		siteUrl,
-		githubPage,
+		gitHubUsername,
+		linkedInProfile,
 		twitterUsername,
-		keywords
+		keywords,
+		description
 	} = website;
 
-	const defaultAlt = siteTitle;
-	let metaDescription =
-		'PorphyStruct, a new digital tool for the analysis of non-planar distortion modes of different porphyrinoids.';
-	export let title = '';
-	export let slug = '';
-	export let description = '';
-	export let ogImage = {
-		url: defaultOgImage,
-		alt: defaultAlt
+	export let pageTitle = '';
+	export let pageDescription = '';
+	export let pageUrl = '';
+	export let pageImage = '';
+	export let pageAuthor: Author = {
+		name: author,
+		twitter: twitterUsername,
+		gitHub: gitHubUsername,
+		linkedIn: linkedInProfile,
+		website: siteUrl
 	};
-	export let twitterImage = {
-		url: defaultTwitterImage,
-		alt: defaultAlt
-	};
-	export let postAuthor = '';
-	postAuthor = author != '' ? author : author;
-	export let twitterHandle = '';
-	twitterHandle = twitterHandle != '' ? twitterHandle : twitterUsername;
-	const url = `${siteUrl}/${slug}`;
-	const pageTitle = `${title ? title + ' - ' : ''}${siteTitle}`;
-	description = description != '' ? description : metaDescription;
+	export let date = '';
+	export let article = false;
+	export let articleType = 'news';
 
-	const openGraphProps = {
-		image: ogImage,
-		description,
-		ogLanguage,
+	pageTitle = `${pageTitle != '' ? pageTitle + ' - ' : ''}${siteTitle}`;
+	pageUrl = `${siteUrl}/${pageUrl}`;
+	pageDescription = pageDescription != '' ? pageDescription : description;
+	pageImage = pageImage != '' ? pageImage : defaultOgImage;
+
+	import Twitter from './Twitter.svelte';
+	import OpenGraph from './OpenGraph.svelte';
+	import SchemaOrg from './SchemaOrg.svelte';
+
+	let twitterProps = {
+		pageAuthor,
+		pageImage
+	};
+
+	let openGraphProps = {
+		article,
 		pageTitle,
 		siteTitle,
-		url
+		pageUrl,
+		date,
+		pageDescription,
+		pageImage,
+		ogLanguage
 	};
-	const twitterProps = {
-		author: postAuthor,
-		twitterUsername: twitterHandle,
-		image: twitterImage
+
+	let schemaOrgProps = {
+		article,
+		pageAuthor,
+		shortTitle,
+		siteTitle,
+		pageDescription,
+		pageTitle,
+		siteLanguage,
+		siteUrl,
+		pageUrl,
+		pageImage,
+		date,
+		articleType
 	};
 </script>
 
@@ -59,9 +79,10 @@
 	<meta name="description" content={description} />
 	<meta name="keywords" content={keywords} />
 	<meta name="robots" content="index, follow" />
-	<meta name="author" content={postAuthor} />
+	<meta name="author" content={pageAuthor.name} />
 	<html lang={siteLanguage} />
-	<link rel="canonical" href={url} />
+	<link rel="canonical" href={pageUrl} />
 </svelte:head>
-<Twitter {...twitterProps} />
 <OpenGraph {...openGraphProps} />
+<Twitter {...twitterProps} />
+<SchemaOrg {...schemaOrgProps} />

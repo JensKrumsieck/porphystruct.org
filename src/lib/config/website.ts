@@ -3,14 +3,12 @@ const website = {
     ogLanguage: 'en_US',
     siteLanguage: 'en-US',
     siteTitle: 'PorphyStruct - Structural Analysis of Porphyrinoids',
-    siteShortTitle: 'PorphyStruct',
+    shortTitle: 'PorphyStruct',
     siteUrl: 'https://porphystruct.org',
-    icon: 'static/icon.png',
-    backgroundColor: '#222831',
-    themeColor: '#222831',
-    contactEmail: 'mail@jenskrumsieck.de',
-    githubPage: 'jenskrumsieck',
+    gitHubUsername: "jenskrumsieck",
+    linkedInProfile: "jens-krumsieck-849445211",
     twitterUsername: 'jens_ation',
-    keywords: "PorphyStruct, Corrole, Porphyrin, Corrphycene, Porphycene, Norcorrole, Conformation, Analysis, NSD, Isoporphyrin, Structural"
+    keywords: "PorphyStruct, Corrole, Porphyrin, Corrphycene, Porphycene, Norcorrole, Conformation, Analysis, NSD, Isoporphyrin, Structural",
+    description: 'PorphyStruct, a new digital tool for the analysis of non-planar distortion modes of different porphyrinoids.'
 }
 export { website as default }

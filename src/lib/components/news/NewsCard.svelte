@@ -12,6 +12,11 @@
 		/>
 		<div class="p-4">
 			<div class="h-36 overflow-hidden">
+				<div class="flex place-items-center">
+					{#each news.tags as tag}
+						<span class="rounded-full bg-dark text-white text-sm px-2 py-0.5 mr-2 mb-2">{tag}</span>
+					{/each}
+				</div>
 				<h3 class="text-2xl font-semibold">
 					<a href={`/news/${moment(news.date).format('YYYY/MM')}/${news.slug}`}>
 						{news.title}

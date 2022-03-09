@@ -1,6 +1,6 @@
 ---
 title: PorphyStruct Web (Beta)
-author: Jens
+author: Jens Krumsieck
 tags:
   - e10f3b24-3ea0-47a5-a15e-119bb903a032
 image: /uploads/ps_beta.png

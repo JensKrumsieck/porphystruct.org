@@ -34,10 +34,6 @@
 	import AuthorInfo from '$lib/components/news/AuthorInfo.svelte';
 	export let news;
 
-	let image = {
-		url: website.siteUrl + news.image,
-		alt: news.title
-	};
 	let toc = true;
 	afterUpdate(() => {
 		toc = generateToc(document);
@@ -46,21 +42,24 @@
 
 {#if news.image == '' || news.image == undefined || news.image == 'undefined'}
 	<SEO
-		title={news.title}
-		slug="news/{$page.params.year}/{$page.params.month}/{$page.params.slug}"
-		description={news.excerpt}
-		twitterHandle={news.author.twitter}
-		postAuthor={news.author.name}
+		pageTitle={news.title}
+		pageUrl="news/{$page.params.year}/{$page.params.month}/{$page.params.slug}"
+		pageDescription={news.excerpt}
+		pageAuthor={news.author}
+		date={news.date}
+		articleType="news"
+		article={true}
 	/>
 {:else}
 	<SEO
-		title={news.title}
-		slug="news/{$page.params.year}/{$page.params.month}/{$page.params.slug}"
-		description={news.excerpt}
-		ogImage={image}
-		twitterImage={image}
-		twitterHandle={news.author.twitter}
-		postAuthor={news.author.name}
+		pageTitle={news.title}
+		pageUrl="news/{$page.params.year}/{$page.params.month}/{$page.params.slug}"
+		pageDescription={news.excerpt}
+		pageImage={news.image}
+		pageAuthor={news.author}
+		date={news.date}
+		articleType="news"
+		article={true}
 	/>
 {/if}
 <Container>
@@ -90,6 +89,13 @@
 			</nav>
 			{#if news.title != undefined}
 				<div class="mt-6">
+					<div class="flex place-items-center">
+						{#each news.tags as tag}
+							<span class="rounded-full bg-dark text-white text-sm px-2 py-0.5 mr-2 mb-2"
+								>{tag}</span
+							>
+						{/each}
+					</div>
 					<H1>{news.title}</H1>
 					<AuthorInfo {news} />
 					<article class="mt-6 bg-white rounded-lg p-4">

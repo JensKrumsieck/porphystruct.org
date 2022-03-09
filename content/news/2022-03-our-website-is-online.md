@@ -1,6 +1,6 @@
 ---
 title: Our Website is online!
-author: Jens
+author: Jens Krumsieck
 tags:
   - 4f3efd80-8892-4110-856c-d5d159a783bb
   - e10f3b24-3ea0-47a5-a15e-119bb903a032

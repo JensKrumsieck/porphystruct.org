@@ -5,7 +5,7 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 </script>
 
-<SEO title="Privacy Policy" slug="privacy" />
+<SEO pageTitle="Privacy Policy" pageUrl="privacy" />
 <Container _class="py-12">
 	<Wrapper>
 		<div class="mt-5">

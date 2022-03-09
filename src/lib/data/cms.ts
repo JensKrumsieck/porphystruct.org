@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import type { Author } from './types';
 
 export function getContent(postType, fileName) {
     try {
@@ -15,7 +16,7 @@ export function getContent(postType, fileName) {
     }
 }
 
-export function getAllContent(postType){
+export function getAllContent(postType) {
     const content = fs.readdirSync(path.join(path.dirname(''), `content/${postType}/`))
     return content;
 }

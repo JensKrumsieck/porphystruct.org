@@ -5,7 +5,7 @@
 	import SEO from '$lib/components/SEO/index.svelte';
 </script>
 
-<SEO slug="imprint" title="Legal Notice" />
+<SEO pageUrl="imprint" pageTitle="Legal Notice" />
 <Container _class=" md:-mt-16">
 	<Wrapper>
 		<div>

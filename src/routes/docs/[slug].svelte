@@ -18,7 +18,7 @@
 	}
 </script>
 
-<script lang="ts">	
+<script lang="ts">
 	import '../content.scss';
 	import Container from '$lib/components/common/Container.svelte';
 	import H1 from '$lib/components/common/H1.svelte';
@@ -35,10 +35,6 @@
 
 	export let post;
 	export let posts;
-	let image = {
-		url: website.siteUrl + post.image,
-		alt: post.title
-	};
 
 	let toc = true;
 	let open = false;
@@ -86,15 +82,22 @@
 </script>
 
 <svelte:window on:scroll={scrollFixed} on:resize={scrollFixed} />
-{#if post.image == '' || post.image == undefined || post.image == "undefined"}
-	<SEO title={post.title} slug="docs/{$page.params.slug}" description={post.excerpt} />
+{#if post.image == '' || post.image == undefined || post.image == 'undefined'}
+	<SEO
+		pageTitle={post.title}
+		pageUrl="docs/{$page.params.slug}"
+		pageDescription={post.excerpt}
+		article={true}
+		articleType="manual"
+	/>
 {:else}
 	<SEO
-		title={post.title}
-		slug="docs/{$page.params.slug}"
-		description={post.excerpt}
-		ogImage={image}
-		twitterImage={image}
+		pageTitle={post.title}
+		pageUrl="docs/{$page.params.slug}"
+		pageDescription={post.excerpt}
+		pageImage={post.image}
+		article={true}
+		articleType="manual"
 	/>
 {/if}
 
@@ -167,19 +170,21 @@
 			{#if post.title != undefined}
 				<H1 _class="mb-6">{post.title}</H1>
 				{#if toc || post.image != undefined}
-				<div
-					class="text-md lg:shadow-lg lg:float-right lg:p-8 lg:max-w-[50%] xl:max-w-[25%] lg:ml-8 lg:bg-dark-blue lg:rounded-lg lg:text-white"
-				>
-					{#if post.image != undefined}
-						<figure class="rounded-lg mb-8">
-							<img src={post.image} alt="Cover" title={post.title} class="rounded-lg" />
-						</figure>
-					{/if}
-					<div id="toc" class="" />
-				</div>
+					<div
+						class="text-md lg:shadow-lg lg:float-right lg:p-8 lg:max-w-[50%] xl:max-w-[25%] lg:ml-8 lg:bg-dark-blue lg:rounded-lg lg:text-white"
+					>
+						{#if post.image != undefined}
+							<figure class="rounded-lg mb-8">
+								<img src={post.image} alt="Cover" title={post.title} class="rounded-lg" />
+							</figure>
+						{/if}
+						<div id="toc" class="" />
+					</div>
 				{/if}
 				<article class="mt-6">
-					<div class="content prose prose-lg prose-h3:text-3xl prose-h4:text-xl max-w-none prose-headings:font-bold">
+					<div
+						class="content prose prose-lg prose-h3:text-3xl prose-h4:text-xl max-w-none prose-headings:font-bold"
+					>
 						{@html post.html}
 					</div>
 				</article>

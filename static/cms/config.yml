@@ -44,6 +44,8 @@ collections:
             fields:            
               - { label: Name, name: name, widget: string }
               - { label: Twitter, name: twitter, widget: string }
+              - { label: GitHub, name: gitHub, widget: string }
+              - { label: LinkedIn, name: linkedIn, widget: string }
               - { label: Website, name: website, widget: string }
   - name: 'docs'
     label: 'Manuals'
