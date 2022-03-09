@@ -70,7 +70,9 @@ export function renderExcerpt(content, html = false) {
         strong(text) { return text; },
         em(text) { return text; },
         image(href, title, text) { return ''; },
-        heading(text, number, raw, slugger) { return raw + newline; }
+        heading(text, number, raw, slugger) { return raw + newline; },
+        code(code: string, lang: string, escaped: boolean) { return code; },
+        codespan(code) { return code; }
     }
     marked.use({ renderer });
     var text = marked(content, renderer);
