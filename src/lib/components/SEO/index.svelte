@@ -40,6 +40,7 @@
 	import Twitter from './Twitter.svelte';
 	import OpenGraph from './OpenGraph.svelte';
 	import SchemaOrg from './SchemaOrg.svelte';
+	import DC from './DC.svelte';
 
 	let twitterProps = {
 		pageAuthor,
@@ -71,6 +72,14 @@
 		date,
 		articleType
 	};
+
+	let dcProps = {
+		article,
+		pageAuthor,
+		pageDescription,
+		pageTitle,
+		date
+	};
 </script>
 
 <svelte:head>
@@ -86,3 +95,4 @@
 <OpenGraph {...openGraphProps} />
 <Twitter {...twitterProps} />
 <SchemaOrg {...schemaOrgProps} />
+<DC {...dcProps} />
