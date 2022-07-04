@@ -3,6 +3,7 @@ title: How to find us at ICPP-12
 author: Jens Krumsieck
 tags:
   - 0f63b449-59bb-434a-b095-d237d7194756
+  - e10f3b24-3ea0-47a5-a15e-119bb903a032
 date: 2022-07-04T21:02:33.960Z
 ---
 As the conference program is out now, i can give you detailed information about how to find us (The Group of Prof. Dr. Martin Bröring) at the ICPP-12 conference in Madrid.
