@@ -21,7 +21,7 @@ On Friday July 15th 2022 -
 
 On Tuesday July 12th 2022 
 
-### Session S03 (Corroles)
+### Session S03 Corroles
 
 S03-P-002 **Simon Eulberg**, Martin Bröring *Antimony Corroles*
 
@@ -31,13 +31,13 @@ S03-P-008 **Jens Krumsieck,** Martin Bröring *PorphyStruct – Structural Analy
 
 S03-P-009 **Nina Schulze,** Martin Bröring *Manganese 10-Thiacorroles*
 
-### S06 Exotic porphyrins and novel pyrrolic macrocycles
+### Session S06 Exotic porphyrins and novel pyrrolic macrocycles
 
 S06-P-007 **Jens Krumsieck**, Cagla Bas, Nina Schulze, Dominik Körner, Jendrik Rusche, William-Dale Möller, Martin Bröring *Metalloisoporphyrins*
 
 On Thursday July 14th 2022 
 
-### S23 Heme proteins and synthetic analogues
+### Session S23 Heme proteins and synthetic analogues
 
 S23-P-002 **Dominik Körner**, Tanja C. Böllersen, Martin Bröring *Artificial cofactors in heme proteins*
 
