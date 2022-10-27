@@ -36,7 +36,7 @@ The Porphyrin Macrocycle has 24 perimeter atoms and it's pointgroup is D<sub>4h<
 Each out-of-plane symmetry corresponds to a specific mode:
 * Doming: `mathA_{2u}`
 * Saddling: `mathB_{1u}`
-* Ruffling: `mathA_{2u}`
+* Ruffling: `mathB_{2u}`
 * Waving: `mathE_{g}`
 * Propellering: `mathA_{1u}`
 
