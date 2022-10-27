@@ -35,8 +35,8 @@ The Porphyrin Macrocycle has 24 perimeter atoms and it's pointgroup is D<sub>4h<
 ```
 Each out-of-plane symmetry corresponds to a specific mode:
 * Doming: `mathA_{2u}`
-* Saddling: `mathB_{1u}`
-* Ruffling: `mathB_{2u}`
+* Saddling: `mathB_{2u}`
+* Ruffling: `mathB_{1u}`
 * Waving: `mathE_{g}`
 * Propellering: `mathA_{1u}`
 
@@ -108,7 +108,7 @@ To see the mode representations, [visit this site: Modes.](/docs/modes#corrphyce
 
 |-|Doming|Saddling|Ruffling|Waving (X,Y)|Propellering|
 |---|---|---|---|---|---|
-|Porphyrin (D<sub>4h</sub>)|A<sub>2u</sub>|B<sub>1u</sub>|B<sub>2u</sub>|E<sub>g</sub>|A<sub>1u</sub>|
+|Porphyrin (D<sub>4h</sub>)|A<sub>2u</sub>|B<sub>2u</sub>|B<sub>1u</sub>|E<sub>g</sub>|A<sub>1u</sub>|
 |Corrole (C<sub>2v</sub>)|B<sub>1</sub>|A<sub>2</sub>|B<sub>1</sub>|B<sub>1</sub> / A<sub>2</sub>|A<sub>2</sub>|
 |Norcorrole (D<sub>2h</sub>)|B<sub>3u</sub>|A<sub>u</sub>|B<sub>3u</sub>|B<sub>1g</sub> / B<sub>2g</sub>|A<sub>u</sub>|
 |Porphycene (D<sub>2h</sub>)|B<sub>3u</sub>|A<sub>u</sub>|B<sub>3u</sub>|B<sub>1g</sub> / B<sub>2g</sub>|A<sub>u</sub>|
