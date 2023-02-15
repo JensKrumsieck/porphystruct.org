@@ -16,7 +16,7 @@ There are a variety of different file formats which can represent molecular data
 
 To open a file drag a file onto the PorphyStruct logo in the big bottom left region or click "Open" in the to toolbar. Once you do, a dialog will open and ask for the Macrocyclic Framework. You will also notice, that the Molecular 3D Representation has loaded. (In the picture [CCDC File YEBTIJ](https://www.ccdc.cam.ac.uk/structures/Search?Ccdcid=295698&DatabaseToSearch=Published) is used.
 
-Choose your Macrocyle Type and click "Submit". 
+Choose your Macrocyle Type and click "Submit". (Please Note: In Version 2.0.0 or higher, this step is automated by PorphyStruct and will not be neccessary)
 
 ![File opened](/uploads/mocorselect.png)
 
