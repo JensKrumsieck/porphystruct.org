@@ -11,7 +11,7 @@ For statistical analysis of a huge amount of molecules manual generation of data
 
 ### Batch Processing
 
-In the **Working Directory** field, choose your Structure Directory. The Label "Number of Files" will refresh automatically, so you should see how many supported files are found in that folder. The **Include Subfolders** option does exactly that, including structures from all subfolders. Choose whether you want to simulate with the **Extended Basis** and pick your Macrocyclic Framework. **NOTE: All Structures in that folder MUST be from the same Macrocycle Type.** Click start and the processing begins. Sometimes there will be errors, like e.g. there is only half of the molecule in the cif-File (rather common). These files will be listed afterwards in your folder as Text File with the name: `FailedItems[Date].txt`. Example: `FailedItems2022-03-04-11-36-50.txt`. 
+In the **Working Directory** field, choose your Structure Directory. The Label "Number of Files" will refresh automatically, so you should see how many supported files are found in that folder. The **Include Subfolders** option does exactly that, including structures from all subfolders. Choose whether you want to simulate with the **Extended Basis**. Click start and the processing begins. Sometimes there will be errors, like e.g. there is only half of the molecule in the cif-File (rather common). These files will be listed afterwards in your folder as Text File with the name: `FailedItems[Date].txt`. Example: `FailedItems2022-03-04-11-36-50.txt`. 
 
 ![Started Processing](/uploads/batchstarted.png)
 
