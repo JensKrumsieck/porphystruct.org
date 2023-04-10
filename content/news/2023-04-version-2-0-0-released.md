@@ -46,3 +46,9 @@ R﻿elease
 [Release 2.0.0 · JensKrumsieck/PorphyStruct (github.com)](https://github.com/JensKrumsieck/PorphyStruct/releases/tag/v2.0.0)
 
 <!--EndFragment-->
+
+
+
+### We are close to 200 overall downloads:
+
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/jenskrumsieck/porphystruct/total?logo=github&style=for-the-badge">
