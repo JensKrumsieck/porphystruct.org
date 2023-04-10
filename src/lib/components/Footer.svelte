@@ -29,14 +29,19 @@
 		<Wrapper notFullHeight>
 			<div class="md:w-1/3 w-full">
 				<H3>Interested? Download now! It's Free!</H3>
-				<Button _class="w-72" href="https://github.com/jenskrumsieck/porphystruct/releases/latest">
-					<Windows size="1.5rem" />
-					<span> <span class="font-bold ml-2">Download </span> for Windows</span>
-				</Button>
+				<div class="group">
+					<Button
+						_class="w-72"
+						href="https://github.com/jenskrumsieck/porphystruct/releases/latest"
+					>
+						<Windows size="1.5rem" />
+						<span> <span class="font-bold ml-2">Download </span> for Windows</span>
+					</Button>
 
-				<a href="https://app.porphystruct.org" class="block mt-5 hover:text-dark-blue">
-					Try Webversion <Badge>Beta</Badge>
-				</a>
+					<Button _class="w-48 my-3" href="https://app.porphystruct.org" outlined>
+						<span class="font-bold">Webversion</span>
+					</Button>
+				</div>
 			</div>
 			<div class="logo-footer md:w-2/3 w-full md:mt-0 mt-10">
 				<div class="flex md:place-content-end">

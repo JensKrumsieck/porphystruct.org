@@ -94,7 +94,7 @@
 				<span> <span class="font-bold ml-2">Download </span> for Windows</span>
 			</Button>
 
-			<Button _class="w-72 bg-white hover:bg-white border-blue" href="https://app.porphystruct.org" class="block mt-5 hover:text-dark-blue">
+			<Button _class="w-48 my-3" href="https://app.porphystruct.org" outlined>
 				<span class="font-bold">Webversion</span>
 			</Button>
 		</div>

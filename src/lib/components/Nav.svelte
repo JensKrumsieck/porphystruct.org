@@ -27,6 +27,9 @@
 			<Windows size="1.5rem" />
 			<span>Download</span>
 		</Button>
+		<Button _class="my-3 ml-2" href="https://app.porphystruct.org" outlined>
+			<span class="font-bold">Webversion</span>
+		</Button>
 		<button
 			data-collapse-toggle="main-menu"
 			type="button"
