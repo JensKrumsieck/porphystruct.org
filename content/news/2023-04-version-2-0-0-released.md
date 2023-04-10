@@ -21,8 +21,6 @@ All references are now forced to follow the same direction for the modes of both
 
 The Webversion - as sharing most of the code - will also benefit from all changes (right now!) So you can already test the improvements here: https://app.porphystruct.org/
 
-As this is a Beta Version there may be some bugs - if you find any, please report them ;)
-
 ## What's Changed
 
 * CLI by @JensKrumsieck in https://github.com/JensKrumsieck/PorphyStruct/pull/72
@@ -40,8 +38,6 @@ Delete uneccessary files after unpacking.
 Usage: 
 `PorphyStruct.CLI.exe analyze "PATH/TO/YOUR_FILE.mol2" -x`
 Leave out .exe for non windows versions, -x is for "use extended basis"
-
-
 
 R﻿elease
 
