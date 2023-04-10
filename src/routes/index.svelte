@@ -94,9 +94,9 @@
 				<span> <span class="font-bold ml-2">Download </span> for Windows</span>
 			</Button>
 
-			<a href="https://app.porphystruct.org" class="block mt-5 hover:text-dark-blue">
-				Try Webversion <Badge>Beta</Badge>
-			</a>
+			<Button href="https://app.porphystruct.org" class="block mt-5 hover:text-dark-blue">
+				<span class="font-bold">Webversion</span>
+			</Button>
 		</div>
 		<div class="right w-full md:w-3/4 self-center flex justify-center relative md:mt-0 mt-12">
 			<img
