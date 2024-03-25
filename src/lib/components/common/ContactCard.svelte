@@ -5,7 +5,6 @@
 		siOrcid,
 		siGithub,
 		siInstagram,
-		siTwitter,
 		siYoutube,
 		siLinkedin,
 		siXing
