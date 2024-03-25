@@ -17,7 +17,6 @@
 
 	export let researchgate = '';
 	export let orcid = '';
-	export let twitter = '';
 	export let instagram = '';
 	export let youtube = '';
 	export let xing = '';
@@ -47,11 +46,6 @@
 			{#if github != ''}
 				<a href={'https://github.com/' + github}>
 					<SimpleIcon svg={siGithub.svg} size="1.25rem" />
-				</a>
-			{/if}
-			{#if twitter != ''}
-				<a href={'https://twitter.com/' + twitter}>
-					<SimpleIcon svg={siTwitter.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if instagram != ''}
