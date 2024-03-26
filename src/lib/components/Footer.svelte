@@ -10,26 +10,15 @@
 </script>
 
 <footer class="mt-12">
-	<Container>
-		<svg
-			class="absolute right-0 z-[-1] md:flex hidden"
-			xmlns="http://www.w3.org/2000/svg"
-			width="1363.724"
-			height="483.796"
-			viewBox="0 0 1363.724 483.796"
-		>
-			<path
-				d="M668,4105.938c15.531-4.751,509.621-313.558,509.621-313.558L930.576,4105.938l247.045-147.277-49.884,180.533,118.772-73.638h767.265"
-				transform="translate(-650.051 -3754.22)"
-				fill="none"
-				stroke="#0088bc"
-				stroke-width="90"
-			/>
-		</svg>
+	<Container>	
+		<div class="flex flex-wrap rounded">
+			<ContactJens />
+			<ContactMartin />
+		</div>
 		<Wrapper notFullHeight>
-			<div class="md:w-1/3 w-full">
+			<div class="md:w-2/3 w-full">
 				<H3>Interested? Download now! It's Free!</H3>
-				<div class="group">
+				<div class="group flex flex-wrap items-center w-full">
 					<Button
 						_class="w-72"
 						href="https://github.com/jenskrumsieck/porphystruct/releases/latest"
@@ -38,25 +27,21 @@
 						<span> <span class="font-bold ml-2">Download </span> for Windows</span>
 					</Button>
 
-					<Button _class="w-48 my-3" href="https://app.porphystruct.org" outlined>
+					<Button _class="w-48 my-3 mx-3" href="https://app.porphystruct.org" outlined>
 						<span class="font-bold">Webversion</span>
 					</Button>
 				</div>
-			</div>
-			<div class="logo-footer md:w-2/3 w-full md:mt-0 mt-10">
+			</div>	
+			<div class="logo-footer md:w-1/3 w-full md:mt-0 mt-10">
 				<div class="flex md:place-content-end">
 					<img src="/ps_logo.svg" alt="Logo" width="42px" />
-					<span class="font-bold text-[1.75rem] ml-2 self-center">PorphyStruct</span>
+					<span class="font-bold text-[2rem] ml-2 self-center">PorphyStruct</span>
 				</div>
 				<p class="flex md:place-content-end mt-4">
 					<a href="/imprint">Legal Notice</a>
 					<a class="ml-6" href="/privacy">Privacy Policy</a>
 				</p>
-			</div>
-			<div class="flex flex-wrap bg-off-white rounded">
-				<ContactJens />
-				<ContactMartin />
-			</div>
+			</div>	
 		</Wrapper>
 	</Container>
 </footer>

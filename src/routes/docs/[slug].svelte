@@ -105,7 +105,7 @@
 	<div class="flex">
 		<!--sidebar-->
 		<div
-			class="sidebar z-30 md:static fixed md:sticky left-0 md:top-0 bg-off-white overflow-x-hidden overflow-y-auto self-start md:h-screen h-full md:pl-0 pl-4 pb-8"
+			class="sidebar z-30 md:static fixed md:sticky left-0 md:top-0 bg-white overflow-x-hidden overflow-y-auto self-start md:h-screen h-full md:pl-0 pl-4 pb-8"
 			id="sb"
 		>
 			<div class="md:block w-64 pt-6" class:hidden={!open}>
@@ -133,7 +133,7 @@
 		</div>
 		<!--content-->
 		<div class="flex-1 md:px-12 w-full pt-8 pb-5">
-			<div class="z-30 flex mb-5 md:static sticky top-0 bg-off-white md:py-0 py-4" id="bc">
+			<div class="z-30 flex mb-5 md:static sticky top-0 bg-white md:py-0 py-4" id="bc">
 				<button
 					type="button"
 					class="md:hidden mr-2"

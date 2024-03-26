@@ -29,45 +29,45 @@
 	</figure>
 	<div class="ml-5">
 		<h4 class="font-bold text-xl">
-			<a href={url}>{name}</a>
+			<a href={url} target="_blank">{name}</a>
 		</h4>
-		<p class="flex social">
+		<div class="flex social">
 			{#if researchgate != ''}
-				<a href={'https://www.researchgate.net/profile/' + researchgate}>
+				<a href={'https://www.researchgate.net/profile/' + researchgate} target="_blank">
 					<SimpleIcon svg={siResearchgate.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if orcid != ''}
-				<a href={'https://orcid.org/' + orcid}>
+				<a href={'https://orcid.org/' + orcid} target="_blank">
 					<SimpleIcon svg={siOrcid.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if github != ''}
-				<a href={'https://github.com/' + github}>
+				<a href={'https://github.com/' + github} target="_blank">
 					<SimpleIcon svg={siGithub.svg} size="1.25rem" />
 				</a>
 			{/if}
+			{#if linkedin != ''}
+				<a href={'https://www.linkedin.com/in/' + linkedin} target="_blank">
+					<SimpleIcon svg={siLinkedin.svg} size="1.25rem" />
+				</a>
+			{/if}
+			{#if xing != ''}
+				<a href={'https://www.xing.com/profile/' + xing} target="_blank">
+					<SimpleIcon svg={siXing.svg} size="1.25rem" />
+				</a>
+			{/if}
 			{#if instagram != ''}
-				<a href={'https://instagram.com/' + instagram}>
+				<a href={'https://instagram.com/' + instagram} target="_blank">
 					<SimpleIcon svg={siInstagram.svg} size="1.25rem" />
 				</a>
 			{/if}
 			{#if youtube != ''}
-				<a href={'https://youtube.com/c/' + youtube}>
+				<a href={'https://youtube.com/c/' + youtube} target="_blank">
 					<SimpleIcon svg={siYoutube.svg} size="1.25rem" />
 				</a>
 			{/if}
-			{#if xing != ''}
-				<a href={'https://www.xing.com/profile/' + xing}>
-					<SimpleIcon svg={siXing.svg} size="1.25rem" />
-				</a>
-			{/if}
-			{#if linkedin != ''}
-				<a href={'https://www.linkedin.com/in/' + linkedin}>
-					<SimpleIcon svg={siLinkedin.svg} size="1.25rem" />
-				</a>
-			{/if}
-		</p>
+		</div>
 	</div>
 </div>
 

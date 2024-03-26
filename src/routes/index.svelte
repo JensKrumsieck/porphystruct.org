@@ -5,7 +5,7 @@
 	 */
 	export async function load({ url, params, fetch }) {
 		const resDocs = await fetch(`${base}/docs.json`);
-		const resNews = await fetch(`${base}/news.json?limit=3`);
+		const resNews = await fetch(`${base}/news.json?limit=4`);
 		let props = {};
 		if (resDocs.ok) {
 			const data = await resDocs.json();
@@ -39,7 +39,6 @@
 	import Book from 'svelte-material-icons/BookOpenVariant.svelte';
 
 	import Button from '$lib/components/common/Button.svelte';
-	import Badge from '$lib/components/common/Badge.svelte';
 	import Wrapper from '$lib/components/common/Wrapper.svelte';
 	import H3 from '$lib/components/common/H3.svelte';
 	import Circles from '../lib/components/circles.svelte';
@@ -52,53 +51,42 @@
 	export let news;
 
 	let size = '5em';
-	let macrocycles = [
-		'Corroles',
-		'Porphyrins',
-		'Norcorroles',
-		'Isocorroles',
-		'Isoporphyrins',
-		'Corrphycenes',
-		'Porphycenes'
-	];
-	let active = 0;
-	setInterval(() => {
-		active = Math.floor(Math.random() * macrocycles.length);
-	}, 1500);
 </script>
 
 <SEO />
 <Container _class="hero md:-mt-16">
 	<Wrapper>
-		<div class="left w-full md:w-1/4 self-center z-20">
-			<p class="uppercase font-semibold text-blue text-sm">PorphyStruct</p>
-			<H1 _class="md:w-[85vw] w-[90vw]">
-				Analyze your
-				<span class="font-bold changing">
-					{#each macrocycles as item, i}
-						<span class:hidden={i != active}>
-							{item}
-							<span class="font-normal bg-dark rounded-lg text-white px-2 md:inline hidden"
-								>with one click.</span
-							>
-						</span>
-					{/each}
+		<div class="left w-full md:w-1/3 self-center z-20">
+			<H1 _class="md:w-[85vw] w-[90vw] font-bold">
+				Rapid Porphyrinoid Analysis
+				<span class="font-normal bg-dark rounded-lg text-white px-2 md:inline hidden">
+					with one click.
 				</span>
 			</H1>
-			<h2 class="md:text-2xl text-xl font-semibold mt-4 mb-10">
-				Structural Analysis of Porphyrinoids
+			<h2 class="text-lg mt-4 mb-10">
+				Analysis of non-planar distortions in a variety of porphyrinoids using a normal-coordinate
+				structural decomposition approach.
 			</h2>
-			<p class="italic text-base my-3">Fast. Free. Open Source.</p>
-			<Button _class="w-72" href="https://github.com/jenskrumsieck/porphystruct/releases/latest">
-				<Windows size="1.5rem" />
-				<span> <span class="font-bold ml-2">Download </span> for Windows</span>
-			</Button>
+			<div class="flex items-center">
+				<img src="/ps_logo.svg" alt="Logo" width="32px" class="mr-2" />
+				<H3>PorphyStruct</H3>
+			</div>
+			<p class="italic text-base mb-3">Fast. Free. Open Source.</p>
+			<div class="buttons flex flex-wrap items-center">
+				<Button
+					_class="w-72 mr-2"
+					href="https://github.com/jenskrumsieck/porphystruct/releases/latest"
+				>
+					<Windows size="1.5rem" />
+					<span> <span class="font-bold ml-2">Download </span> for Windows</span>
+				</Button>
 
-			<Button _class="w-48 my-3" href="https://app.porphystruct.org" outlined>
-				<span class="font-bold">Webversion</span>
-			</Button>
+				<Button _class="w-48 my-3" href="https://app.porphystruct.org" outlined>
+					<span class="font-bold">Webversion</span>
+				</Button>
+			</div>
 		</div>
-		<div class="right w-full md:w-3/4 self-center flex justify-center relative md:mt-0 mt-12">
+		<div class="right w-full md:w-2/3 self-center flex justify-center relative md:mt-0 mt-12">
 			<img
 				srcset={screenshot_hero}
 				class="rounded shadow-2xl lg:w-5/6 w-3/4 md-w-1/2 z-10"
@@ -111,9 +99,9 @@
 </Container>
 <Container>
 	<div class="py-24">
-		<h2 class="text-4xl">Latest News</h2>
+		<h2 class="text-4xl font-bold">Latest News</h2>
 		<div class="flex">
-			<ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 grid-cols-1 mt-8">
+			<ul class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 grid-cols-1 mt-8">
 				{#each news as theNews}
 					<li>
 						<NewsCard news={theNews} />
@@ -203,12 +191,12 @@
 	</Wrapper>
 </Container>
 
-<Container _class="overflow-hidden">
-	<Wrapper>
+<Container _class="overflow-hidden py-12">
+	<Wrapper notFullHeight>
 		<div class="left w-full md:w-1/2 self-center md:pr-16 z-20">
 			<H3>Batch Processing</H3>
 			<p>
-				The <strong>automated Analysis</strong> of <span class="font-bold">hundreds</span> of
+				The <strong>automated Analysis</strong> of <span class="font-bold">thousands</span> of
 				structures is possible due to the implemented Batch processing feature. The Output will be
 				merged into a csv file for further Analysis in Excel or as a Pandas DataFrame in Python
 				scripts. Did you know? Some python scripts to Play with are available here:
@@ -279,12 +267,11 @@
 					class="shadow-svg"
 				/>
 			</svg>
-			<Circles _class="z-0 circle_shift -top-1/4" />
 		</div>
 	</Wrapper>
 </Container>
 
-<Container _class="py-24">
+<Container _class="py-12">
 	<Wrapper notFullHeight>
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-8 content-around text-center ">
 			<div class="col flex flex-col items-center">
@@ -386,47 +373,6 @@
 		> and always will be!
 	</p>
 </Container>
-
-{#if currentSettings.youtube}
-	<Container _class="my-16">
-		<Wrapper notFullHeight>
-			<div class="flex flex-wrap gap-12 place-items-center mx-auto">
-				<iframe
-					class="w-80 md:w-96 h-44 md:h-56"
-					src="https://www.youtube-nocookie.com/embed/JstXfZPR-UU"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				/>
-				<iframe
-					class="w-80 md:w-96 h-44 md:h-56"
-					src="https://www.youtube-nocookie.com/embed/zwIAVYFFJIU"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				/>
-				<iframe
-					class="w-80 md:w-96 h-44 md:h-56"
-					src="https://www.youtube-nocookie.com/embed/YCA3ZIYyLQw"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				/>
-				<iframe
-					class="w-80 md:w-96 h-44 md:h-56"
-					src="https://www.youtube-nocookie.com/embed/WdEJJrrPYKg"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				/>
-			</div>
-		</Wrapper>
-	</Container>
-{/if}
 
 <style lang="scss">
 	.shadow-svg {

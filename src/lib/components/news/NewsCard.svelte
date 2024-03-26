@@ -4,10 +4,10 @@
 	export let news;
 </script>
 
-<div class="bg-white rounded shadow">
+<div class="bg-off-white rounded shadow">
 	<a class="block" href={`/news/${moment(news.date).format('YYYY/MM')}/${news.slug}`}>
 		<figure
-			class="mb-8 text-center h-32 rounded-t bg-top bg-cover"
+			class="mb-8 text-center h-48 rounded-t bg-center bg-cover"
 			style={`background-image: url(${news.image != undefined ? news.image : '/ps_logo.svg'});`}
 		/>
 		<div class="p-4">
