@@ -3,6 +3,7 @@ title: Version 2.0.1 released!
 author: Jens Krumsieck
 tags:
   - f5cf8734-b29e-439c-b746-a71cfdbd5044
+image: /uploads/screenshot_hero.png
 date: 2023-06-23T11:30:58.113Z
 ---
 ## New Features:
