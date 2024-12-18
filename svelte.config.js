@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-node';
 import { imagetools } from 'vite-imagetools';
 import preprocess from 'svelte-preprocess';
 
